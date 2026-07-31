@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { SITE, NAV, SERVICES } from '@/lib/data';
+import { SITE, SERVICES } from '@/lib/data';
 
 export default function Footer() {
   const serviceLinks = SERVICES.map((s) => ({
@@ -54,10 +54,7 @@ export default function Footer() {
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {serviceLinks.slice(0, 5).map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} style={{ fontSize: '14px', color: 'var(--muted)', transition: 'color 0.15s' }}
-                    onMouseEnter={e => e.target.style.color = 'var(--text)'}
-                    onMouseLeave={e => e.target.style.color = 'var(--muted)'}
-                  >
+                  <Link href={l.href} style={{ fontSize: '14px', color: 'var(--muted)', transition: 'color 0.15s' }}>
                     {l.label}
                   </Link>
                 </li>

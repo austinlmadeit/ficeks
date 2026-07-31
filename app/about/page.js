@@ -8,9 +8,9 @@ export const metadata = {
 
 const timeline = [
   { year: '1946', event: 'Ficek Insurance founded in Brandon, Manitoba. A commitment to the community and to honest, independent advice.' },
-  { year: '1970s–80s', event: 'Growth through reputation. Word-of-mouth referrals from satisfied Brandon families and businesses.' },
+  { year: '1970s\u201380s', event: 'Growth through reputation. Word-of-mouth referrals from satisfied Brandon families and businesses.' },
   { year: '1990s', event: 'Second generation joins the business. The family tradition of personalized service continues.' },
-  { year: '2000s', event: 'Expanded commercial and farm insurance offerings to serve Manitoba's agricultural community.' },
+  { year: '2000s', event: "Expanded commercial and farm insurance offerings to serve Manitoba's agricultural community." },
   { year: '2024+', event: 'Ficek Insurance continues to serve Brandon with the same values: independent advice, local expertise, family service.' },
 ];
 
