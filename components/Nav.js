@@ -7,16 +7,9 @@ import { SITE, NAV } from '@/lib/data';
 import styles from './Nav.module.css';
 
 export default function Nav() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const pathname = usePathname();
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   useEffect(() => {
     setMenuOpen(false);
@@ -24,15 +17,18 @@ export default function Nav() {
   }, [pathname]);
 
   return (
-    <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
+    <header className={styles.header}>
       <div className={`${styles.inner} container`}>
-        {/* Logo */}
+        {/* Ficek Brand Logo */}
         <Link href="/" className={styles.logo}>
-          <span className={styles.logoMain}>FICEK</span>
-          <span className={styles.logoSub}>INSURANCE</span>
+          <span className={styles.logoBadge}>F</span>
+          <div className={styles.logoText}>
+            <span className={styles.logoTitle}>FICEK</span>
+            <span className={styles.logoSub}>INSURANCE</span>
+          </div>
         </Link>
 
-        {/* Desktop nav */}
+        {/* Desktop Nav */}
         <nav className={styles.desktopNav}>
           {NAV.filter(n => !n.devOnly).map((item) => (
             <div
@@ -61,19 +57,20 @@ export default function Nav() {
           ))}
         </nav>
 
-        {/* Right side */}
+        {/* Right CTA & Phone */}
         <div className={styles.navRight}>
           <a href={SITE.phoneHref} className={styles.phoneLink}>
-            {SITE.phone}
+            <span className={styles.phoneLabel}>Call Direct</span>
+            <span className={styles.phoneNum}>{SITE.phone}</span>
           </a>
-          <Link href="/quote" className="btn btn-cta">
+          <Link href="/quote" className="btn btn-red">
             Get a Quote
           </Link>
         </div>
 
-        {/* Mobile hamburger */}
+        {/* Mobile Hamburger */}
         <button
-          className={`${styles.hamburger} ${menuOpen ? styles.hamburgerOpen : ''}`}
+          className={styles.hamburger}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -83,7 +80,7 @@ export default function Nav() {
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Drawer */}
       {menuOpen && (
         <div className={styles.mobileMenu}>
           {NAV.map((item) => (
@@ -102,7 +99,7 @@ export default function Nav() {
               )}
             </div>
           ))}
-          <Link href="/quote" className="btn btn-cta" style={{ margin: '16px', display: 'block', textAlign: 'center' }}>
+          <Link href="/quote" className="btn btn-red" style={{ margin: '16px', display: 'block', textAlign: 'center' }}>
             Get a Quote
           </Link>
         </div>

@@ -1,19 +1,19 @@
-import { Manrope, Inter } from 'next/font/google';
+import { Outfit, Inter } from 'next/font/google';
 import './globals.css';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import { SITE } from '@/lib/data';
 
-const manrope = Manrope({
+const outfit = Outfit({
   subsets: ['latin'],
-  weight: ['300', '400', '600', '700', '800'],
+  weight: ['400', '600', '700', '800', '900'],
   variable: '--font-heading',
   display: 'swap',
 });
 
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['400', '500'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-body',
   display: 'swap',
 });
@@ -21,23 +21,23 @@ const inter = Inter({
 export const metadata = {
   metadataBase: new URL('https://ficekinsurance.com'),
   title: {
-    default: 'Independent Insurance Broker Brandon MB | Ficek Insurance',
+    default: 'Ficek Insurance | Independent Broker Brandon MB',
     template: '%s | Ficek Insurance',
   },
   description: SITE.description,
-  keywords: ['insurance broker Brandon MB', 'independent insurance Manitoba', 'home insurance Brandon', 'auto insurance Brandon', 'Ficek Insurance'],
+  keywords: ['insurance broker Brandon MB', 'Ficek Insurance', 'Autopac Brandon', 'home insurance Brandon MB', 'business insurance Brandon'],
   openGraph: {
     type: 'website',
     locale: 'en_CA',
     url: 'https://ficekinsurance.com',
     siteName: SITE.name,
-    title: 'Independent Insurance Broker Brandon MB | Ficek Insurance',
+    title: 'Ficek Insurance | Independent Broker Brandon MB',
     description: SITE.description,
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Ficek Insurance — Brandon, Manitoba' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Independent Insurance Broker Brandon MB | Ficek Insurance',
+    title: 'Ficek Insurance | Independent Broker Brandon MB',
     description: SITE.description,
   },
   robots: {
@@ -69,7 +69,7 @@ const schemaOrg = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-CA" className={`${manrope.variable} ${inter.variable}`}>
+    <html lang="en-CA" className={`${outfit.variable} ${inter.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -78,7 +78,7 @@ export default function RootLayout({ children }) {
       </head>
       <body style={{ fontFamily: 'var(--font-body, Inter, sans-serif)' }}>
         <div className="dev-banner">
-          🔬 SANDBOX BUILD — Not the live site · <a href="/dev-notes" style={{ textDecoration: 'underline' }}>View Dev Notes & SEO Issues</a>
+          🔴 FICEK BRAND REDESIGN · <a href="/dev-notes" style={{ textDecoration: 'underline', color: '#ef4444' }}>View Dev Notes & Audit Tracker</a>
         </div>
         <Nav />
         <main>{children}</main>
