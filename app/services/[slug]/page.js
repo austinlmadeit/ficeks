@@ -6,8 +6,9 @@ export function generateStaticParams() {
   return SERVICES.map((s) => ({ slug: s.slug }));
 }
 
-export function generateMetadata({ params }) {
-  const service = SERVICES.find((s) => s.slug === params.slug);
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const service = SERVICES.find((s) => s.slug === slug);
   if (!service) return {};
   return {
     title: `${service.title} Brandon MB | Ficek Insurance`,
@@ -19,8 +20,9 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function ServicePage({ params }) {
-  const service = SERVICES.find((s) => s.slug === params.slug);
+export default async function ServicePage({ params }) {
+  const { slug } = await params;
+  const service = SERVICES.find((s) => s.slug === slug);
   if (!service) notFound();
 
   const otherServices = SERVICES.filter((s) => s.slug !== service.slug).slice(0, 3);
