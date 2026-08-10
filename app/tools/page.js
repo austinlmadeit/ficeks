@@ -20,14 +20,6 @@ export default function ToolsPage() {
   const [hasEmployees, setHasEmployees] = useState('yes');
   const [hasCommercialVehicle, setHasCommercialVehicle] = useState('yes');
   const [hasCyberData, setHasCyberData] = useState('yes');
-  const [quizSubmitted, setQuizSubmitted] = useState(false);
-
-  // Bundle Estimator state
-  const [hasAuto, setHasAuto] = useState(true);
-  const [hasHome, setHasHome] = useState(true);
-  const [hasRec, setHasRec] = useState(false);
-
-  const estimatedBundleDiscount = (hasAuto && hasHome ? 15 : 0) + (hasRec ? 5 : 0);
 
   return (
     <>
@@ -87,7 +79,7 @@ export default function ToolsPage() {
             lineHeight: 1.65,
             marginBottom: '32px',
           }}>
-            Estimate your home contents replacement value, evaluate commercial business gaps, or calculate multi-line bundle savings in seconds.
+            Estimate your home contents replacement value or evaluate commercial business risk gaps in seconds.
           </p>
         </div>
       </section>
@@ -99,7 +91,6 @@ export default function ToolsPage() {
             {[
               { id: 'inventory', label: '🏠 Home Contents Calculator' },
               { id: 'quiz', label: '🏢 Business Risk Gap Quiz' },
-              { id: 'bundle', label: '💰 Bundle Savings Estimator' },
             ].map((t) => (
               <button
                 key={t.id}
@@ -269,58 +260,6 @@ export default function ToolsPage() {
                 </ul>
                 <Link href="/quote" className="btn btn-red" style={{ justifyContent: 'center' }}>
                   Consult a Ficek Commercial Broker →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* ── TAB 3: BUNDLE SAVINGS ESTIMATOR ── */}
-      {activeTab === 'bundle' && (
-        <section className="section" style={{ background: '#ffffff' }}>
-          <div className="container" style={{ maxWidth: '840px' }}>
-            <div className="card card-red-top" style={{ padding: '36px', background: '#fafafa' }}>
-              <div style={{ fontSize: '12px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px' }}>
-                Tool #3: Bundle Savings Estimator
-              </div>
-              <h2 style={{ fontSize: '28px', fontWeight: 900, marginBottom: '12px' }}>
-                Multi-Policy Savings Estimator
-              </h2>
-              <p style={{ color: '#71717a', lineHeight: 1.6, marginBottom: '28px' }}>
-                Bundling multiple policies through Ficek Insurance qualifies you for multi-policy discounts with top Canadian insurers.
-              </p>
-
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '32px' }}>
-                {[
-                  { label: 'Auto Insurance (MPI Extension)', state: hasAuto, setter: setHasAuto },
-                  { label: 'Home, Tenant, or Farm Dwelling', state: hasHome, setter: setHasHome },
-                  { label: 'Recreational (Boat, ATV, Snowmobile)', state: hasRec, setter: setHasRec },
-                ].map((item, idx) => (
-                  <label key={idx} style={{ display: 'flex', alignItems: 'center', gap: '12px', background: '#ffffff', padding: '16px 20px', borderRadius: '8px', border: '1px solid #e4e4e7', cursor: 'pointer', fontWeight: 700 }}>
-                    <input
-                      type="checkbox"
-                      checked={item.state}
-                      onChange={(e) => item.setter(e.target.checked)}
-                      style={{ width: '20px', height: '20px', accentColor: '#dc2626' }}
-                    />
-                    <span>{item.label}</span>
-                  </label>
-                ))}
-              </div>
-
-              <div style={{ background: '#09090b', color: '#ffffff', padding: '28px', borderRadius: '12px', textAlign: 'center' }}>
-                <div style={{ fontSize: '13px', color: '#a1a1aa', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 700, marginBottom: '4px' }}>
-                  Estimated Bundle Savings Potential
-                </div>
-                <div style={{ fontSize: '48px', fontWeight: 900, color: '#ef4444', marginBottom: '16px' }}>
-                  Up to {estimatedBundleDiscount}% OFF
-                </div>
-                <p style={{ fontSize: '14px', color: '#a1a1aa', marginBottom: '20px' }}>
-                  Multi-policy discounts apply across home, private auto extensions, and recreational lines.
-                </p>
-                <Link href="/quote" className="btn btn-red" style={{ padding: '14px 32px', fontSize: '16px' }}>
-                  Start Bundled Quote →
                 </Link>
               </div>
             </div>
