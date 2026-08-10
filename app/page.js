@@ -67,7 +67,7 @@ export default function HomePage() {
                 marginBottom: '20px',
                 letterSpacing: '-0.02em',
               }}>
-                Simple, trusted protection for your home, vehicle & business.
+                Let our Family Protect Your Family, Like Family.
               </h1>
 
               <p style={{
