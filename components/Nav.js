@@ -20,7 +20,7 @@ export default function Nav() {
     <header className={styles.header}>
       <div className={`${styles.inner} container`}>
         {/* Top Left Emergency Claims Badge + Brand Logo */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
           <Link href="/claims" className={styles.claimsBadge}>
             <span className={styles.claimsPulse} />
             🚨 24/7 Claims
