@@ -19,21 +19,20 @@ export default function Nav() {
   return (
     <header className={styles.header}>
       <div className={`${styles.inner} container`}>
-        {/* Top Left Emergency Claims Badge + Brand Logo */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
-          <Link href="/claims" className={styles.claimsBadge}>
-            <span className={styles.claimsPulse} />
-            🚨 24/7 Claims
-          </Link>
+        {/* Far Left 24/7 Emergency Claims Badge */}
+        <Link href="/claims" className={styles.claimsBadge}>
+          <span className={styles.claimsPulse} />
+          🚨 24/7 Claims
+        </Link>
 
-          <Link href="/" className={styles.logo}>
-            <span className={styles.logoBadge}>F</span>
-            <div className={styles.logoText}>
-              <span className={styles.logoTitle}>FICEK</span>
-              <span className={styles.logoSub}>INSURANCE</span>
-            </div>
-          </Link>
-        </div>
+        {/* Ficek Brand Logo */}
+        <Link href="/" className={styles.logo}>
+          <span className={styles.logoBadge}>F</span>
+          <div className={styles.logoText}>
+            <span className={styles.logoTitle}>FICEK</span>
+            <span className={styles.logoSub}>INSURANCE</span>
+          </div>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className={styles.desktopNav}>
