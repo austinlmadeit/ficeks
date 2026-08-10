@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import HeroQuoteWidget from '@/components/HeroQuoteWidget';
+import CarrierGrid from '@/components/CarrierGrid';
 import { SITE, SERVICES } from '@/lib/data';
 
 export const metadata = {
@@ -117,11 +118,11 @@ export default function HomePage() {
                 href: '/quote',
               },
               {
-                icon: '🛡️',
-                title: 'Claims Assistance',
-                desc: 'Need to file a claim? We walk you through every step with MPI or private insurers.',
-                linkText: 'Contact Office →',
-                href: '/contact',
+                icon: '🚨',
+                title: '24/7 Emergency Claims Center',
+                desc: 'Filing a claim? Access direct carrier phone hotlines and accident checklists.',
+                linkText: 'Claims Hotline Hub →',
+                href: '/claims',
               },
             ].map((u, i) => (
               <Link key={i} href={u.href} className="card" style={{ display: 'block', textDecoration: 'none', background: '#ffffff' }}>
@@ -270,6 +271,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── CARRIER PARTNER SHOWCASE GRID ── */}
+      <CarrierGrid />
 
       {/* ── LOCAL BRAND STORY & TEAM ── */}
       <section className="section" style={{ background: '#fafafa', borderTop: '1px solid #e4e4e7' }}>
