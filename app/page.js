@@ -118,11 +118,11 @@ export default function HomePage() {
                 href: '/quote',
               },
               {
-                icon: '🚨',
-                title: '24/7 Emergency Claims Center',
-                desc: 'Filing a claim? Access direct carrier phone hotlines and accident checklists.',
-                linkText: 'Claims Hotline Hub →',
-                href: '/claims',
+                icon: '📍',
+                title: 'Visit Our Brandon Office',
+                desc: 'Located at 1525 18th Street in Brandon, MB. Drop by or call our local broker team.',
+                linkText: 'Contact & Office Map →',
+                href: '/contact',
               },
             ].map((u, i) => (
               <Link key={i} href={u.href} className="card" style={{ display: 'block', textDecoration: 'none', background: '#ffffff' }}>
