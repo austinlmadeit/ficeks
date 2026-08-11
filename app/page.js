@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import HeroQuoteWidget from '@/components/HeroQuoteWidget';
-import CarrierGrid from '@/components/CarrierGrid';
+import CarrierCarousel from '@/components/CarrierCarousel';
 import { SITE, SERVICES } from '@/lib/data';
 
 export const metadata = {
@@ -98,43 +98,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── SANDBOX.CA UTILITY STRIP (Find Broker, Claim, Quote) ── */}
-      <section style={{ background: '#f4f4f5', borderBottom: '1px solid #e4e4e7', padding: '32px 0' }}>
-        <div className="container">
-          <div className="grid-3">
-            {[
-              {
-                icon: '🔍',
-                title: 'Find a Licensed Broker',
-                desc: 'Talk to Rod, Heather, Danon, or Sabrina Ficek at our Brandon office.',
-                linkText: 'Meet Our Team →',
-                href: '/about/our-team',
-              },
-              {
-                icon: '📋',
-                title: 'Get a Free Quote',
-                desc: 'Compare rates across top Canadian insurance providers in minutes.',
-                linkText: 'Start Quote Form →',
-                href: '/quote',
-              },
-              {
-                icon: '📍',
-                title: 'Visit Our Brandon Office',
-                desc: 'Located at 1525 18th Street in Brandon, MB. Drop by or call our local broker team.',
-                linkText: 'Contact & Office Map →',
-                href: '/contact',
-              },
-            ].map((u, i) => (
-              <Link key={i} href={u.href} className="card" style={{ display: 'block', textDecoration: 'none', background: '#ffffff' }}>
-                <div style={{ fontSize: '32px', marginBottom: '12px' }}>{u.icon}</div>
-                <h3 style={{ fontSize: '18px', fontWeight: 800, marginBottom: '6px', color: '#09090b' }}>{u.title}</h3>
-                <p style={{ fontSize: '14px', color: '#71717a', lineHeight: 1.6, marginBottom: '16px' }}>{u.desc}</p>
-                <span style={{ fontSize: '13px', color: '#dc2626', fontWeight: 800 }}>{u.linkText}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ── AUTO-SLIDING CARRIER LOGO CAROUSEL SLIDESHOW ── */}
+      <CarrierCarousel />
 
       {/* ── SANDBOX.CA CATEGORY MEGA HUB (Auto, Property, Commercial, Farm) ── */}
       <section className="section" style={{ background: '#ffffff' }}>
@@ -272,8 +237,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── CARRIER PARTNER SHOWCASE GRID ── */}
-      <CarrierGrid />
 
       {/* ── LOCAL BRAND STORY & TEAM ── */}
       <section className="section" style={{ background: '#fafafa', borderTop: '1px solid #e4e4e7' }}>
