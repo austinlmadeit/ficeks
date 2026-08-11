@@ -10,47 +10,49 @@ const SEVERITY_LABELS = {
   medium:   { label: '🟡 Medium',   color: '#eab308', bg: 'rgba(234,179,8,0.1)' },
 };
 
-const CHANGE_LOG = [
+export const DAILY_CHANGE_LOG = [
   {
-    version: 'v1.5',
+    day: 'Day 4',
     date: 'August 10, 2026',
-    title: 'R&D Features & Infrastructure Audit Tracker',
-    highlights: [
-      'Built 24/7 Emergency Claims Center (/claims) with Manitoba Autopac (MPI) collision checklist.',
-      'Built Interactive Risk Tools (/tools) featuring Home Contents Calculator and Commercial Gap Quiz.',
-      'Pushed 24/7 Claims Pill Badge to the far-left outer margin of header bar.',
+    title: 'Claims Center, Risk Calculators, Widescreen Marquee & Live Dev Tracker',
+    changes: [
+      'Built dedicated 24/7 Emergency Claims Center (/claims) with Manitoba Autopac (MPI) collision checklist.',
+      'Built Interactive Risk Tools (/tools) featuring Home Contents Replacement Calculator and Business Risk Gap Quiz.',
+      'Positioned 24/7 Emergency Claims Pill Badge on top-left outer margin of header bar.',
       'Updated Hero Headline to: "Let our Family Protect Your Family, Like Family."',
-      'Created hidden Dev Notes & Infrastructure Change Log (/dev-notes).',
+      'Replaced utility cards with Widescreen Auto-Sliding Carrier Partner Logo Carousel (340px slots).',
+      'Integrated live Dev Notes & Audit Tracker into top banner and main navigation.',
     ],
   },
   {
-    version: 'v1.4',
+    day: 'Day 3',
     date: 'August 9, 2026',
-    title: 'Manitoba Autopac (MPI) Extension Integration',
-    highlights: [
+    title: 'Manitoba Autopac (MPI) Routing & Coverage Breakdown',
+    changes: [
       'Resolved Next.js 16 dynamic route params handling in app/services/[slug]/page.js.',
       'Added rich Manitoba Autopac vs MPI Extension coverage breakdown for auto insurance.',
-      'Added 200 OK verification across all 22 static and dynamic routes.',
+      'Verified 200 OK status across all 22 static and dynamic site routes.',
     ],
   },
   {
-    version: 'v1.3',
+    day: 'Day 2',
     date: 'August 5, 2026',
-    title: 'Sandbox.ca Structural Redesign & Brand Alignment',
-    highlights: [
-      'Implemented Red (#dc2626), Obsidian Black (#09090b), and Crisp White design tokens.',
+    title: 'Sandbox.ca Design System & Interactive Quote Engine',
+    changes: [
+      'Implemented Sandbox.ca design tokens: Crimson Red (#dc2626), Obsidian Black (#09090b), Crisp White.',
       'Built Interactive Hero Quote Widget component.',
       'Rebuilt homepage with 4-column mega category hub (Auto, Property, Commercial, Farm).',
-      'Configured Vercel production deployments under austin.l@ficekinsurance.com.',
+      'Configured automated production Vercel deployment pipelines.',
     ],
   },
   {
-    version: 'v1.0',
+    day: 'Day 1',
     date: 'July 31, 2026',
-    title: 'Initial Next.js Migration & Ground-Up Setup',
-    highlights: [
-      'Migrated codebase from legacy static HTML/WP draft to Next.js App Router framework.',
-      'Configured Google Fonts (Outfit & Inter), JSON-LD schema, and automated SEO metadata.',
+    title: 'Initial Audit & Next.js Framework Architecture',
+    changes: [
+      'Conducted initial SEO & performance audit of ficekinsurance.com (identified 6 critical failures).',
+      'Initial ground-up Next.js App Router project setup with Google Fonts (Outfit & Inter).',
+      'Configured JSON-LD InsuranceAgency local business schema and SEO metadata.',
     ],
   },
 ];
@@ -64,13 +66,13 @@ const INFRASTRUCTURE_COMPARISON = [
 ];
 
 export default function DevNotesPage() {
-  const [tab, setTab] = useState('audit');
+  const [tab, setTab] = useState('changelog');
   const issues = SEO_ISSUES;
-  const fixedCount = issues.length; // All 6 issues resolved in redesign
+  const fixedCount = issues.length;
 
   return (
     <>
-      {/* Dev-only warning banner */}
+      {/* Dev warning banner */}
       <div style={{
         background: 'linear-gradient(90deg, #dc2626, #09090b)',
         color: '#ffffff',
@@ -81,7 +83,7 @@ export default function DevNotesPage() {
         letterSpacing: '1px',
         textTransform: 'uppercase',
       }}>
-        🔬 HIDDEN DEVELOPER & INFRASTRUCTURE TRACKER — INTERNAL USE ONLY
+        🔬 LIVE DAILY DEVELOPMENT LOG & INFRASTRUCTURE AUDIT TRACKER
       </div>
 
       <section style={{ padding: '60px 0' }}>
@@ -89,18 +91,18 @@ export default function DevNotesPage() {
           <div style={{ marginBottom: '32px' }}>
             <span className="section-tag">Internal Engineering Log</span>
             <h1 style={{ fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 900, marginBottom: '12px' }}>
-              Ficek Redesign Change Log & Audit Tracker
+              Ficek Redesign Daily Log & Audit Tracker
             </h1>
             <p style={{ color: '#71717a', maxWidth: '640px', lineHeight: 1.6 }}>
-              Reference log documenting all audit fixes, version releases, and Next.js vs. WordPress infrastructure comparisons.
+              Reference log documenting daily work sessions, audit fixes, and Next.js vs. WordPress infrastructure comparisons.
             </p>
           </div>
 
           {/* TABS */}
-          <div style={{ display: 'flex', gap: '12px', marginBottom: '36px', borderBottom: '2px solid #e4e4e7', paddingBottom: '16px' }}>
+          <div style={{ display: 'flex', gap: '12px', marginBottom: '36px', borderBottom: '2px solid #e4e4e7', paddingBottom: '16px', flexWrap: 'wrap' }}>
             {[
+              { id: 'changelog', label: '📅 Daily Work Sessions Log' },
               { id: 'audit', label: '✅ Audit Failure Tracker (6/6 Fixed)' },
-              { id: 'changelog', label: '📜 Version Change Log (v1.0 – v1.5)' },
               { id: 'boss', label: '📊 Next.js vs WordPress Pitch' },
             ].map((t) => (
               <button
@@ -122,7 +124,35 @@ export default function DevNotesPage() {
             ))}
           </div>
 
-          {/* TAB 1: AUDIT RESOLUTION TRACKER */}
+          {/* TAB 1: DAILY CHANGE LOG */}
+          {tab === 'changelog' && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '28px', maxWidth: '840px' }}>
+              {DAILY_CHANGE_LOG.map((log, idx) => (
+                <div key={idx} className="card card-red-top" style={{ background: '#fafafa', padding: '28px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px', borderBottom: '1px solid #e4e4e7', paddingBottom: '12px' }}>
+                    <div>
+                      <span style={{ fontSize: '12px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '1px', background: 'rgba(220,38,38,0.08)', padding: '3px 10px', borderRadius: '4px', marginRight: '10px' }}>
+                        {log.day}
+                      </span>
+                      <span style={{ fontSize: '18px', fontWeight: 900, color: '#09090b' }}>
+                        {log.title}
+                      </span>
+                    </div>
+                    <span style={{ fontSize: '13px', color: '#71717a', fontWeight: 800 }}>{log.date}</span>
+                  </div>
+                  <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '14px', color: '#09090b', marginLeft: '20px', marginTop: '12px' }}>
+                    {log.changes.map((c, i) => (
+                      <li key={i} style={{ lineHeight: 1.55 }}>
+                        ✔ {c}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* TAB 2: AUDIT RESOLUTION TRACKER */}
           {tab === 'audit' && (
             <div>
               <div className="card" style={{ maxWidth: '480px', marginBottom: '32px', borderLeft: '4px solid #16a34a' }}>
@@ -159,25 +189,6 @@ export default function DevNotesPage() {
                   );
                 })}
               </div>
-            </div>
-          )}
-
-          {/* TAB 2: VERSION CHANGE LOG */}
-          {tab === 'changelog' && (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', maxWidth: '800px' }}>
-              {CHANGE_LOG.map((log, idx) => (
-                <div key={idx} className="card card-red-top" style={{ background: '#fafafa' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-                    <span style={{ fontSize: '18px', fontWeight: 900, color: '#dc2626' }}>{log.version} — {log.title}</span>
-                    <span style={{ fontSize: '12px', color: '#71717a', fontWeight: 700 }}>{log.date}</span>
-                  </div>
-                  <ul style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '14px', color: '#09090b', marginLeft: '20px' }}>
-                    {log.highlights.map((h, i) => (
-                      <li key={i}>• {h}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
             </div>
           )}
 
