@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Outfit, Inter } from 'next/font/google';
 import './globals.css';
 import Nav from '@/components/Nav';
@@ -78,7 +79,7 @@ export default function RootLayout({ children }) {
       </head>
       <body style={{ fontFamily: 'var(--font-body, Inter, sans-serif)' }}>
         <div className="dev-banner">
-          🔴 FICEK BRAND REDESIGN · <a href="/dev-notes" style={{ textDecoration: 'underline', color: '#ef4444' }}>View Dev Notes & Audit Tracker</a>
+          🔴 FICEK BRAND REDESIGN · <Link href="/dev-notes" style={{ textDecoration: 'underline', color: '#ef4444', fontWeight: 800 }}>View Dev Notes & Audit Tracker</Link>
         </div>
         <Nav />
         <main>{children}</main>
