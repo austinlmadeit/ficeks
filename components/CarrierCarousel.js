@@ -11,11 +11,11 @@ export default function CarrierCarousel() {
       background: '#f4f4f5',
       borderTop: '1px solid #e4e4e7',
       borderBottom: '2px solid #09090b',
-      padding: '36px 0',
+      padding: '44px 0',
       overflow: 'hidden',
       position: 'relative',
     }}>
-      <div className="container" style={{ marginBottom: '20px', textAlign: 'center' }}>
+      <div className="container" style={{ marginBottom: '24px', textAlign: 'center' }}>
         <span style={{
           fontSize: '11px',
           fontWeight: 800,
@@ -23,21 +23,21 @@ export default function CarrierCarousel() {
           textTransform: 'uppercase',
           color: '#dc2626',
           background: 'rgba(220,38,38,0.08)',
-          padding: '4px 12px',
+          padding: '4px 14px',
           borderRadius: '4px',
         }}>
           Independent Broker Advantage
         </span>
-        <h2 style={{ fontSize: '20px', fontWeight: 900, color: '#09090b', marginTop: '6px' }}>
+        <h2 style={{ fontSize: '22px', fontWeight: 900, color: '#09090b', marginTop: '6px' }}>
           Our Insurance Carrier Partners
         </h2>
       </div>
 
-      {/* ── AUTO-SLIDING MARQUEE TRACK ── */}
+      {/* ── WIDE AUTO-SLIDING MARQUEE TRACK ── */}
       <div style={{
         display: 'flex',
         width: 'max-content',
-        animation: 'marquee 30s linear infinite',
+        animation: 'marquee 35s linear infinite',
       }}
       className="carousel-track"
       >
@@ -45,43 +45,43 @@ export default function CarrierCarousel() {
           <div
             key={`${carrier.id}-${idx}`}
             style={{
-              width: '240px',
-              height: '96px',
-              marginRight: '20px',
+              width: '340px',
+              height: '124px',
+              marginRight: '28px',
               background: '#ffffff',
               border: '2px solid #e4e4e7',
-              borderRadius: '8px',
+              borderRadius: '10px',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              justify: 'center',
-              padding: '12px',
-              boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)',
+              justifyContent: 'center',
+              padding: '16px 20px',
+              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.04)',
               transition: 'all 0.2s ease',
               cursor: 'pointer',
               flexShrink: 0,
             }}
             className="carousel-card"
           >
-            {/* Rectangular Logo Placeholder Box */}
+            {/* Widescreen Rectangular Logo Placeholder Box */}
             <div style={{
               width: '100%',
-              height: '42px',
-              border: '1px dashed #a1a1aa',
-              borderRadius: '4px',
+              height: '64px',
+              border: '1.5px dashed #a1a1aa',
+              borderRadius: '6px',
               background: '#fafafa',
               display: 'flex',
               alignItems: 'center',
-              justify: 'center',
-              fontSize: '11px',
+              justifyContent: 'center',
+              fontSize: '13px',
               fontWeight: 800,
-              color: '#71717a',
+              color: '#52525b',
               letterSpacing: '0.5px',
-              marginBottom: '6px',
+              marginBottom: '8px',
             }}>
-              📷 {carrier.name} Logo
+              📷 {carrier.name} Logo Placeholder
             </div>
-            <div style={{ fontSize: '11px', fontWeight: 700, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+            <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
               {carrier.badge}
             </div>
           </div>
@@ -99,8 +99,8 @@ export default function CarrierCarousel() {
         }
         .carousel-card:hover {
           border-color: #dc2626 !important;
-          transform: translateY(-2px);
-          box-shadow: 0 8px 20px rgba(220, 38, 38, 0.15) !important;
+          transform: translateY(-3px);
+          box-shadow: 0 10px 24px rgba(220, 38, 38, 0.18) !important;
         }
       `}</style>
     </section>
