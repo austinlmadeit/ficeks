@@ -140,19 +140,9 @@ export default function OurTeamPage() {
                   color: '#dc2626',
                   textTransform: 'uppercase',
                   letterSpacing: '0.5px',
-                  marginBottom: '12px',
                 }}>
                   {member.title}
                 </div>
-
-                <p style={{
-                  fontSize: '13px',
-                  color: '#71717a',
-                  lineHeight: 1.6,
-                  margin: 0,
-                }}>
-                  {member.bio}
-                </p>
               </div>
             ))}
           </div>

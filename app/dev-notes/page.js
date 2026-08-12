@@ -22,6 +22,7 @@ export const DAILY_CHANGE_LOG = [
       'Updated Customer Authorization form PDF link directly to live MPI portal (Customer-Authorization-EN.pdf).',
       'Built interactive Ficek Family Visual History Roadmap on /about starting from 1986 founding heritage.',
       'Updated team roster across /about and /about/our-team to feature all 12 real Brandon brokers and executives under "Meet the Ficek Team".',
+      'Refined team cards to show clean job titles only (removed specialization bios) and updated Austin Liske title to Commercial/Personal Lines Insurance Broker.',
       'Removed legacy placeholder history items and aligned timeline with authentic Brandon office locations (6th St, Shilo, 1st St, 1550A Richmond Ave).',
       'Pushed and deployed live production updates to Vercel (ficek-insurance-redesign.vercel.app).',
     ],

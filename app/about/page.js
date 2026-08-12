@@ -226,8 +226,7 @@ export default function AboutPage() {
                   {member.name.split(' ').map(n => n[0]).join('')}
                 </div>
                 <div style={{ fontWeight: 900, fontSize: '18px', marginBottom: '4px', color: '#09090b' }}>{member.name}</div>
-                <div style={{ fontSize: '13px', color: '#dc2626', fontWeight: 800, marginBottom: '12px' }}>{member.title}</div>
-                <p style={{ fontSize: '14px', color: '#71717a', lineHeight: 1.6 }}>{member.bio}</p>
+                <div style={{ fontSize: '13px', color: '#dc2626', fontWeight: 800 }}>{member.title}</div>
               </div>
             ))}
           </div>
