@@ -202,8 +202,8 @@ export default function AboutPage() {
       <section className="section" style={{ background: '#ffffff' }}>
         <div className="container">
           <div className="text-center" style={{ marginBottom: '48px' }}>
-            <span className="section-tag">Family Leadership</span>
-            <h2 className="section-title">Meet Rod, Heather, Danon & Sabrina</h2>
+            <span className="section-tag">Brandon Office Team</span>
+            <h2 className="section-title">Meet the Ficek Team</h2>
           </div>
 
           <div className="grid-4">

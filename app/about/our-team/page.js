@@ -87,7 +87,7 @@ export default function OurTeamPage() {
 
           <div className="text-center" style={{ marginBottom: '56px' }}>
             <span className="section-tag">Brandon Office Team</span>
-            <h2 className="section-title">Meet Our 12 Licensed Brokers & Executives</h2>
+            <h2 className="section-title">Meet the Ficek Team</h2>
           </div>
 
           <div className="grid-4" style={{ gap: '28px' }}>
