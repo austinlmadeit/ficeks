@@ -12,16 +12,18 @@ const SEVERITY_LABELS = {
 
 export const DAILY_CHANGE_LOG = [
   {
-    day: 'Day 5',
+    day: 'Day 5 (Today - Live)',
     date: 'August 12, 2026',
     title: 'Resources Dropdown, 18-Resource MPI Directory, History Roadmap & 12-Broker Roster',
     changes: [
       'Restructured header navigation: renamed Risk Tools to "Resources" with dropdown menu (/tools & /resources/mpi-forms).',
       'Built Official Manitoba Public Insurance (MPI) Forms Hub & Linear Scannable Directory with instant search filter bar.',
-      'Mapped & hyperlinked all 18 official Manitoba Public Insurance, Provincial Tax, and Federal RIV forms.',
+      'Mapped & hyperlinked all 18 official Manitoba Public Insurance, Provincial Tax (RST), and Federal RIV forms.',
       'Updated Customer Authorization form PDF link directly to live MPI portal (Customer-Authorization-EN.pdf).',
       'Built interactive Ficek Family Visual History Roadmap on /about starting from 1986 founding heritage.',
       'Updated team roster across /about and /about/our-team to feature all 12 real Brandon brokers and executives under "Meet the Ficek Team".',
+      'Removed legacy placeholder history items and aligned timeline with authentic Brandon office locations (6th St, Shilo, 1st St, 1550A Richmond Ave).',
+      'Pushed and deployed live production updates to Vercel (ficek-insurance-redesign.vercel.app).',
     ],
   },
   {
