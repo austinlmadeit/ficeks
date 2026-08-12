@@ -12,6 +12,19 @@ const SEVERITY_LABELS = {
 
 export const DAILY_CHANGE_LOG = [
   {
+    day: 'Day 5',
+    date: 'August 12, 2026',
+    title: 'Resources Dropdown, 18-Resource MPI Directory, History Roadmap & 12-Broker Roster',
+    changes: [
+      'Restructured header navigation: renamed Risk Tools to "Resources" with dropdown menu (/tools & /resources/mpi-forms).',
+      'Built Official Manitoba Public Insurance (MPI) Forms Hub & Linear Scannable Directory with instant search filter bar.',
+      'Mapped & hyperlinked all 18 official Manitoba Public Insurance, Provincial Tax, and Federal RIV forms.',
+      'Updated Customer Authorization form PDF link directly to live MPI portal (Customer-Authorization-EN.pdf).',
+      'Built interactive Ficek Family Visual History Roadmap on /about starting from 1986 founding heritage.',
+      'Updated team roster across /about and /about/our-team to feature all 12 real Brandon brokers and executives under "Meet the Ficek Team".',
+    ],
+  },
+  {
     day: 'Day 4',
     date: 'August 10, 2026',
     title: 'Claims Center, Risk Calculators, Widescreen Marquee & Live Dev Tracker',
