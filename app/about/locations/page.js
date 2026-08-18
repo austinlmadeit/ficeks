@@ -65,7 +65,7 @@ export default function LocationsPage() {
             lineHeight: 1.65,
             marginBottom: '32px',
           }}>
-            Serving Brandon and Westman families across 2 local offices — <strong>1439 1st Street</strong> (Main Headquarters) and <strong>1525 18th Street</strong>. Walk-ins welcome for Autopac and insurance consultations!
+            Serving Brandon and Westman families across 2 local offices — <strong>1439 1st Street</strong> (Main Office) and <strong>1525 18th Street</strong>. Walk-ins welcome for Autopac and insurance consultations!
           </p>
 
           <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
