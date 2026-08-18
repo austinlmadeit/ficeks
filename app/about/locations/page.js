@@ -1,66 +1,210 @@
-import { SITE } from '@/lib/data';
+import Link from 'next/link';
+import { SITE, OFFICES } from '@/lib/data';
 
 export const metadata = {
-  title: 'Location | Ficek Insurance Brandon MB',
-  description: `Visit Ficek Insurance at ${SITE.address.full}. Office hours Monday to Friday, 9am to 5pm. Call ${SITE.phone}.`,
+  title: 'Brandon MB Office Locations | Ficek Insurance',
+  description: 'Visit Ficek Insurance in Brandon, Manitoba — 1439 1st Street (Main Office HQ) and 1550A Richmond Avenue (Murray Chrysler Building). Walk-ins welcome for Autopac and insurance consultations.',
 };
 
 export default function LocationsPage() {
   return (
     <>
+      {/* ── HERO BANNER ── */}
       <section style={{
-        background: 'linear-gradient(135deg, var(--surface) 0%, var(--bg) 100%)',
-        borderBottom: '1px solid var(--border)',
-        padding: '140px 0 80px',
+        background: '#09090b',
+        color: '#ffffff',
+        paddingTop: '80px',
+        paddingBottom: '80px',
+        borderBottom: '4px solid #dc2626',
+        position: 'relative',
+        overflow: 'hidden',
       }}>
-        <div className="container">
-          <span className="section-label">Find Us</span>
-          <h1 style={{ fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 800, fontFamily: 'var(--font-heading)', letterSpacing: '-0.5px', marginBottom: '20px' }}>
-            Our Brandon Location
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          right: 0,
+          width: '500px',
+          height: '500px',
+          background: 'radial-gradient(circle, rgba(220,38,38,0.2) 0%, transparent 70%)',
+          pointerEvents: 'none',
+        }} />
+
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '6px 14px',
+            borderRadius: '20px',
+            background: '#dc2626',
+            color: '#ffffff',
+            fontSize: '12px',
+            fontWeight: 800,
+            letterSpacing: '1px',
+            textTransform: 'uppercase',
+            marginBottom: '20px',
+          }}>
+            📍 2 Convenient Brandon Locations
+          </div>
+
+          <h1 style={{
+            fontSize: 'clamp(36px, 5.5vw, 56px)',
+            fontWeight: 900,
+            color: '#ffffff',
+            lineHeight: 1.1,
+            marginBottom: '20px',
+            letterSpacing: '-0.02em',
+          }}>
+            Our Brandon Offices & Contact Info
           </h1>
-          <p style={{ fontSize: '18px', color: 'var(--muted)', maxWidth: '500px', lineHeight: 1.7 }}>
-            We're located in the heart of Brandon, Manitoba. Stop in and see us — no appointment needed.
+
+          <p style={{
+            fontSize: '20px',
+            color: '#a1a1aa',
+            maxWidth: '680px',
+            lineHeight: 1.65,
+            marginBottom: '32px',
+          }}>
+            Serving Brandon and Westman families across 2 local offices. Stop in for Autopac registration, driver licensing, home, farm, or commercial insurance — walk-ins welcome!
           </p>
+
+          <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
+            <a href={SITE.phoneHref} className="btn btn-red">
+              📞 Direct Broker Line: {SITE.phone}
+            </a>
+            <Link href="/quote" className="btn btn-outline-white">
+              📝 Request a Free Quote
+            </Link>
+          </div>
         </div>
       </section>
-      <section className="section">
+
+      {/* ── DUAL OFFICE LOCATIONS SHOWCASE ── */}
+      <section className="section" style={{ background: '#ffffff', paddingTop: '64px', paddingBottom: '64px' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px' }}>
-            <div>
-              <h2 style={{ fontSize: '28px', fontWeight: 700, fontFamily: 'var(--font-heading)', marginBottom: '32px' }}>Contact Information</h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-                {[
-                  { label: '📍 Address', content: SITE.address.full },
-                  { label: '📞 Phone', content: SITE.phone, href: SITE.phoneHref },
-                  { label: '✉️ Email', content: SITE.email, href: `mailto:${SITE.email}` },
-                  { label: '🕐 Hours', content: 'Monday – Friday: 9:00 AM – 5:00 PM\nSaturday & Sunday: Closed' },
-                ].map((item, i) => (
-                  <div key={i}>
-                    <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--muted)', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '6px' }}>{item.label}</div>
-                    {item.href ? (
-                      <a href={item.href} style={{ fontSize: '16px', fontWeight: 600, color: 'var(--accent2)' }}>{item.content}</a>
-                    ) : (
-                      <p style={{ fontSize: '15px', color: 'var(--text)', whiteSpace: 'pre-line', lineHeight: 1.65 }}>{item.content}</p>
-                    )}
+
+          <div className="text-center" style={{ marginBottom: '56px' }}>
+            <span className="section-tag">Brandon Offices</span>
+            <h2 className="section-title">Visit Us at Either Brandon Location</h2>
+            <p className="section-sub mx-auto">
+              Our 1st Street Headquarters and Richmond Avenue office are staffed by licensed Brandon insurance brokers.
+            </p>
+          </div>
+
+          {/* DUAL OFFICE CARDS GRID */}
+          <div className="grid-2" style={{ gap: '32px', marginBottom: '64px' }}>
+            {OFFICES.map((office) => (
+              <div key={office.id} className="card card-red-top" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', background: '#fafafa', padding: '32px' }}>
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
+                    <span style={{
+                      fontSize: '12px',
+                      fontWeight: 900,
+                      color: office.id === 'main' ? '#ffffff' : '#dc2626',
+                      background: office.id === 'main' ? '#dc2626' : 'rgba(220,38,38,0.1)',
+                      padding: '4px 12px',
+                      borderRadius: '4px',
+                      textTransform: 'uppercase',
+                    }}>
+                      {office.badge}
+                    </span>
+                    <span style={{ fontSize: '13px', fontWeight: 700, color: '#71717a' }}>
+                      📍 {office.crossStreet}
+                    </span>
                   </div>
-                ))}
+
+                  <h3 style={{ fontSize: '22px', fontWeight: 900, color: '#09090b', marginBottom: '12px' }}>
+                    {office.name}
+                  </h3>
+
+                  <p style={{ fontSize: '15px', color: '#71717a', lineHeight: 1.6, marginBottom: '24px' }}>
+                    {office.desc}
+                  </p>
+
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '28px', borderTop: '1px solid #e4e4e7', paddingTop: '20px' }}>
+                    <div>
+                      <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
+                        Street Address
+                      </div>
+                      <div style={{ fontSize: '16px', fontWeight: 800, color: '#09090b' }}>
+                        {office.full}
+                      </div>
+                    </div>
+
+                    <div>
+                      <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
+                        Phone Number
+                      </div>
+                      <a href={office.phoneHref} style={{ fontSize: '16px', fontWeight: 800, color: '#dc2626', textDecoration: 'none' }}>
+                        📞 {office.phone}
+                      </a>
+                    </div>
+
+                    <div>
+                      <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
+                        Office Hours
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#09090b' }}>
+                        ⏰ {office.hours}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                  <a
+                    href={office.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-red"
+                    style={{ flex: 1, textAlign: 'center', padding: '12px 18px', fontSize: '14px' }}
+                  >
+                    🗺️ Open Google Maps Directions ↗
+                  </a>
+                  <a
+                    href={office.phoneHref}
+                    className="btn btn-outline"
+                    style={{ padding: '12px 18px', fontSize: '14px' }}
+                  >
+                    📞 Call Office
+                  </a>
+                </div>
               </div>
+            ))}
+          </div>
+
+          {/* ── CLIENT AMENITIES & WALK-IN CHECKLIST ── */}
+          <div style={{
+            background: '#09090b',
+            color: '#ffffff',
+            padding: '40px',
+            borderRadius: '12px',
+            marginBottom: '64px',
+          }}>
+            <div className="text-center" style={{ marginBottom: '32px' }}>
+              <span style={{ fontSize: '12px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                Client Services & Amenities
+              </span>
+              <h3 style={{ fontSize: '28px', fontWeight: 900, color: '#ffffff', marginTop: '6px' }}>
+                What to Expect When You Visit Our Brandon Offices
+              </h3>
             </div>
-            <div className="card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '300px', textAlign: 'center' }}>
-              <div style={{ fontSize: '48px', marginBottom: '16px' }}>🗺️</div>
-              <p style={{ color: 'var(--muted)', marginBottom: '20px' }}>
-                {SITE.address.full}<br />Brandon, MB
-              </p>
-              <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SITE.address.full)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-accent"
-              >
-                Open in Google Maps
-              </a>
+
+            <div className="grid-3" style={{ gap: '24px' }}>
+              {[
+                { icon: '🚶‍♂️', title: 'Walk-Ins Always Welcome', desc: 'No appointment needed for MPI Autopac, driver licensing, or quick coverage questions.' },
+                { icon: '🅿️', title: 'Free Client Parking', desc: 'Dedicated free parking lots at both 1439 1st Street and 1550A Richmond Avenue.' },
+                { icon: '📄', title: 'Document & Form Assistance', desc: 'Our brokers help you complete vehicle Bill of Sales, Exclusive Use agreements, and RST tax refunds.' },
+              ].map((item, i) => (
+                <div key={i} style={{ background: '#18181b', padding: '24px', borderRadius: '8px', borderLeft: '4px solid #dc2626' }}>
+                  <div style={{ fontSize: '32px', marginBottom: '12px' }}>{item.icon}</div>
+                  <h4 style={{ fontSize: '17px', fontWeight: 800, color: '#ffffff', marginBottom: '6px' }}>{item.title}</h4>
+                  <p style={{ fontSize: '14px', color: '#a1a1aa', lineHeight: 1.5, margin: 0 }}>{item.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
+
         </div>
       </section>
     </>
