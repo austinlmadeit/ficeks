@@ -84,11 +84,8 @@ export default function LocationsPage() {
         <div className="container">
 
           <div className="text-center" style={{ marginBottom: '56px' }}>
-            <span className="section-tag">Interactive Brandon Location Maps</span>
-            <h2 className="section-title">Visit Us at 1439 1st St or 1525 18th St</h2>
-            <p className="section-sub mx-auto">
-              Both Brandon offices are staffed by licensed Manitoba insurance brokers ready to assist you.
-            </p>
+            <span className="section-tag">Brandon Offices</span>
+            <h2 className="section-title">Two Locations to Serve You Better</h2>
           </div>
 
           {/* DUAL OFFICE CARDS GRID WITH EMBEDDED GOOGLE MAPS */}
