@@ -67,7 +67,7 @@ export default function HomePage() {
                 marginBottom: '20px',
                 letterSpacing: '-0.02em',
               }}>
-                Let our Family Protect Your Family, Like Family.
+                We are Ficek Insurance & We love what we do.
               </h1>
 
               <p style={{
