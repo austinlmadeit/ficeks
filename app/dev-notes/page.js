@@ -25,6 +25,7 @@ export const DAILY_CHANGE_LOG = [
       'Embedded responsive interactive Google Maps iframes directly inside each office showcase card.',
       'Updated locations section heading to: "Two Locations to Serve You Better" and removed subtext per client direction.',
       'Updated 1525 18th Street office hours to: Monday – Friday 9:00 AM – 7:00 PM and Saturday 10:00 AM – 5:00 PM.',
+      'Updated 1525 18th Street direct phone number to: 204-728-1957.',
       'Pushed and deployed live production updates to Vercel (ficek-insurance-redesign.vercel.app).',
     ],
   },
