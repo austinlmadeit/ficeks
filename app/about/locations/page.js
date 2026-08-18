@@ -3,7 +3,7 @@ import { SITE, OFFICES } from '@/lib/data';
 
 export const metadata = {
   title: 'Brandon MB Office Locations | Ficek Insurance',
-  description: 'Visit Ficek Insurance in Brandon, Manitoba — 1439 1st Street (Main Office HQ) and 1550A Richmond Avenue (Murray Chrysler Building). Walk-ins welcome for Autopac and insurance consultations.',
+  description: 'Visit Ficek Insurance in Brandon, Manitoba — 1439 1st Street (Main Office HQ) and 1525 18th Street (18th St Branch). Interactive maps, hours, and contact info.',
 };
 
 export default function LocationsPage() {
@@ -44,7 +44,7 @@ export default function LocationsPage() {
             textTransform: 'uppercase',
             marginBottom: '20px',
           }}>
-            📍 2 Convenient Brandon Locations
+            📍 2 Brandon Offices (1st St & 18th St)
           </div>
 
           <h1 style={{
@@ -55,7 +55,7 @@ export default function LocationsPage() {
             marginBottom: '20px',
             letterSpacing: '-0.02em',
           }}>
-            Our Brandon Offices & Contact Info
+            Our Brandon Locations & Interactive Maps
           </h1>
 
           <p style={{
@@ -65,7 +65,7 @@ export default function LocationsPage() {
             lineHeight: 1.65,
             marginBottom: '32px',
           }}>
-            Serving Brandon and Westman families across 2 local offices. Stop in for Autopac registration, driver licensing, home, farm, or commercial insurance — walk-ins welcome!
+            Serving Brandon and Westman families across 2 local offices — <strong>1439 1st Street</strong> (Main Headquarters) and <strong>1525 18th Street</strong>. Walk-ins welcome for Autopac and insurance consultations!
           </p>
 
           <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
@@ -79,23 +79,24 @@ export default function LocationsPage() {
         </div>
       </section>
 
-      {/* ── DUAL OFFICE LOCATIONS SHOWCASE ── */}
+      {/* ── DUAL OFFICE SHOWCASE & EMBEDDED MAPS ── */}
       <section className="section" style={{ background: '#ffffff', paddingTop: '64px', paddingBottom: '64px' }}>
         <div className="container">
 
           <div className="text-center" style={{ marginBottom: '56px' }}>
-            <span className="section-tag">Brandon Offices</span>
-            <h2 className="section-title">Visit Us at Either Brandon Location</h2>
+            <span className="section-tag">Interactive Brandon Location Maps</span>
+            <h2 className="section-title">Visit Us at 1439 1st St or 1525 18th St</h2>
             <p className="section-sub mx-auto">
-              Our 1st Street Headquarters and Richmond Avenue office are staffed by licensed Brandon insurance brokers.
+              Both Brandon offices are staffed by licensed Manitoba insurance brokers ready to assist you.
             </p>
           </div>
 
-          {/* DUAL OFFICE CARDS GRID */}
-          <div className="grid-2" style={{ gap: '32px', marginBottom: '64px' }}>
+          {/* DUAL OFFICE CARDS GRID WITH EMBEDDED GOOGLE MAPS */}
+          <div className="grid-2" style={{ gap: '36px', marginBottom: '64px' }}>
             {OFFICES.map((office) => (
-              <div key={office.id} className="card card-red-top" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', background: '#fafafa', padding: '32px' }}>
+              <div key={office.id} className="card card-red-top" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', background: '#fafafa', padding: '28px', borderRadius: '12px' }}>
                 <div>
+                  {/* Badge & Cross Street */}
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
                     <span style={{
                       fontSize: '12px',
@@ -113,15 +114,38 @@ export default function LocationsPage() {
                     </span>
                   </div>
 
-                  <h3 style={{ fontSize: '22px', fontWeight: 900, color: '#09090b', marginBottom: '12px' }}>
+                  <h3 style={{ fontSize: '22px', fontWeight: 900, color: '#09090b', marginBottom: '10px' }}>
                     {office.name}
                   </h3>
 
-                  <p style={{ fontSize: '15px', color: '#71717a', lineHeight: 1.6, marginBottom: '24px' }}>
+                  <p style={{ fontSize: '15px', color: '#71717a', lineHeight: 1.6, marginBottom: '20px' }}>
                     {office.desc}
                   </p>
 
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '28px', borderTop: '1px solid #e4e4e7', paddingTop: '20px' }}>
+                  {/* EMBEDDED GOOGLE MAP IFRAME */}
+                  <div style={{
+                    position: 'relative',
+                    width: '100%',
+                    height: '240px',
+                    borderRadius: '8px',
+                    overflow: 'hidden',
+                    marginBottom: '20px',
+                    border: '2px solid #e4e4e7',
+                  }}>
+                    <iframe
+                      title={office.name}
+                      src={office.embedUrl}
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  </div>
+
+                  {/* Address, Phone & Hours Info */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '24px', borderTop: '1px solid #e4e4e7', paddingTop: '16px' }}>
                     <div>
                       <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
                         Street Address
@@ -159,7 +183,7 @@ export default function LocationsPage() {
                     className="btn btn-red"
                     style={{ flex: 1, textAlign: 'center', padding: '12px 18px', fontSize: '14px' }}
                   >
-                    🗺️ Open Google Maps Directions ↗
+                    🗺️ Open Full Google Maps ↗
                   </a>
                   <a
                     href={office.phoneHref}
@@ -179,7 +203,6 @@ export default function LocationsPage() {
             color: '#ffffff',
             padding: '40px',
             borderRadius: '12px',
-            marginBottom: '64px',
           }}>
             <div className="text-center" style={{ marginBottom: '32px' }}>
               <span style={{ fontSize: '12px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '1px' }}>
@@ -193,7 +216,7 @@ export default function LocationsPage() {
             <div className="grid-3" style={{ gap: '24px' }}>
               {[
                 { icon: '🚶‍♂️', title: 'Walk-Ins Always Welcome', desc: 'No appointment needed for MPI Autopac, driver licensing, or quick coverage questions.' },
-                { icon: '🅿️', title: 'Free Client Parking', desc: 'Dedicated free parking lots at both 1439 1st Street and 1550A Richmond Avenue.' },
+                { icon: '🅿️', title: 'Free Client Parking', desc: 'Dedicated free parking lots at both 1439 1st Street and 1525 18th Street.' },
                 { icon: '📄', title: 'Document & Form Assistance', desc: 'Our brokers help you complete vehicle Bill of Sales, Exclusive Use agreements, and RST tax refunds.' },
               ].map((item, i) => (
                 <div key={i} style={{ background: '#18181b', padding: '24px', borderRadius: '8px', borderLeft: '4px solid #dc2626' }}>
