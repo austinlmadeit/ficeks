@@ -13,7 +13,7 @@ const SEVERITY_LABELS = {
 export const DAILY_CHANGE_LOG = [
   {
     day: 'Day 5 (Today - Live)',
-    date: 'August 12, 2026',
+    date: 'August 18, 2026',
     title: 'Visual History Roadmap, 12-Broker Team Roster & Security Analysis',
     changes: [
       'Built interactive Ficek Family Visual History Roadmap on /about starting from 1986 founding heritage.',
