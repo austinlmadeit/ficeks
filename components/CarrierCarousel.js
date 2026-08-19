@@ -37,7 +37,7 @@ export default function CarrierCarousel() {
       <div style={{
         display: 'flex',
         width: 'max-content',
-        animation: 'marquee 35s linear infinite',
+        animation: 'marquee 65s linear infinite',
       }}
       className="carousel-track"
       >

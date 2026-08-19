@@ -28,6 +28,7 @@ export const DAILY_CHANGE_LOG = [
       'Updated 1525 18th Street direct phone number to: 204-728-1957.',
       'Updated homepage hero headline to: "We are Ficek Insurance & We love what we do."',
       'Updated homepage Carrier Partner Carousel with all 18 official carriers & MGAs and removed category labels per client request.',
+      'Slowed down homepage Carrier Partner Carousel marquee animation speed for smoother, more elegant scrolling.',
       'Pushed and deployed live production updates to Vercel (ficek-insurance-redesign.vercel.app).',
     ],
   },
