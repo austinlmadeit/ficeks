@@ -93,7 +93,7 @@ export default function CarrierCarousel() {
               textTransform: 'uppercase',
               letterSpacing: '0.8px',
             }}>
-              {carrier.badge} • {carrier.category}
+              {carrier.badge}
             </div>
           </div>
         ))}
