@@ -32,6 +32,7 @@ export const DAILY_CHANGE_LOG = [
       'Fixed carousel hover pause CSS bug so that mouse hover over any card or marquee area immediately freezes the scrolling track in place.',
       'Hyperlinked each of the 18 carrier cards with their official website URL (Red River Mutual, Sandbox, SGI Canada, Optimum, Milnco, Trans Canada, Premier, ABEX, Aurora, Beacon, CHES, Chutter, Totten, ODIS, PAL, Risk-Can, Strategic, Western Surety).',
       'Configured carrier card layout so each company name is rendered in red text below a widescreen logo placeholder box.',
+      'Configured Cache-Control: no-store, no-cache HTTP headers in next.config.mjs for /dev-notes to guarantee browsers and Vercel CDN bypass stale disk caches and load live updates automatically.',
       'Pushed and deployed live production updates to Vercel (ficek-insurance-redesign.vercel.app).',
     ],
   },
