@@ -70,28 +70,30 @@ export default function CarrierCarousel() {
             }}
             className="carousel-card"
           >
-            {/* Widescreen Carrier Logo Placeholder Box */}
+            {/* Widescreen Carrier Logo Image Box */}
             <div style={{
               width: '100%',
-              height: '64px',
-              border: '1.5px dashed #a1a1aa',
+              height: '68px',
               borderRadius: '6px',
-              background: '#fafafa',
+              background: '#ffffff',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              padding: '0 12px',
+              padding: '6px 14px',
               textAlign: 'center',
               marginBottom: '10px',
+              border: '1px solid #e4e4e7',
             }}>
-              <span style={{
-                fontSize: '13px',
-                fontWeight: 700,
-                color: '#71717a',
-                letterSpacing: '0.5px',
-              }}>
-                📷 Logo Placeholder
-              </span>
+              <img
+                src={carrier.logo}
+                alt={carrier.name}
+                style={{
+                  maxHeight: '52px',
+                  maxWidth: '100%',
+                  objectFit: 'contain',
+                  display: 'block',
+                }}
+              />
             </div>
             {/* Company Name in Red Text */}
             <div style={{

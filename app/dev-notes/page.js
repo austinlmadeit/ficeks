@@ -12,7 +12,18 @@ const SEVERITY_LABELS = {
 
 export const DAILY_CHANGE_LOG = [
   {
-    day: 'Day 5 (Today - Live)',
+    day: 'Day 6 (Today - Live)',
+    date: 'August 19, 2026',
+    title: '18 Carrier Partner Logos Integration & High-Res Image Optimization',
+    changes: [
+      'Processed and integrated all 18 authentic insurance carrier & MGA partner logo graphics into public/images/carriers/.',
+      'Plugged high-res logo images into Carrier Partner Carousel cards (Red River Mutual, Sandbox, SGI Canada, Optimum, Milnco, Trans Canada, Premier, ABEX, Aurora, Beacon, CHES, Chutter, Totten, ODIS, PAL, Risk-Can, Strategic, Western Surety).',
+      'Configured crisp object-fit image styling and red company title links for all 18 partners.',
+      'Pushed and deployed live production updates to Vercel (ficek-insurance-redesign.vercel.app).',
+    ],
+  },
+  {
+    day: 'Day 5',
     date: 'August 18, 2026',
     title: 'Visual History Roadmap, 12-Broker Team Roster & Security Analysis',
     changes: [
