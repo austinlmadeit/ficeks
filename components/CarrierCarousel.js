@@ -45,8 +45,11 @@ export default function CarrierCarousel() {
         className="carousel-track"
       >
         {CARRIER_SLOTS.map((carrier, idx) => (
-          <div
+          <a
             key={`${carrier.id}-${idx}`}
+            href={carrier.url}
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               width: '320px',
               height: '136px',
@@ -63,6 +66,7 @@ export default function CarrierCarousel() {
               transition: 'all 0.2s ease',
               cursor: 'pointer',
               flexShrink: 0,
+              textDecoration: 'none',
             }}
             className="carousel-card"
           >
@@ -96,9 +100,9 @@ export default function CarrierCarousel() {
               textTransform: 'uppercase',
               letterSpacing: '0.8px',
             }}>
-              {carrier.badge}
+              {carrier.badge} ↗
             </div>
-          </div>
+          </a>
         ))}
       </div>
 
