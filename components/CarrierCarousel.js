@@ -7,14 +7,17 @@ const CARRIER_SLOTS = [...CARRIERS, ...CARRIERS];
 
 export default function CarrierCarousel() {
   return (
-    <section style={{
-      background: '#f4f4f5',
-      borderTop: '1px solid #e4e4e7',
-      borderBottom: '2px solid #09090b',
-      padding: '44px 0',
-      overflow: 'hidden',
-      position: 'relative',
-    }}>
+    <section
+      className="carousel-container"
+      style={{
+        background: '#f4f4f5',
+        borderTop: '1px solid #e4e4e7',
+        borderBottom: '2px solid #09090b',
+        padding: '44px 0',
+        overflow: 'hidden',
+        position: 'relative',
+      }}
+    >
       <div className="container" style={{ marginBottom: '24px', textAlign: 'center' }}>
         <span style={{
           fontSize: '11px',
@@ -34,12 +37,12 @@ export default function CarrierCarousel() {
       </div>
 
       {/* ── WIDE AUTO-SLIDING MARQUEE TRACK ── */}
-      <div style={{
-        display: 'flex',
-        width: 'max-content',
-        animation: 'marquee 65s linear infinite',
-      }}
-      className="carousel-track"
+      <div
+        style={{
+          display: 'flex',
+          width: 'max-content',
+        }}
+        className="carousel-track"
       >
         {CARRIER_SLOTS.map((carrier, idx) => (
           <div
@@ -99,14 +102,18 @@ export default function CarrierCarousel() {
         ))}
       </div>
 
-      {/* ── KEYFRAME ANIMATION & HOVER PAUSE STYLES ── */}
+      {/* ── KEYFRAME ANIMATION & GUARANTEED HOVER PAUSE STYLES ── */}
       <style jsx>{`
         @keyframes marquee {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
         }
-        .carousel-track:hover {
-          animation-play-state: paused;
+        .carousel-track {
+          animation: marquee 65s linear infinite !important;
+        }
+        .carousel-track:hover,
+        .carousel-container:hover .carousel-track {
+          animation-play-state: paused !important;
         }
         .carousel-card:hover {
           border-color: #dc2626 !important;

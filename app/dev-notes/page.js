@@ -29,6 +29,7 @@ export const DAILY_CHANGE_LOG = [
       'Updated homepage hero headline to: "We are Ficek Insurance & We love what we do."',
       'Updated homepage Carrier Partner Carousel with all 18 official carriers & MGAs and removed category labels per client request.',
       'Slowed down homepage Carrier Partner Carousel marquee animation speed for smoother, more elegant scrolling.',
+      'Fixed carousel hover pause CSS bug so that mouse hover over any card or marquee area immediately freezes the scrolling track in place.',
       'Pushed and deployed live production updates to Vercel (ficek-insurance-redesign.vercel.app).',
     ],
   },
