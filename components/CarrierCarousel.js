@@ -45,9 +45,9 @@ export default function CarrierCarousel() {
           <div
             key={`${carrier.id}-${idx}`}
             style={{
-              width: '340px',
-              height: '124px',
-              marginRight: '28px',
+              width: '320px',
+              height: '136px',
+              marginRight: '24px',
               background: '#ffffff',
               border: '2px solid #e4e4e7',
               borderRadius: '10px',
@@ -63,26 +63,37 @@ export default function CarrierCarousel() {
             }}
             className="carousel-card"
           >
-            {/* Widescreen Rectangular Logo Placeholder Box */}
+            {/* Widescreen Carrier Partner Box */}
             <div style={{
               width: '100%',
-              height: '64px',
+              height: '68px',
               border: '1.5px dashed #a1a1aa',
               borderRadius: '6px',
               background: '#fafafa',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              fontSize: '13px',
-              fontWeight: 800,
-              color: '#52525b',
-              letterSpacing: '0.5px',
-              marginBottom: '8px',
+              padding: '0 12px',
+              textAlign: 'center',
+              marginBottom: '10px',
             }}>
-              📷 {carrier.name} Logo Placeholder
+              <span style={{
+                fontSize: '14px',
+                fontWeight: 900,
+                color: '#09090b',
+                lineHeight: 1.25,
+              }}>
+                {carrier.name}
+              </span>
             </div>
-            <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
-              {carrier.badge}
+            <div style={{
+              fontSize: '11px',
+              fontWeight: 800,
+              color: '#dc2626',
+              textTransform: 'uppercase',
+              letterSpacing: '0.8px',
+            }}>
+              {carrier.badge} • {carrier.category}
             </div>
           </div>
         ))}

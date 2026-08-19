@@ -27,6 +27,7 @@ export const DAILY_CHANGE_LOG = [
       'Updated 1525 18th Street office hours to: Monday – Friday 9:00 AM – 7:00 PM and Saturday 10:00 AM – 5:00 PM.',
       'Updated 1525 18th Street direct phone number to: 204-728-1957.',
       'Updated homepage hero headline to: "We are Ficek Insurance & We love what we do."',
+      'Updated homepage Carrier Partner Carousel with all 18 official carriers & MGAs (Red River Mutual, Sandbox, SGI Canada, Optimum, Milnco, Trans Canada, Premier, ABEX, Aurora, Beacon, CHES, Chutter, Totten, ODIS, PAL, Risk-Can, Strategic, Western Surety).',
       'Pushed and deployed live production updates to Vercel (ficek-insurance-redesign.vercel.app).',
     ],
   },
