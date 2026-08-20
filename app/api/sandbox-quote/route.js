@@ -145,7 +145,7 @@ export async function POST(request) {
 
     const { data, error } = await resend.emails.send({
       from: 'Ficek Insurance Website <onboarding@resend.dev>',
-      to: ['info@ficekinsurance.com'],
+      to: ['austin.l@ficekinsurance.com'],
       replyTo: email,
       subject: `🚗 New Sandbox Auto Quote Request — ${firstName} ${lastName} (${vehicleYear || ''} ${vehicleMake || ''} ${vehicleModel || ''})`,
       html: emailHtml,
