@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import HeroQuoteWidget from '@/components/HeroQuoteWidget';
 import CarrierCarousel from '@/components/CarrierCarousel';
-import { SITE, SERVICES } from '@/lib/data';
+import { SITE, SERVICES, TESTIMONIALS } from '@/lib/data';
 
 export const metadata = {
   title: 'Ficek Insurance | Home, Auto, Farm & Business Insurance Brandon MB',
@@ -281,6 +281,71 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 5-STAR CLIENT REVIEWS & COMMUNITY TRUST ── */}
+      <section className="section" style={{ background: '#ffffff', borderTop: '1px solid #e4e4e7' }}>
+        <div className="container">
+          <div className="text-center" style={{ marginBottom: '48px' }}>
+            <span className="section-tag">Client Testimonials</span>
+            <h2 className="section-title">Trusted by Brandon & Westman Families</h2>
+            <p className="section-sub mx-auto">
+              Read how our independent brokers protect local drivers, homeowners, agricultural producers, and businesses.
+            </p>
+          </div>
+
+          <div className="grid-4" style={{ gap: '24px' }}>
+            {TESTIMONIALS.map((review, i) => (
+              <div
+                key={i}
+                className="card card-red-top"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  background: '#fafafa',
+                  borderRadius: '12px',
+                  padding: '28px 22px',
+                  border: '1px solid #e4e4e7',
+                }}
+              >
+                <div>
+                  <div style={{ color: '#eab308', fontSize: '18px', marginBottom: '12px' }}>
+                    {'★'.repeat(review.rating)}
+                  </div>
+                  <div style={{
+                    fontSize: '11px',
+                    fontWeight: 800,
+                    color: '#dc2626',
+                    letterSpacing: '1px',
+                    textTransform: 'uppercase',
+                    marginBottom: '10px',
+                  }}>
+                    {review.service}
+                  </div>
+                  <p style={{
+                    fontSize: '14px',
+                    color: '#3f3f46',
+                    lineHeight: 1.65,
+                    fontStyle: 'italic',
+                    marginBottom: '20px',
+                  }}>
+                    "{review.quote}"
+                  </p>
+                </div>
+
+                <div style={{ paddingTop: '16px', borderTop: '1px solid #e4e4e7' }}>
+                  <div style={{ fontWeight: 800, fontSize: '15px', color: '#09090b' }}>
+                    {review.author}
+                  </div>
+                  <div style={{ fontSize: '12px', color: '#71717a' }}>
+                    📍 {review.location}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

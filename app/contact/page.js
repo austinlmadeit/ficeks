@@ -1,80 +1,134 @@
-import { SITE } from '@/lib/data';
+import { SITE, OFFICES } from '@/lib/data';
+import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
   title: 'Contact Us | Ficek Insurance Brandon MB',
-  description: `Contact Ficek Insurance in Brandon, Manitoba. Phone: ${SITE.phone} | Email: ${SITE.email} | ${SITE.address.full}`,
+  description: `Contact licensed independent brokers at Ficek Insurance in Brandon, Manitoba. 1439 1st Street (204-571-1777) and 1525 18th Street (204-728-1957). Email: ${SITE.email}.`,
 };
 
 export default function ContactPage() {
   return (
     <>
       <section style={{
-        background: 'linear-gradient(135deg, var(--surface) 0%, var(--bg) 100%)',
-        borderBottom: '1px solid var(--border)',
-        padding: '140px 0 80px',
+        background: '#09090b',
+        color: '#ffffff',
+        borderBottom: '4px solid #dc2626',
+        padding: '80px 0 60px',
+        position: 'relative',
+        overflow: 'hidden',
       }}>
-        <div className="container">
-          <span className="section-label">Get in Touch</span>
-          <h1 style={{ fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 800, fontFamily: 'var(--font-heading)', letterSpacing: '-0.5px', marginBottom: '20px' }}>
-            We're here to help
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          right: 0,
+          width: '500px',
+          height: '500px',
+          background: 'radial-gradient(circle, rgba(220,38,38,0.2) 0%, transparent 70%)',
+          pointerEvents: 'none',
+        }} />
+
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '6px 14px',
+            borderRadius: '20px',
+            background: '#dc2626',
+            color: '#ffffff',
+            fontSize: '12px',
+            fontWeight: 800,
+            letterSpacing: '1px',
+            textTransform: 'uppercase',
+            marginBottom: '16px',
+          }}>
+            📍 Two Brandon Locations to Serve You Better
+          </div>
+          <h1 style={{ fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 900, letterSpacing: '-0.02em', marginBottom: '16px', color: '#ffffff' }}>
+            We're Here to Help You
           </h1>
-          <p style={{ fontSize: '18px', color: 'var(--muted)', maxWidth: '500px', lineHeight: 1.7 }}>
-            Have a question? Want to review your current coverage? Reach out — we're always happy to talk.
+          <p style={{ fontSize: '18px', color: '#a1a1aa', maxWidth: '600px', lineHeight: 1.65 }}>
+            Have a question about your coverage, need an Autopac renewal, or want to make a policy change? Contact our local Brandon broker team today.
           </p>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" style={{ background: '#f8fafc', padding: '64px 0' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px' }}>
-            {/* Contact form */}
-            <form action={`mailto:${SITE.email}`} method="post" encType="text/plain">
-              <h2 style={{ fontSize: '24px', fontWeight: 700, fontFamily: 'var(--font-heading)', marginBottom: '28px' }}>Send us a message</h2>
-              <div className="form-group">
-                <label className="form-label" htmlFor="c-name">Name *</label>
-                <input id="c-name" name="name" type="text" className="form-input" placeholder="Your name" required />
-              </div>
-              <div className="form-group">
-                <label className="form-label" htmlFor="c-phone">Phone</label>
-                <input id="c-phone" name="phone" type="tel" className="form-input" placeholder="204-xxx-xxxx" />
-              </div>
-              <div className="form-group">
-                <label className="form-label" htmlFor="c-email">Email *</label>
-                <input id="c-email" name="email" type="email" className="form-input" placeholder="your@email.com" required />
-              </div>
-              <div className="form-group">
-                <label className="form-label" htmlFor="c-message">Message *</label>
-                <textarea id="c-message" name="message" className="form-textarea" placeholder="How can we help?" required style={{ minHeight: '160px' }} />
-              </div>
-              <button type="submit" className="btn btn-cta" style={{ width: '100%', justifyContent: 'center', padding: '16px' }}>
-                Send Message →
-              </button>
-            </form>
+          <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '56px', alignItems: 'start' }}>
+            {/* Interactive Contact Form Component */}
+            <div style={{
+              background: '#ffffff',
+              borderRadius: '16px',
+              padding: '36px',
+              border: '1px solid #e4e4e7',
+              boxShadow: '0 12px 36px rgba(0,0,0,0.06)',
+            }}>
+              <h2 style={{ fontSize: '24px', fontWeight: 900, color: '#09090b', marginBottom: '8px' }}>
+                Send Us a Direct Message
+              </h2>
+              <p style={{ fontSize: '14px', color: '#71717a', marginBottom: '24px' }}>
+                Fill out the form below and one of our licensed insurance brokers will follow up promptly.
+              </p>
+              <ContactForm />
+            </div>
 
-            {/* Contact info */}
-            <div>
-              <h2 style={{ fontSize: '24px', fontWeight: 700, fontFamily: 'var(--font-heading)', marginBottom: '28px' }}>Contact details</h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                {[
-                  { emoji: '📍', label: 'Address', content: SITE.address.full },
-                  { emoji: '📞', label: 'Phone', content: SITE.phone, href: SITE.phoneHref, highlight: true },
-                  { emoji: '✉️', label: 'Email', content: SITE.email, href: `mailto:${SITE.email}` },
-                  { emoji: '🕐', label: 'Office Hours', content: 'Monday – Friday: 9:00 AM – 5:00 PM\nSaturday & Sunday: Closed' },
-                ].map((item, i) => (
-                  <div key={i} className="card" style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-                    <span style={{ fontSize: '24px', flexShrink: 0 }}>{item.emoji}</span>
+            {/* Brandon Office Contact Details */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <h2 style={{ fontSize: '24px', fontWeight: 900, color: '#09090b', marginBottom: '4px' }}>
+                Office Information
+              </h2>
+
+              {OFFICES.map((office) => (
+                <div key={office.id} className="card card-red-top" style={{ background: '#ffffff', padding: '24px', borderRadius: '12px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 900, color: '#dc2626', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                      {office.badge}
+                    </span>
+                    <span style={{ fontSize: '12px', fontWeight: 700, color: '#71717a' }}>
+                      {office.crossStreet}
+                    </span>
+                  </div>
+                  <h3 style={{ fontSize: '18px', fontWeight: 900, color: '#09090b', marginBottom: '6px' }}>
+                    {office.name}
+                  </h3>
+                  <p style={{ fontSize: '14px', color: '#71717a', marginBottom: '12px' }}>
+                    {office.full}
+                  </p>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '14px' }}>
                     <div>
-                      <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '4px' }}>{item.label}</div>
-                      {item.href ? (
-                        <a href={item.href} style={{ fontWeight: 600, color: item.highlight ? 'var(--accent2)' : 'var(--text)', fontSize: item.highlight ? '18px' : '15px' }}>
-                          {item.content}
-                        </a>
-                      ) : (
-                        <p style={{ color: 'var(--text)', fontSize: '15px', lineHeight: 1.65, whiteSpace: 'pre-line' }}>{item.content}</p>
-                      )}
+                      <strong>Phone: </strong>
+                      <a href={office.phoneHref} style={{ color: '#dc2626', fontWeight: 800, textDecoration: 'none' }}>
+                        {office.phone}
+                      </a>
+                    </div>
+                    <div>
+                      <strong>Hours: </strong>
+                      <span style={{ color: '#09090b' }}>{office.hours}</span>
                     </div>
                   </div>
-                ))}
+                </div>
+              ))}
+
+              {/* General Inquiries Card */}
+              <div className="card" style={{ background: '#ffffff', padding: '24px', borderRadius: '12px' }}>
+                <h3 style={{ fontSize: '18px', fontWeight: 900, color: '#09090b', marginBottom: '10px' }}>
+                  Direct Email & Claims
+                </h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '14px' }}>
+                  <div>
+                    <strong>General Email: </strong>
+                    <a href={`mailto:${SITE.email}`} style={{ color: '#dc2626', fontWeight: 700, textDecoration: 'none' }}>
+                      {SITE.email}
+                    </a>
+                  </div>
+                  <div>
+                    <strong>Emergency Claims: </strong>
+                    <a href="/claims" style={{ color: '#dc2626', fontWeight: 700, textDecoration: 'none' }}>
+                      Visit 24/7 Claims Hub →
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

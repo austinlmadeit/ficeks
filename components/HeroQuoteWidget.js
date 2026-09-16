@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { SITE } from '@/lib/data';
 
 const QUOTE_TYPES = [
   { id: 'auto', label: 'Auto (MPI)', icon: '🚗', badge: 'Autopac' },
@@ -17,11 +18,46 @@ export default function HeroQuoteWidget() {
   const [postalCode, setPostalCode] = useState('');
   const [fullName, setFullName] = useState('');
   const [phone, setPhone] = useState('');
+  const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (!fullName.trim() || !phone.trim()) {
+      setError('Please provide your name and phone number.');
+      return;
+    }
+
+    setLoading(true);
+    setError('');
+
+    try {
+      const typeObj = QUOTE_TYPES.find(t => t.id === selectedType);
+      const res = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          formType: 'quick_quote',
+          name: fullName,
+          phone: phone,
+          postalCode: postalCode || 'Brandon, MB',
+          insuranceType: typeObj ? typeObj.label : 'General Insurance',
+          message: `Homepage quick lead widget. Selected coverage: ${typeObj?.label || 'General'}. Postal Code: ${postalCode || 'Not specified'}`,
+        }),
+      });
+
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setError('Unable to send quote request. Please call our brokers directly.');
+      }
+    } catch {
+      setError('Unable to send quote request. Please call our brokers directly.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -36,7 +72,7 @@ export default function HeroQuoteWidget() {
       <div style={{
         display: 'flex',
         alignItems: 'center',
-        justify: 'space-between',
+        justifyContent: 'space-between',
         marginBottom: '20px',
         paddingBottom: '16px',
         borderBottom: '2px solid #f4f4f5',
@@ -115,6 +151,7 @@ export default function HeroQuoteWidget() {
                   borderRadius: '6px',
                   fontSize: '14px',
                   outline: 'none',
+                  boxSizing: 'border-box',
                 }}
               />
             </div>
@@ -135,6 +172,7 @@ export default function HeroQuoteWidget() {
                   borderRadius: '6px',
                   fontSize: '14px',
                   outline: 'none',
+                  boxSizing: 'border-box',
                 }}
               />
             </div>
@@ -156,16 +194,31 @@ export default function HeroQuoteWidget() {
                 borderRadius: '6px',
                 fontSize: '14px',
                 outline: 'none',
+                boxSizing: 'border-box',
               }}
             />
           </div>
 
+          {error && (
+            <div style={{ color: '#dc2626', fontSize: '13px', fontWeight: 700, marginBottom: '14px', background: '#fef2f2', padding: '8px 12px', borderRadius: '6px' }}>
+              ⚠️ {error}
+            </div>
+          )}
+
           <button
             type="submit"
+            disabled={loading}
             className="btn btn-red"
-            style={{ width: '100%', padding: '16px', fontSize: '16px', borderRadius: '8px' }}
+            style={{
+              width: '100%',
+              padding: '16px',
+              fontSize: '16px',
+              borderRadius: '8px',
+              background: loading ? '#9ca3af' : '#dc2626',
+              cursor: loading ? 'not-allowed' : 'pointer',
+            }}
           >
-            Calculate & Request Quote →
+            {loading ? 'Submitting...' : 'Calculate & Request Quote →'}
           </button>
           <p style={{ fontSize: '12px', color: '#71717a', textAlign: 'center', marginTop: '10px' }}>
             🔒 Free & no obligation. A Ficek broker responds in 1 business day.
@@ -177,12 +230,17 @@ export default function HeroQuoteWidget() {
           <h4 style={{ fontSize: '22px', fontWeight: 800, color: '#09090b', marginBottom: '8px' }}>
             Quote Request Received!
           </h4>
-          <p style={{ fontSize: '15px', color: '#71717a', marginBottom: '24px' }}>
+          <p style={{ fontSize: '15px', color: '#71717a', marginBottom: '24px', lineHeight: 1.6 }}>
             Thanks {fullName}! One of our licensed Brandon brokers will review options for your <strong>{QUOTE_TYPES.find(t => t.id === selectedType)?.label}</strong> coverage and contact you at <strong>{phone}</strong>.
           </p>
           <button
             type="button"
-            onClick={() => setSubmitted(false)}
+            onClick={() => {
+              setSubmitted(false);
+              setFullName('');
+              setPhone('');
+              setPostalCode('');
+            }}
             className="btn btn-outline"
             style={{ width: '100%' }}
           >

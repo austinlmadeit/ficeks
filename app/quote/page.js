@@ -1,88 +1,142 @@
-import { SITE, SERVICES } from '@/lib/data';
+import { SITE } from '@/lib/data';
+import QuoteWizard from '@/components/QuoteWizard';
 
 export const metadata = {
   title: 'Request a Free Insurance Quote | Ficek Insurance Brandon MB',
-  description: 'Request a free insurance quote from Ficek Insurance in Brandon, Manitoba. Home, auto, commercial, farm and more. Independent brokers — we shop the market for you.',
+  description: 'Request a free insurance quote from licensed independent brokers at Ficek Insurance in Brandon, Manitoba. Compare rates across 18+ insurance carriers for Auto MPI, Home, Commercial, Farm, and Life.',
 };
 
 export default function QuotePage() {
   return (
     <>
       <section style={{
-        background: 'linear-gradient(135deg, var(--surface) 0%, var(--bg) 100%)',
-        borderBottom: '1px solid var(--border)',
-        padding: '140px 0 80px',
+        background: '#09090b',
+        color: '#ffffff',
+        borderBottom: '4px solid #dc2626',
+        padding: '80px 0 60px',
+        position: 'relative',
+        overflow: 'hidden',
       }}>
-        <div className="container">
-          <span className="section-label">Free Consultation</span>
-          <h1 style={{ fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 800, fontFamily: 'var(--font-heading)', letterSpacing: '-0.5px', marginBottom: '20px' }}>
-            Get your free quote
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          right: 0,
+          width: '500px',
+          height: '500px',
+          background: 'radial-gradient(circle, rgba(220,38,38,0.2) 0%, transparent 70%)',
+          pointerEvents: 'none',
+        }} />
+
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '6px 14px',
+            borderRadius: '20px',
+            background: '#dc2626',
+            color: '#ffffff',
+            fontSize: '12px',
+            fontWeight: 800,
+            letterSpacing: '1px',
+            textTransform: 'uppercase',
+            marginBottom: '16px',
+          }}>
+            ⚡ Free Independent Broker Comparison
+          </div>
+          <h1 style={{ fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 900, letterSpacing: '-0.02em', marginBottom: '16px', color: '#ffffff' }}>
+            Request Your Free Insurance Quote
           </h1>
-          <p style={{ fontSize: '18px', color: 'var(--muted)', maxWidth: '500px', lineHeight: 1.7 }}>
-            Fill out the form and a Ficek Insurance broker will contact you within one business day. No pressure, no obligation.
+          <p style={{ fontSize: '18px', color: '#a1a1aa', maxWidth: '640px', lineHeight: 1.65 }}>
+            Because Ficek Insurance is independent, we don't work for one insurance company — we shop multiple top Canadian carriers to find you the strongest coverage at the most competitive price.
           </p>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" style={{ background: '#f8fafc', padding: '64px 0' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'start' }}>
-            {/* Form */}
-            <form action={`mailto:${SITE.email}`} method="post" encType="text/plain">
-              <div className="form-group">
-                <label className="form-label" htmlFor="name">Full Name *</label>
-                <input id="name" name="name" type="text" className="form-input" placeholder="Your full name" required />
-              </div>
-              <div className="form-group">
-                <label className="form-label" htmlFor="phone">Phone Number *</label>
-                <input id="phone" name="phone" type="tel" className="form-input" placeholder="204-xxx-xxxx" required />
-              </div>
-              <div className="form-group">
-                <label className="form-label" htmlFor="email">Email Address</label>
-                <input id="email" name="email" type="email" className="form-input" placeholder="your@email.com" />
-              </div>
-              <div className="form-group">
-                <label className="form-label" htmlFor="type">Insurance Type *</label>
-                <select id="type" name="type" className="form-select" required>
-                  <option value="">Select insurance type...</option>
-                  {SERVICES.map((s) => (
-                    <option key={s.slug} value={s.title}>{s.title}</option>
-                  ))}
-                  <option value="Multiple">Multiple types</option>
-                  <option value="Not sure">Not sure — I need advice</option>
-                </select>
-              </div>
-              <div className="form-group">
-                <label className="form-label" htmlFor="message">Tell us more (optional)</label>
-                <textarea id="message" name="message" className="form-textarea" placeholder="Any details about your insurance needs..." />
-              </div>
-              <button type="submit" className="btn btn-cta" style={{ width: '100%', justifyContent: 'center', padding: '16px' }}>
-                Send Quote Request →
-              </button>
-              <p style={{ fontSize: '12px', color: 'var(--muted)', marginTop: '12px', textAlign: 'center' }}>
-                We respond within 1 business day. No spam, ever.
-              </p>
-            </form>
-
-            {/* Info */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 0.8fr', gap: '48px', alignItems: 'start' }}>
+            {/* Interactive 3-Step Wizard */}
             <div>
-              <div className="card" style={{ marginBottom: '24px' }}>
-                <h3 style={{ fontWeight: 700, fontFamily: 'var(--font-heading)', marginBottom: '16px' }}>Prefer to call?</h3>
-                <a href={SITE.phoneHref} style={{ fontSize: '22px', fontWeight: 800, color: 'var(--accent2)', fontFamily: 'var(--font-heading)' }}>{SITE.phone}</a>
-                <p style={{ fontSize: '14px', color: 'var(--muted)', marginTop: '8px' }}>Monday – Friday, 9am to 5pm</p>
+              <QuoteWizard />
+            </div>
+
+            {/* Support Info & Broker Highlights */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+              {/* Phone Card */}
+              <div className="card card-red-top" style={{ background: '#ffffff', padding: '28px', borderRadius: '12px' }}>
+                <span style={{ fontSize: '11px', fontWeight: 900, color: '#dc2626', letterSpacing: '1px', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
+                  Need Immediate Help?
+                </span>
+                <h3 style={{ fontSize: '20px', fontWeight: 900, marginBottom: '12px', color: '#09090b' }}>
+                  Talk to a Brandon Broker Now
+                </h3>
+                <p style={{ fontSize: '14px', color: '#71717a', lineHeight: 1.6, marginBottom: '20px' }}>
+                  Have an urgent Autopac renewal or commercial policy deadline? Give our team a direct call during business hours.
+                </p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <a
+                    href={SITE.phoneHref}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '10px',
+                      background: '#fef2f2',
+                      border: '1.5px solid #fecaca',
+                      borderRadius: '8px',
+                      padding: '12px 16px',
+                      color: '#dc2626',
+                      fontWeight: 800,
+                      fontSize: '16px',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    <span>📞</span>
+                    <span>1st Street (Main): 204-571-1777</span>
+                  </a>
+                  <a
+                    href="tel:+12047281957"
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '10px',
+                      background: '#f4f4f5',
+                      border: '1.5px solid #e4e4e7',
+                      borderRadius: '8px',
+                      padding: '12px 16px',
+                      color: '#09090b',
+                      fontWeight: 800,
+                      fontSize: '15px',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    <span>📍</span>
+                    <span>18th Street Office: 204-728-1957</span>
+                  </a>
+                </div>
               </div>
-              <div className="card">
-                <h3 style={{ fontWeight: 700, fontFamily: 'var(--font-heading)', marginBottom: '16px' }}>Why quote with us?</h3>
-                <ul className="coverage-list">
+
+              {/* The Ficek Independent Advantage */}
+              <div className="card" style={{ background: '#ffffff', padding: '28px', borderRadius: '12px' }}>
+                <h3 style={{ fontSize: '18px', fontWeight: 900, marginBottom: '16px', color: '#09090b' }}>
+                  Why Request a Quote with Ficek?
+                </h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                   {[
-                    'We compare multiple insurers — not just one',
-                    'Independent advice — no sales pressure',
-                    'Local Brandon expertise since 1946',
-                    'Claims support when you need it most',
-                  ].map((item, i) => (
-                    <li key={i} className="coverage-item">{item}</li>
+                    { title: '18+ Canadian Carriers', desc: 'We represent Sandbox Mutual, Red River Mutual, SGI Canada, and leading MGAs.' },
+                    { title: 'Local Brandon Family Business', desc: 'Serving Westman drivers, homeowners, and businesses with authentic local roots since 1986.' },
+                    { title: 'Claims Advocacy', desc: 'When you have a claim, our brokers guide you through the process and fight on your behalf.' },
+                    { title: 'Zero Obligation or Pressure', desc: 'Our quotes are free and designed to educate you on real coverage differences.' },
+                  ].map((item, idx) => (
+                    <div key={idx} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
+                      <span style={{ color: '#dc2626', fontWeight: 900, fontSize: '15px' }}>✓</span>
+                      <div>
+                        <strong style={{ fontSize: '14px', color: '#09090b', display: 'block' }}>{item.title}</strong>
+                        <span style={{ fontSize: '13px', color: '#71717a', lineHeight: 1.4 }}>{item.desc}</span>
+                      </div>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             </div>
           </div>
