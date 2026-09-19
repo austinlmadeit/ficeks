@@ -31,16 +31,12 @@ export default async function ServicePage({ params }) {
 
   const comparisonRows = [
     { feature: 'Third-Party Liability Limits', mpi: '$500,000 Basic (MPI top-up max $5M)', sandbox: '$1,000,000 / $2,000,000 / $5,000,000', sandboxWins: true },
-    { feature: 'Collision / Upset Deductibles', mpi: '$750 Standard ($1,000 starting 2026)', sandbox: 'Flexible buy-downs: $100, $200, $350, $500, $750, $1,000', sandboxWins: true },
-    { feature: 'Collision With an Animal', mpi: 'Subject to full collision deductible', sandbox: '🏆 $0 Deductible (Free coverage on all deductible tiers)', sandboxWins: true },
-    { feature: 'Comprehensive Deductibles', mpi: 'Subject to basic deductible', sandbox: '$50, $100, $200, $350, $500, $750, or $1,000', sandboxWins: true },
-    { feature: 'Glass Repairs & Rock Chips', mpi: 'Subject to deductible', sandbox: '🏆 $0 Deductible (Free on all tiers up to $750)', sandboxWins: true },
-    { feature: 'Vandalism & Paint-Less Dent Repair', mpi: 'Subject to full deductible', sandbox: '🏆 $0 Deductible on $50, $100, $200 & $350 tiers', sandboxWins: true },
-    { feature: 'Theft of Entire Vehicle, Fire & Lightning', mpi: 'Subject to deductible', sandbox: '🏆 $0 Deductible across ALL tiers ($50–$1,000)', sandboxWins: true },
-    { feature: 'Leased / New Vehicle Replacement Cost', mpi: 'Limited to 24 months', sandbox: '48-Month Replacement Cost (Owned & Leased vehicles)', sandboxWins: true },
-    { feature: 'SEF 27 (Rental Vehicle Physical Damage)', mpi: 'Separate add-on with restricted limits', sandbox: '🏆 Included Automatically (when Liability, Coll & Comp purchased)', sandboxWins: true },
-    { feature: 'Lay Up Endorsement', mpi: 'Requires manual policy suspension / fee', sandbox: '🏆 Included at No Extra Cost (year-round licensed vehicles)', sandboxWins: true },
-    { feature: 'Excess Vehicle Value Coverage', mpi: 'Strict maximum allowable claim limits', sandbox: 'Coverage for commercial trucks & vehicles valued over $70,000', sandboxWins: true },
+    { feature: 'Collision Deductible Options', mpi: '$750 Standard ($1,000 starting 2026)', sandbox: '$100, $200, $350, $500, $750, or $1,000', sandboxWins: true },
+    { feature: 'Comprehensive Deductible Options', mpi: 'Subject to basic deductible', sandbox: '$50, $100, $200, $350, $500, $750, or $1,000', sandboxWins: true },
+    { feature: 'Leased / New Vehicle Replacement Cost', mpi: 'Limited to 24 months', sandbox: '48-Month Replacement Cost (Owned & Leased)', sandboxWins: true },
+    { feature: 'SEF 27 (Rental Car Insurance)', mpi: 'Separate add-on with restricted limits', sandbox: 'Included when Liability, Coll & Comp are purchased', sandboxWins: true },
+    { feature: 'Lay Up Endorsement', mpi: 'Manual policy suspension / fee', sandbox: 'Included at no additional cost (year-round licensed vehicles)', sandboxWins: true },
+    { feature: 'Excess Vehicle Value Coverage', mpi: 'Strict claim maximums', sandbox: 'Vehicles valued higher than $70,000 & Commercial trucks', sandboxWins: true },
     { feature: 'Mandatory Manitoba Coverage', mpi: '✓ Required by law (Basic Autopac)', sandbox: 'Seamlessly layered on top of MPI by Ficek', sandboxWins: false },
   ];
 
@@ -182,12 +178,12 @@ export default async function ServicePage({ params }) {
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                   {[
-                    { icon: '🦌', text: '$0 Animal Collision Deductible (All tiers)' },
-                    { icon: '🪟', text: '$0 Rock Chip & Glass Repair Deductible' },
-                    { icon: '🚗', text: '48-Month Replacement Cost (Owned & Leased)' },
-                    { icon: '✈️', text: 'SEF 27 Rental Car Insurance Automatically Included' },
-                    { icon: '🛡️', text: '$0 Deductible for Total Theft, Fire & Lightning' },
-                    { icon: '📋', text: 'Liability Options: $1M, $2M, and $5M' },
+                    { icon: '🛡️', text: 'Collision Deductibles: $100, $200, $350, $500, $750, $1,000' },
+                    { icon: '🚗', text: 'Comprehensive Deductibles: $50, $100, $200, $350, $500, $750, $1,000' },
+                    { icon: '📋', text: 'Third-Party Liability: $1,000,000 / $2,000,000 / $5,000,000' },
+                    { icon: '✨', text: '48-Month Replacement Cost (Owned & Leased)' },
+                    { icon: '✈️', text: 'SEF 27 Rental Car Insurance Included' },
+                    { icon: '🅿️', text: 'Lay Up Endorsement Included at No Additional Cost' },
                   ].map(({ icon, text }) => (
                     <div key={text} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                       <span style={{ fontSize: '20px', flexShrink: 0 }}>{icon}</span>

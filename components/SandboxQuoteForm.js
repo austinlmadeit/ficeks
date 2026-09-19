@@ -3,8 +3,8 @@
 import { useState } from 'react';
 
 const COVERAGE_OPTIONS = [
-  '$0 Collision With an Animal Deductible',
-  '$0 Glass Repair & Free Rock Chip Repair',
+  'Collision Deductible Buy-Down ($100, $200, $350, $500)',
+  'Comprehensive Deductible ($50, $100, $200, $350, $500)',
   '48-Month Leased/New Vehicle Replacement Cost',
   'SEF 27 Rental Car Insurance (Included)',
   'Lay Up Endorsement (Included at no cost)',
