@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { SITE, SERVICES } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import SandboxQuoteForm from '@/components/SandboxQuoteForm';
@@ -104,14 +105,38 @@ export default async function ServicePage({ params }) {
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '15px' }}>
                 <thead>
                   <tr>
-                    <th style={{ padding: '14px 20px', textAlign: 'left', background: '#f4f4f5', borderBottom: '2px solid #e4e4e7', fontWeight: 800, color: '#09090b', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                    <th style={{ padding: '16px 20px', textAlign: 'left', background: '#f4f4f5', borderBottom: '2px solid #e4e4e7', fontWeight: 800, color: '#09090b', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                       Coverage Area
                     </th>
-                    <th style={{ padding: '14px 20px', textAlign: 'center', background: '#f4f4f5', borderBottom: '2px solid #e4e4e7', fontWeight: 800, color: '#71717a', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                      Basic MPI Autopac
+                    <th style={{ padding: '16px 20px', textAlign: 'center', background: '#f4f4f5', borderBottom: '2px solid #e4e4e7' }}>
+                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                        <div style={{ position: 'relative', width: '120px', height: '36px' }}>
+                          <Image
+                            src="/images/carriers/autopac.jpg"
+                            alt="Basic MPI Autopac"
+                            fill
+                            style={{ objectFit: 'contain' }}
+                          />
+                        </div>
+                        <span style={{ fontWeight: 800, color: '#71717a', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                          Basic MPI Autopac
+                        </span>
+                      </div>
                     </th>
-                    <th style={{ padding: '14px 20px', textAlign: 'center', background: '#fef2f2', borderBottom: '2px solid #dc2626', fontWeight: 800, color: '#dc2626', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                      Sandbox Mutual Extension
+                    <th style={{ padding: '16px 20px', textAlign: 'center', background: '#fef2f2', borderBottom: '2px solid #dc2626' }}>
+                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                        <div style={{ position: 'relative', width: '38px', height: '38px' }}>
+                          <Image
+                            src="/images/carriers/smi 2.0.webp"
+                            alt="Sandbox Mutual Insurance"
+                            fill
+                            style={{ objectFit: 'contain' }}
+                          />
+                        </div>
+                        <span style={{ fontWeight: 800, color: '#dc2626', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                          Sandbox Mutual Extension
+                        </span>
+                      </div>
                     </th>
                   </tr>
                 </thead>
