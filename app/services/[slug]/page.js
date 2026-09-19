@@ -152,7 +152,7 @@ export default async function ServicePage({ params }) {
 
             <div style={{ marginTop: '24px', padding: '16px 20px', background: '#fef2f2', borderRadius: '10px', border: '1px solid #fecaca', display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
               <p style={{ fontSize: '14px', color: '#09090b', lineHeight: 1.7, margin: 0 }}>
-                <strong>Important:</strong> Sandbox Mutual Private Auto Extension works <em>alongside</em> your mandatory MPI Autopac — it does not replace it. Ficek Insurance brokers handle both your MPI registration and your Sandbox extension in one visit at our Brandon offices at <strong>1439 1st Street</strong> or <strong>1525 18th Street</strong>.
+                <strong>Important:</strong> Sandbox Mutual Private Auto Extension works <em>alongside</em> your mandatory MPI Autopac and does not replace it. Ficek Insurance brokers handle both your MPI registration and your Sandbox extension in one visit at our Brandon offices at <strong>1439 1st Street</strong> or <strong>1525 18th Street</strong>.
               </p>
             </div>
           </div>
