@@ -3,12 +3,13 @@
 import { useState } from 'react';
 
 const COVERAGE_OPTIONS = [
-  '$0 Glass Deductible / Free Rock Chip Repair',
-  'Loss of Use / Rental Car Protection',
-  'New Vehicle Price Replacement (up to 60 months)',
-  'Family Multi-Vehicle Discount Bundling',
-  'Extended US & Out-of-Province Travel Coverage',
-  'Commercial / Fleet Vehicle Coverage',
+  '$0 Collision With an Animal Deductible',
+  '$0 Glass Repair & Free Rock Chip Repair',
+  '48-Month Leased/New Vehicle Replacement Cost',
+  'SEF 27 Rental Car Insurance (Included)',
+  'Lay Up Endorsement (Included at no cost)',
+  'Loss of Use Occurrence Protection',
+  'Excess Value Coverage (Vehicles > $70k / Commercial)',
 ];
 
 const STEPS = ['Contact Info', 'Vehicle Details', 'Coverage Preferences'];
@@ -295,7 +296,7 @@ export default function SandboxQuoteForm() {
             <div style={fieldStyle}>
               <label style={labelStyle}>Preferred Liability Limit *</label>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
-                {['$2 Million', '$5 Million', '$10 Million'].map((opt) => (
+                {['$1 Million', '$2 Million', '$5 Million'].map((opt) => (
                   <button
                     key={opt}
                     type="button"
