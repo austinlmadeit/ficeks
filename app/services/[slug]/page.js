@@ -60,29 +60,60 @@ export default async function ServicePage({ params }) {
           pointerEvents: 'none',
         }} />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <Link href="/services" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#ef4444', fontSize: '14px', fontWeight: 700, marginBottom: '20px' }}>
+          <Link href="/services" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#ef4444', fontSize: '14px', fontWeight: 700, marginBottom: '24px' }}>
             ← All Insurance Categories
           </Link>
-          <div style={{ fontSize: '48px', marginBottom: '16px' }}>{service.icon}</div>
-          <h1 style={{ fontSize: 'clamp(36px, 5.5vw, 56px)', fontWeight: 900, color: '#ffffff', lineHeight: 1.1, marginBottom: '20px', letterSpacing: '-0.02em' }}>
-            {service.title}
-          </h1>
-          <p style={{ fontSize: '20px', color: '#a1a1aa', maxWidth: '640px', lineHeight: 1.65, marginBottom: '32px' }}>
-            {service.summary}
-          </p>
-          <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-            {isAuto ? (
-              <a href="#sandbox-quote" className="btn btn-red" style={{ fontSize: '16px', padding: '16px 32px' }}>
-                Get My Sandbox Mutual Quote →
-              </a>
-            ) : (
-              <Link href="/quote" className="btn btn-red" style={{ fontSize: '16px', padding: '16px 32px' }}>
-                Request a Free Quote for {service.title} →
-              </Link>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '40px', flexWrap: 'wrap' }}>
+            <div style={{ maxWidth: '640px' }}>
+              {!isAuto && <div style={{ fontSize: '48px', marginBottom: '16px' }}>{service.icon}</div>}
+              <h1 style={{ fontSize: 'clamp(36px, 5.5vw, 56px)', fontWeight: 900, color: '#ffffff', lineHeight: 1.1, marginBottom: '20px', letterSpacing: '-0.02em' }}>
+                {service.title}
+              </h1>
+              <p style={{ fontSize: '20px', color: '#a1a1aa', maxWidth: '640px', lineHeight: 1.65, marginBottom: '32px' }}>
+                {service.summary}
+              </p>
+              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                {isAuto ? (
+                  <a href="#sandbox-quote" className="btn btn-red" style={{ fontSize: '16px', padding: '16px 32px' }}>
+                    Get My Sandbox Mutual Quote →
+                  </a>
+                ) : (
+                  <Link href="/quote" className="btn btn-red" style={{ fontSize: '16px', padding: '16px 32px' }}>
+                    Request a Free Quote for {service.title} →
+                  </Link>
+                )}
+                <a href={SITE.phoneHref} className="btn btn-outline-white" style={{ fontSize: '16px', padding: '16px 32px' }}>
+                  Call {SITE.phone}
+                </a>
+              </div>
+            </div>
+            {isAuto && (
+              <div style={{
+                background: '#ffffff',
+                padding: '24px 32px',
+                borderRadius: '16px',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.35)',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                border: '1px solid rgba(255,255,255,0.1)',
+                minWidth: '220px',
+              }}>
+                <div style={{ position: 'relative', width: '200px', height: '80px' }}>
+                  <Image
+                    src="/images/carriers/autopac.jpg"
+                    alt="MPI Autopac Licensed Broker"
+                    fill
+                    priority
+                    style={{ objectFit: 'contain' }}
+                  />
+                </div>
+                <span style={{ fontSize: '12px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.8px', marginTop: '10px' }}>
+                  Authorized MPI Agent
+                </span>
+              </div>
             )}
-            <a href={SITE.phoneHref} className="btn btn-outline-white" style={{ fontSize: '16px', padding: '16px 32px' }}>
-              Call {SITE.phone}
-            </a>
           </div>
         </div>
       </section>
