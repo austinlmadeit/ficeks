@@ -99,12 +99,12 @@ export default function AboutPage() {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {[
-                { icon: '⚖️', title: 'Unbiased Representation', desc: 'No insurance company quotas. We represent your best financial interest.' },
-                { icon: '🔍', title: 'Multi-Market Shopping', desc: 'We compare coverage options across leading Canadian insurance markets.' },
-                { icon: '🤝', title: 'Local Claims Advocacy', desc: 'Direct, personal guidance when you need to file a claim.' },
+                { title: 'Unbiased Representation', desc: 'No insurance company quotas. We represent your best financial interest.' },
+                { title: 'Multi-Market Shopping', desc: 'We compare coverage options across leading Canadian insurance markets.' },
+                { title: 'Local Claims Advocacy', desc: 'Direct, personal guidance when you need to file a claim.' },
               ].map((item, i) => (
                 <div key={i} className="card card-red-top" style={{ display: 'flex', gap: '16px', alignItems: 'flex-start', background: '#fafafa' }}>
-                  <span style={{ fontSize: '32px' }}>{item.icon}</span>
+                  <span style={{ fontSize: '24px', color: '#dc2626', lineHeight: 1 }}>•</span>
                   <div>
                     <div style={{ fontWeight: 800, fontSize: '17px', color: '#09090b', marginBottom: '4px' }}>{item.title}</div>
                     <div style={{ fontSize: '14px', color: '#71717a', lineHeight: 1.5 }}>{item.desc}</div>
