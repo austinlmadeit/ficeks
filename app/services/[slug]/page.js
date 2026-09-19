@@ -174,7 +174,7 @@ export default async function ServicePage({ params }) {
                 <span style={{ display: 'inline-block', background: '#dc2626', color: '#fff', fontWeight: 800, fontSize: '11px', letterSpacing: '1px', textTransform: 'uppercase', padding: '5px 12px', borderRadius: '4px', marginBottom: '20px' }}>
                   Free Quote — No Obligation
                 </span>
-                <h2 style={{ fontSize: '36px', fontWeight: 900, lineHeight: 1.15, marginBottom: '18px' }}>
+                <h2 style={{ fontSize: '36px', fontWeight: 900, lineHeight: 1.15, marginBottom: '18px', color: '#ffffff' }}>
                   Get Your Sandbox Mutual Auto Quote from a Real Brandon Broker
                 </h2>
                 <p style={{ fontSize: '16px', color: '#a1a1aa', lineHeight: 1.75, marginBottom: '28px' }}>
