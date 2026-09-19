@@ -35,8 +35,6 @@ export default async function ServicePage({ params }) {
     { feature: 'Glass / Rock Chip Repair', mpi: 'Subject to full deductible', sandbox: '$0 Glass Deductible / Free Chip Repair', sandboxWins: true },
     { feature: 'Loss of Use / Rental Vehicle', mpi: 'Basic daily limits ($40–$68/day)', sandbox: 'Higher daily limits ($100+/day) + worldwide rental', sandboxWins: true },
     { feature: 'New Vehicle Price Replacement', mpi: 'Limited to 24 months', sandbox: 'Extended 24 to 60-month replacement cost', sandboxWins: true },
-    { feature: 'US & Out-of-Province Driving', mpi: 'Basic liability only ($500k)', sandbox: 'Comprehensive liability & legal defense across US/Canada', sandboxWins: true },
-    { feature: 'Home + Auto Multi-Policy Discount', mpi: 'Not available (MPI standalone)', sandbox: 'Substantial multi-vehicle & home bundle discounts', sandboxWins: true },
     { feature: 'Mandatory Manitoba Coverage', mpi: '✓ Required by law (Basic Autopac)', sandbox: 'Seamlessly layered on top of MPI by Ficek', sandboxWins: false },
   ];
 
