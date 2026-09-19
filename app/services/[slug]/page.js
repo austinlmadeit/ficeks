@@ -103,96 +103,61 @@ export default async function ServicePage({ params }) {
               </p>
             </div>
 
-            {/* 3-Column Layout: Left Autopac Logo | Comparison Table | Right SMI Logo */}
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'minmax(140px, 180px) 1fr minmax(140px, 180px)',
-              gap: '28px',
-              alignItems: 'center',
-            }}>
-              {/* Left Flank: Autopac Logo */}
-              <div style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: '24px 16px',
-                background: '#fafafa',
-                borderRadius: '16px',
-                border: '1px solid #e4e4e7',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
-              }}>
-                <div style={{ position: 'relative', width: '130px', height: '65px' }}>
-                  <Image
-                    src="/images/carriers/autopac.jpg"
-                    alt="Basic MPI Autopac"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                  />
-                </div>
-                <span style={{ fontSize: '11px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.6px', marginTop: '10px', textAlign: 'center' }}>
-                  Basic Autopac
-                </span>
-              </div>
-
-              {/* Center: Comparison Table */}
-              <div style={{ overflowX: 'auto', width: '100%' }}>
-                <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '15px' }}>
-                  <thead>
-                    <tr>
-                      <th style={{ padding: '14px 18px', textAlign: 'left', background: '#f4f4f5', borderBottom: '2px solid #e4e4e7', fontWeight: 800, color: '#09090b', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                        Coverage Area
-                      </th>
-                      <th style={{ padding: '14px 18px', textAlign: 'center', background: '#f4f4f5', borderBottom: '2px solid #e4e4e7', fontWeight: 800, color: '#71717a', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                        Basic MPI Autopac
-                      </th>
-                      <th style={{ padding: '14px 18px', textAlign: 'center', background: '#fef2f2', borderBottom: '2px solid #dc2626', fontWeight: 800, color: '#dc2626', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                        Sandbox Mutual Extension
-                      </th>
+            {/* Comparison Table with logos in header */}
+            <div style={{ overflowX: 'auto', width: '100%' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '15px' }}>
+                <thead>
+                  <tr>
+                    <th style={{ padding: '12px 18px', background: '#f4f4f5', borderBottom: '1px solid #e4e4e7' }}></th>
+                    <th style={{ padding: '12px 18px', textAlign: 'center', background: '#f4f4f5', borderBottom: '1px solid #e4e4e7', verticalAlign: 'bottom' }}>
+                      <div style={{ position: 'relative', width: '100px', height: '40px', margin: '0 auto' }}>
+                        <Image
+                          src="/images/carriers/autopac.jpg"
+                          alt="Autopac"
+                          fill
+                          style={{ objectFit: 'contain' }}
+                        />
+                      </div>
+                    </th>
+                    <th style={{ padding: '12px 18px', textAlign: 'center', background: '#fef2f2', borderBottom: '1px solid #fecaca', verticalAlign: 'bottom' }}>
+                      <div style={{ position: 'relative', width: '44px', height: '44px', margin: '0 auto' }}>
+                        <Image
+                          src="/images/carriers/smi 2.0.webp"
+                          alt="Sandbox Mutual Insurance"
+                          fill
+                          style={{ objectFit: 'contain' }}
+                        />
+                      </div>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th style={{ padding: '14px 18px', textAlign: 'left', background: '#f4f4f5', borderBottom: '2px solid #e4e4e7', fontWeight: 800, color: '#09090b', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                      Coverage Area
+                    </th>
+                    <th style={{ padding: '14px 18px', textAlign: 'center', background: '#f4f4f5', borderBottom: '2px solid #e4e4e7', fontWeight: 800, color: '#71717a', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                      Basic MPI Autopac
+                    </th>
+                    <th style={{ padding: '14px 18px', textAlign: 'center', background: '#fef2f2', borderBottom: '2px solid #dc2626', fontWeight: 800, color: '#dc2626', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                      Sandbox Mutual Extension
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonRows.map((row, i) => (
+                    <tr key={i} style={{ borderBottom: '1px solid #f4f4f5' }}>
+                      <td style={{ padding: '16px 18px', fontWeight: 700, color: '#09090b', background: i % 2 === 0 ? '#ffffff' : '#fafafa' }}>
+                        {row.feature}
+                      </td>
+                      <td style={{ padding: '16px 18px', textAlign: 'center', color: '#71717a', background: i % 2 === 0 ? '#ffffff' : '#fafafa', fontSize: '14px' }}>
+                        {row.mpi}
+                      </td>
+                      <td style={{ padding: '16px 18px', textAlign: 'center', background: row.sandboxWins ? (i % 2 === 0 ? '#fff9f9' : '#fef5f5') : (i % 2 === 0 ? '#ffffff' : '#fafafa'), fontWeight: row.sandboxWins ? 700 : 500, color: row.sandboxWins ? '#dc2626' : '#71717a', fontSize: '14px' }}>
+                        {row.sandbox}
+                      </td>
                     </tr>
-                  </thead>
-                  <tbody>
-                    {comparisonRows.map((row, i) => (
-                      <tr key={i} style={{ borderBottom: '1px solid #f4f4f5' }}>
-                        <td style={{ padding: '16px 18px', fontWeight: 700, color: '#09090b', background: i % 2 === 0 ? '#ffffff' : '#fafafa' }}>
-                          {row.feature}
-                        </td>
-                        <td style={{ padding: '16px 18px', textAlign: 'center', color: '#71717a', background: i % 2 === 0 ? '#ffffff' : '#fafafa', fontSize: '14px' }}>
-                          {row.mpi}
-                        </td>
-                        <td style={{ padding: '16px 18px', textAlign: 'center', background: row.sandboxWins ? (i % 2 === 0 ? '#fff9f9' : '#fef5f5') : (i % 2 === 0 ? '#ffffff' : '#fafafa'), fontWeight: row.sandboxWins ? 700 : 500, color: row.sandboxWins ? '#dc2626' : '#71717a', fontSize: '14px' }}>
-                          {row.sandbox}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-
-              {/* Right Flank: Sandbox Mutual 2.0 Logo */}
-              <div style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: '24px 16px',
-                background: '#fff9f9',
-                borderRadius: '16px',
-                border: '1px solid #fecaca',
-                boxShadow: '0 4px 20px rgba(220,38,38,0.05)',
-              }}>
-                <div style={{ position: 'relative', width: '70px', height: '70px' }}>
-                  <Image
-                    src="/images/carriers/smi 2.0.webp"
-                    alt="Sandbox Mutual Insurance"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                  />
-                </div>
-                <span style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.6px', marginTop: '10px', textAlign: 'center' }}>
-                  Sandbox Mutual
-                </span>
-              </div>
+                  ))}
+                </tbody>
+              </table>
             </div>
 
             <div style={{ marginTop: '24px', padding: '16px 20px', background: '#fef2f2', borderRadius: '10px', border: '1px solid #fecaca', display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
