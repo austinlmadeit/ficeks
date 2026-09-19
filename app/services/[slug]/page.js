@@ -37,7 +37,7 @@ export default async function ServicePage({ params }) {
     { feature: 'SEF 27 (Rental Car Insurance)', mpi: 'Separate add-on with restricted limits', sandbox: 'Included when Liability, Coll & Comp are purchased', sandboxWins: true },
     { feature: 'Lay Up Endorsement', mpi: 'Manual policy suspension / fee', sandbox: 'Included at no additional cost (year-round licensed vehicles)', sandboxWins: true },
     { feature: 'Excess Vehicle Value Coverage', mpi: 'Strict claim maximums', sandbox: 'Vehicles valued higher than $70,000 & Commercial trucks', sandboxWins: true },
-    { feature: 'Mandatory Manitoba Coverage', mpi: '✓ Required by law (Basic Autopac)', sandbox: 'Seamlessly layered on top of MPI by Ficek', sandboxWins: false },
+    { feature: 'Mandatory Manitoba Coverage', mpi: 'Required by law (Basic Autopac)', sandbox: 'Seamlessly layered on top of MPI by Ficek', sandboxWins: false },
   ];
 
   return (
