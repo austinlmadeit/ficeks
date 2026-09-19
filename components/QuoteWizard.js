@@ -24,6 +24,7 @@ export default function QuoteWizard() {
     // Step 2 details
     propertyOrVehicleDetails: '',
     currentInsurerOrMPI: '',
+    policyNumber: '',
     estimatedRenewal: '',
     // Step 3 contact
     name: '',
@@ -34,6 +35,8 @@ export default function QuoteWizard() {
     bestTimeToCall: 'Morning (9am – 12pm)',
     message: '',
   });
+
+  const isAuto = form.insuranceType.toLowerCase().includes('auto');
 
   const update = (field, val) => setForm(prev => ({ ...prev, [field]: val }));
 
@@ -69,8 +72,8 @@ export default function QuoteWizard() {
     try {
       const detailedMessage = `
 [Coverage Details]: ${form.propertyOrVehicleDetails || 'None specified'}
-[Current Provider/MPI]: ${form.currentInsurerOrMPI || 'Not stated'}
-[Renewal Timeline]: ${form.estimatedRenewal || 'Immediate / ASAP'}
+[${isAuto ? 'Current Insurer or D/L Number' : 'Current Insurer'}]: ${form.currentInsurerOrMPI || 'Not stated'}
+${!isAuto && form.policyNumber ? `[Policy Number]: ${form.policyNumber}\n` : ''}[Renewal Timeline]: ${form.estimatedRenewal || 'Immediate / ASAP'}
 [Preferred Ficek Office]: ${form.preferredOffice}
 [Client Notes]: ${form.message || 'No additional notes provided.'}
       `.trim();
@@ -310,55 +313,131 @@ export default function QuoteWizard() {
                 />
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-                <div>
-                  <label style={{ display: 'block', fontSize: '12px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '6px' }}>
-                    Current Insurer or MPI
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="e.g. MPI / Wawanesa / Intact / Other"
-                    value={form.currentInsurerOrMPI}
-                    onChange={(e) => update('currentInsurerOrMPI', e.target.value)}
-                    style={{
-                      width: '100%',
-                      padding: '12px 14px',
-                      borderRadius: '8px',
-                      border: '1.5px solid #e4e4e7',
-                      fontSize: '15px',
-                      color: '#09090b',
-                      outline: 'none',
-                      boxSizing: 'border-box',
-                    }}
-                  />
+              {isAuto ? (
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                  <div>
+                    <label style={{ display: 'block', fontSize: '12px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '6px' }}>
+                      Current Insurer or D/L Number
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="e.g. MPI / D-XXXX-XXXXX-XXXX"
+                      value={form.currentInsurerOrMPI}
+                      onChange={(e) => update('currentInsurerOrMPI', e.target.value)}
+                      style={{
+                        width: '100%',
+                        padding: '12px 14px',
+                        borderRadius: '8px',
+                        border: '1.5px solid #e4e4e7',
+                        fontSize: '15px',
+                        color: '#09090b',
+                        outline: 'none',
+                        boxSizing: 'border-box',
+                      }}
+                    />
+                  </div>
+                  <div>
+                    <label style={{ display: 'block', fontSize: '12px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '6px' }}>
+                      Policy Renewal Timeline
+                    </label>
+                    <select
+                      value={form.estimatedRenewal}
+                      onChange={(e) => update('estimatedRenewal', e.target.value)}
+                      style={{
+                        width: '100%',
+                        padding: '12px 14px',
+                        borderRadius: '8px',
+                        border: '1.5px solid #e4e4e7',
+                        fontSize: '15px',
+                        color: '#09090b',
+                        outline: 'none',
+                        boxSizing: 'border-box',
+                        background: '#fff',
+                      }}
+                    >
+                      <option value="">Select timeline...</option>
+                      <option value="Immediate / Buying this week">Immediate / Buying this week</option>
+                      <option value="Within 30 Days">Within 30 Days</option>
+                      <option value="1 to 3 Months">1 to 3 Months</option>
+                      <option value="Just comparison shopping">Just comparison shopping</option>
+                    </select>
+                  </div>
                 </div>
-                <div>
-                  <label style={{ display: 'block', fontSize: '12px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '6px' }}>
-                    Policy Renewal Timeline
-                  </label>
-                  <select
-                    value={form.estimatedRenewal}
-                    onChange={(e) => update('estimatedRenewal', e.target.value)}
-                    style={{
-                      width: '100%',
-                      padding: '12px 14px',
-                      borderRadius: '8px',
-                      border: '1.5px solid #e4e4e7',
-                      fontSize: '15px',
-                      color: '#09090b',
-                      outline: 'none',
-                      boxSizing: 'border-box',
-                      background: '#fff',
-                    }}
-                  >
-                    <option value="">Select timeline...</option>
-                    <option value="Immediate / Buying this week">Immediate / Buying this week</option>
-                    <option value="Within 30 Days">Within 30 Days</option>
-                    <option value="1 to 3 Months">1 to 3 Months</option>
-                    <option value="Just comparison shopping">Just comparison shopping</option>
-                  </select>
-                </div>
-              </div>
+              ) : (
+                <>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                    <div>
+                      <label style={{ display: 'block', fontSize: '12px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '6px' }}>
+                        Current Insurer
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="e.g. Wawanesa / Intact / Red River / Other"
+                        value={form.currentInsurerOrMPI}
+                        onChange={(e) => update('currentInsurerOrMPI', e.target.value)}
+                        style={{
+                          width: '100%',
+                          padding: '12px 14px',
+                          borderRadius: '8px',
+                          border: '1.5px solid #e4e4e7',
+                          fontSize: '15px',
+                          color: '#09090b',
+                          outline: 'none',
+                          boxSizing: 'border-box',
+                        }}
+                      />
+                    </div>
+                    <div>
+                      <label style={{ display: 'block', fontSize: '12px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '6px' }}>
+                        Policy Number
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="e.g. POL-1234567 (optional)"
+                        value={form.policyNumber}
+                        onChange={(e) => update('policyNumber', e.target.value)}
+                        style={{
+                          width: '100%',
+                          padding: '12px 14px',
+                          borderRadius: '8px',
+                          border: '1.5px solid #e4e4e7',
+                          fontSize: '15px',
+                          color: '#09090b',
+                          outline: 'none',
+                          boxSizing: 'border-box',
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label style={{ display: 'block', fontSize: '12px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '6px' }}>
+                      Policy Renewal Timeline
+                    </label>
+                    <select
+                      value={form.estimatedRenewal}
+                      onChange={(e) => update('estimatedRenewal', e.target.value)}
+                      style={{
+                        width: '100%',
+                        padding: '12px 14px',
+                        borderRadius: '8px',
+                        border: '1.5px solid #e4e4e7',
+                        fontSize: '15px',
+                        color: '#09090b',
+                        outline: 'none',
+                        boxSizing: 'border-box',
+                        background: '#fff',
+                      }}
+                    >
+                      <option value="">Select timeline...</option>
+                      <option value="Immediate / Buying this week">Immediate / Buying this week</option>
+                      <option value="Within 30 Days">Within 30 Days</option>
+                      <option value="1 to 3 Months">1 to 3 Months</option>
+                      <option value="Just comparison shopping">Just comparison shopping</option>
+                    </select>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         )}
