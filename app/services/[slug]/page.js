@@ -63,64 +63,35 @@ export default async function ServicePage({ params }) {
           <Link href="/services" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#ef4444', fontSize: '14px', fontWeight: 700, marginBottom: '24px' }}>
             ← All Insurance Categories
           </Link>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '40px', flexWrap: 'wrap' }}>
-            <div style={{ maxWidth: '640px' }}>
-              {!isAuto && <div style={{ fontSize: '48px', marginBottom: '16px' }}>{service.icon}</div>}
-              <h1 style={{ fontSize: 'clamp(36px, 5.5vw, 56px)', fontWeight: 900, color: '#ffffff', lineHeight: 1.1, marginBottom: '20px', letterSpacing: '-0.02em' }}>
-                {service.title}
-              </h1>
-              <p style={{ fontSize: '20px', color: '#a1a1aa', maxWidth: '640px', lineHeight: 1.65, marginBottom: '32px' }}>
-                {service.summary}
-              </p>
-              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                {isAuto ? (
-                  <a href="#sandbox-quote" className="btn btn-red" style={{ fontSize: '16px', padding: '16px 32px' }}>
-                    Get My Sandbox Mutual Quote →
-                  </a>
-                ) : (
-                  <Link href="/quote" className="btn btn-red" style={{ fontSize: '16px', padding: '16px 32px' }}>
-                    Request a Free Quote for {service.title} →
-                  </Link>
-                )}
-                <a href={SITE.phoneHref} className="btn btn-outline-white" style={{ fontSize: '16px', padding: '16px 32px' }}>
-                  Call {SITE.phone}
+          <div style={{ maxWidth: '720px' }}>
+            {!isAuto && <div style={{ fontSize: '48px', marginBottom: '16px' }}>{service.icon}</div>}
+            <h1 style={{ fontSize: 'clamp(36px, 5.5vw, 56px)', fontWeight: 900, color: '#ffffff', lineHeight: 1.1, marginBottom: '20px', letterSpacing: '-0.02em' }}>
+              {service.title}
+            </h1>
+            <p style={{ fontSize: '20px', color: '#a1a1aa', maxWidth: '640px', lineHeight: 1.65, marginBottom: '32px' }}>
+              {service.summary}
+            </p>
+            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+              {isAuto ? (
+                <a href="#sandbox-quote" className="btn btn-red" style={{ fontSize: '16px', padding: '16px 32px' }}>
+                  Get My Sandbox Mutual Quote →
                 </a>
-              </div>
+              ) : (
+                <Link href="/quote" className="btn btn-red" style={{ fontSize: '16px', padding: '16px 32px' }}>
+                  Request a Free Quote for {service.title} →
+                </Link>
+              )}
+              <a href={SITE.phoneHref} className="btn btn-outline-white" style={{ fontSize: '16px', padding: '16px 32px' }}>
+                Call {SITE.phone}
+              </a>
             </div>
-            {isAuto && (
-              <div style={{
-                background: '#ffffff',
-                padding: '24px 32px',
-                borderRadius: '16px',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.35)',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                border: '1px solid rgba(255,255,255,0.1)',
-                minWidth: '220px',
-              }}>
-                <div style={{ position: 'relative', width: '200px', height: '80px' }}>
-                  <Image
-                    src="/images/carriers/autopac.jpg"
-                    alt="MPI Autopac Licensed Broker"
-                    fill
-                    priority
-                    style={{ objectFit: 'contain' }}
-                  />
-                </div>
-                <span style={{ fontSize: '12px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.8px', marginTop: '10px' }}>
-                  Authorized MPI Agent
-                </span>
-              </div>
-            )}
           </div>
         </div>
       </section>
 
       {/* SANDBOX vs MPI COMPARISON MATRIX */}
       {isAuto && (
-        <section className="section" style={{ background: '#ffffff' }}>
+        <section className="section" style={{ background: '#ffffff', overflow: 'hidden' }}>
           <div className="container">
             <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 40px auto' }}>
               <span className="section-tag">How Manitoba Auto Insurance Works</span>
@@ -132,61 +103,96 @@ export default async function ServicePage({ params }) {
               </p>
             </div>
 
-            <div style={{ overflowX: 'auto' }}>
-              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '15px' }}>
-                <thead>
-                  <tr>
-                    <th style={{ padding: '16px 20px', textAlign: 'left', background: '#f4f4f5', borderBottom: '2px solid #e4e4e7', fontWeight: 800, color: '#09090b', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                      Coverage Area
-                    </th>
-                    <th style={{ padding: '16px 20px', textAlign: 'center', background: '#f4f4f5', borderBottom: '2px solid #e4e4e7' }}>
-                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
-                        <div style={{ position: 'relative', width: '120px', height: '36px' }}>
-                          <Image
-                            src="/images/carriers/autopac.jpg"
-                            alt="Basic MPI Autopac"
-                            fill
-                            style={{ objectFit: 'contain' }}
-                          />
-                        </div>
-                        <span style={{ fontWeight: 800, color: '#71717a', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                          Basic MPI Autopac
-                        </span>
-                      </div>
-                    </th>
-                    <th style={{ padding: '16px 20px', textAlign: 'center', background: '#fef2f2', borderBottom: '2px solid #dc2626' }}>
-                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
-                        <div style={{ position: 'relative', width: '38px', height: '38px' }}>
-                          <Image
-                            src="/images/carriers/smi 2.0.webp"
-                            alt="Sandbox Mutual Insurance"
-                            fill
-                            style={{ objectFit: 'contain' }}
-                          />
-                        </div>
-                        <span style={{ fontWeight: 800, color: '#dc2626', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                          Sandbox Mutual Extension
-                        </span>
-                      </div>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {comparisonRows.map((row, i) => (
-                    <tr key={i} style={{ borderBottom: '1px solid #f4f4f5' }}>
-                      <td style={{ padding: '16px 20px', fontWeight: 700, color: '#09090b', background: i % 2 === 0 ? '#ffffff' : '#fafafa' }}>
-                        {row.feature}
-                      </td>
-                      <td style={{ padding: '16px 20px', textAlign: 'center', color: '#71717a', background: i % 2 === 0 ? '#ffffff' : '#fafafa', fontSize: '14px' }}>
-                        {row.mpi}
-                      </td>
-                      <td style={{ padding: '16px 20px', textAlign: 'center', background: row.sandboxWins ? (i % 2 === 0 ? '#fff9f9' : '#fef5f5') : (i % 2 === 0 ? '#ffffff' : '#fafafa'), fontWeight: row.sandboxWins ? 700 : 500, color: row.sandboxWins ? '#dc2626' : '#71717a', fontSize: '14px' }}>
-                        {row.sandbox}
-                      </td>
+            {/* 3-Column Layout: Left Autopac Logo | Comparison Table | Right SMI Logo */}
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'minmax(140px, 180px) 1fr minmax(140px, 180px)',
+              gap: '28px',
+              alignItems: 'center',
+            }}>
+              {/* Left Flank: Autopac Logo */}
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '24px 16px',
+                background: '#fafafa',
+                borderRadius: '16px',
+                border: '1px solid #e4e4e7',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
+              }}>
+                <div style={{ position: 'relative', width: '130px', height: '65px' }}>
+                  <Image
+                    src="/images/carriers/autopac.jpg"
+                    alt="Basic MPI Autopac"
+                    fill
+                    style={{ objectFit: 'contain' }}
+                  />
+                </div>
+                <span style={{ fontSize: '11px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.6px', marginTop: '10px', textAlign: 'center' }}>
+                  Basic Autopac
+                </span>
+              </div>
+
+              {/* Center: Comparison Table */}
+              <div style={{ overflowX: 'auto', width: '100%' }}>
+                <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '15px' }}>
+                  <thead>
+                    <tr>
+                      <th style={{ padding: '14px 18px', textAlign: 'left', background: '#f4f4f5', borderBottom: '2px solid #e4e4e7', fontWeight: 800, color: '#09090b', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                        Coverage Area
+                      </th>
+                      <th style={{ padding: '14px 18px', textAlign: 'center', background: '#f4f4f5', borderBottom: '2px solid #e4e4e7', fontWeight: 800, color: '#71717a', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                        Basic MPI Autopac
+                      </th>
+                      <th style={{ padding: '14px 18px', textAlign: 'center', background: '#fef2f2', borderBottom: '2px solid #dc2626', fontWeight: 800, color: '#dc2626', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                        Sandbox Mutual Extension
+                      </th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {comparisonRows.map((row, i) => (
+                      <tr key={i} style={{ borderBottom: '1px solid #f4f4f5' }}>
+                        <td style={{ padding: '16px 18px', fontWeight: 700, color: '#09090b', background: i % 2 === 0 ? '#ffffff' : '#fafafa' }}>
+                          {row.feature}
+                        </td>
+                        <td style={{ padding: '16px 18px', textAlign: 'center', color: '#71717a', background: i % 2 === 0 ? '#ffffff' : '#fafafa', fontSize: '14px' }}>
+                          {row.mpi}
+                        </td>
+                        <td style={{ padding: '16px 18px', textAlign: 'center', background: row.sandboxWins ? (i % 2 === 0 ? '#fff9f9' : '#fef5f5') : (i % 2 === 0 ? '#ffffff' : '#fafafa'), fontWeight: row.sandboxWins ? 700 : 500, color: row.sandboxWins ? '#dc2626' : '#71717a', fontSize: '14px' }}>
+                          {row.sandbox}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Right Flank: Sandbox Mutual 2.0 Logo */}
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '24px 16px',
+                background: '#fff9f9',
+                borderRadius: '16px',
+                border: '1px solid #fecaca',
+                boxShadow: '0 4px 20px rgba(220,38,38,0.05)',
+              }}>
+                <div style={{ position: 'relative', width: '70px', height: '70px' }}>
+                  <Image
+                    src="/images/carriers/smi 2.0.webp"
+                    alt="Sandbox Mutual Insurance"
+                    fill
+                    style={{ objectFit: 'contain' }}
+                  />
+                </div>
+                <span style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.6px', marginTop: '10px', textAlign: 'center' }}>
+                  Sandbox Mutual
+                </span>
+              </div>
             </div>
 
             <div style={{ marginTop: '24px', padding: '16px 20px', background: '#fef2f2', borderRadius: '10px', border: '1px solid #fecaca', display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
