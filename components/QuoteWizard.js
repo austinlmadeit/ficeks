@@ -25,7 +25,6 @@ export default function QuoteWizard() {
     propertyOrVehicleDetails: '',
     currentInsurerOrMPI: '',
     estimatedRenewal: '',
-    coverageGoals: [],
     // Step 3 contact
     name: '',
     phone: '',
@@ -37,15 +36,6 @@ export default function QuoteWizard() {
   });
 
   const update = (field, val) => setForm(prev => ({ ...prev, [field]: val }));
-
-  const toggleGoal = (goal) => {
-    setForm(prev => ({
-      ...prev,
-      coverageGoals: prev.coverageGoals.includes(goal)
-        ? prev.coverageGoals.filter(g => g !== goal)
-        : [...prev.coverageGoals, goal],
-    }));
-  };
 
   const handleNext = () => {
     if (step === 1) {
@@ -81,7 +71,6 @@ export default function QuoteWizard() {
 [Coverage Details]: ${form.propertyOrVehicleDetails || 'None specified'}
 [Current Provider/MPI]: ${form.currentInsurerOrMPI || 'Not stated'}
 [Renewal Timeline]: ${form.estimatedRenewal || 'Immediate / ASAP'}
-[Specific Goals]: ${form.coverageGoals.join(', ') || 'Best price and coverage review'}
 [Preferred Ficek Office]: ${form.preferredOffice}
 [Client Notes]: ${form.message || 'No additional notes provided.'}
       `.trim();
@@ -368,64 +357,6 @@ export default function QuoteWizard() {
                     <option value="1 to 3 Months">1 to 3 Months</option>
                     <option value="Just comparison shopping">Just comparison shopping</option>
                   </select>
-                </div>
-              </div>
-
-              <div>
-                <label style={{ display: 'block', fontSize: '12px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '10px' }}>
-                  What matters most to you? (Check all that apply)
-                </label>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '10px' }}>
-                  {[
-                    'Lowest Monthly Rate',
-                    'Higher Liability Protection ($5M–$10M)',
-                    'Multi-Policy Bundle Discounts',
-                    'Zero or Low Deductible Options',
-                    'Sewer Backup / Overland Water Protection',
-                    'Local Brandon Broker Support',
-                  ].map((goal) => {
-                    const isChecked = form.coverageGoals.includes(goal);
-                    return (
-                      <button
-                        type="button"
-                        key={goal}
-                        onClick={() => toggleGoal(goal)}
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '10px',
-                          padding: '10px 14px',
-                          borderRadius: '8px',
-                          border: isChecked ? '1.5px solid #dc2626' : '1.5px solid #e4e4e7',
-                          background: isChecked ? '#fef2f2' : '#fafafa',
-                          color: isChecked ? '#dc2626' : '#09090b',
-                          fontSize: '13px',
-                          fontWeight: 700,
-                          cursor: 'pointer',
-                          textAlign: 'left',
-                          transition: 'all 0.15s ease',
-                        }}
-                      >
-                        <span style={{
-                          width: '18px',
-                          height: '18px',
-                          borderRadius: '4px',
-                          border: isChecked ? '2px solid #dc2626' : '2px solid #d4d4d8',
-                          background: isChecked ? '#dc2626' : '#ffffff',
-                          color: '#fff',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          fontSize: '11px',
-                          fontWeight: 900,
-                          flexShrink: 0,
-                        }}>
-                          {isChecked ? '✓' : ''}
-                        </span>
-                        {goal}
-                      </button>
-                    );
-                  })}
                 </div>
               </div>
             </div>
