@@ -96,7 +96,7 @@ export default async function ServicePage({ params }) {
                 MPI Autopac is Mandatory. <span style={{ color: '#dc2626' }}>Sandbox Mutual Makes It Better.</span>
               </h2>
               <p style={{ fontSize: '16px', color: '#71717a', lineHeight: 1.75 }}>
-                Every registered Manitoba vehicle requires Basic Autopac through MPI. Sandbox Mutual provides an additional extension option layered directly on top of your MPI policy for higher liability limits, lower deductibles, and more comprehensive extended coverages.
+                Every registered Manitoba vehicle requires Basic Autopac through MPI. Sandbox Mutual provides an additional extension option layered directly on top of your MPI policy for higher limits, lower deductibles, and more comprehensive extended coverages.
               </p>
             </div>
 
