@@ -121,10 +121,13 @@ export async function POST(request) {
       </html>
     `;
 
+    const toEmail = process.env.LEAD_NOTIFICATION_EMAIL || 'austin.l@ficekinsurance.com';
+    const fromEmail = process.env.RESEND_FROM_EMAIL || 'Ficek Insurance Website <onboarding@resend.dev>';
+
     const { data, error } = await resend.emails.send({
-      from: 'Ficek Insurance Website <onboarding@resend.dev>',
-      to: ['austin.l@ficekinsurance.com'],
-      replyTo: email || 'austin.l@ficekinsurance.com',
+      from: fromEmail,
+      to: [toEmail],
+      replyTo: email || toEmail,
       subject: `${formTitle} — ${name} (${typeTitle})`,
       html: emailHtml,
     });
