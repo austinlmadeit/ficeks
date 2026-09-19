@@ -63,28 +63,40 @@ export default async function ServicePage({ params }) {
           <Link href="/services" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#ef4444', fontSize: '14px', fontWeight: 700, marginBottom: '24px' }}>
             ← All Insurance Categories
           </Link>
-          <div style={{ maxWidth: '720px' }}>
-            {!isAuto && <div style={{ fontSize: '48px', marginBottom: '16px' }}>{service.icon}</div>}
-            <h1 style={{ fontSize: 'clamp(36px, 5.5vw, 56px)', fontWeight: 900, color: '#ffffff', lineHeight: 1.1, marginBottom: '20px', letterSpacing: '-0.02em' }}>
-              {service.title}
-            </h1>
-            <p style={{ fontSize: '20px', color: '#a1a1aa', maxWidth: '640px', lineHeight: 1.65, marginBottom: '32px' }}>
-              {service.summary}
-            </p>
-            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-              {isAuto ? (
-                <a href="#sandbox-quote" className="btn btn-red" style={{ fontSize: '16px', padding: '16px 32px' }}>
-                  Get My Sandbox Mutual Quote →
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '40px' }}>
+            <div style={{ maxWidth: '720px' }}>
+              {!isAuto && <div style={{ fontSize: '48px', marginBottom: '16px' }}>{service.icon}</div>}
+              <h1 style={{ fontSize: 'clamp(36px, 5.5vw, 56px)', fontWeight: 900, color: '#ffffff', lineHeight: 1.1, marginBottom: '20px', letterSpacing: '-0.02em' }}>
+                {service.title}
+              </h1>
+              <p style={{ fontSize: '20px', color: '#a1a1aa', maxWidth: '640px', lineHeight: 1.65, marginBottom: '32px' }}>
+                {service.summary}
+              </p>
+              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                {isAuto ? (
+                  <a href="#sandbox-quote" className="btn btn-red" style={{ fontSize: '16px', padding: '16px 32px' }}>
+                    Get My Sandbox Mutual Quote →
+                  </a>
+                ) : (
+                  <Link href="/quote" className="btn btn-red" style={{ fontSize: '16px', padding: '16px 32px' }}>
+                    Request a Free Quote for {service.title} →
+                  </Link>
+                )}
+                <a href={SITE.phoneHref} className="btn btn-outline-white" style={{ fontSize: '16px', padding: '16px 32px' }}>
+                  Call {SITE.phone}
                 </a>
-              ) : (
-                <Link href="/quote" className="btn btn-red" style={{ fontSize: '16px', padding: '16px 32px' }}>
-                  Request a Free Quote for {service.title} →
-                </Link>
-              )}
-              <a href={SITE.phoneHref} className="btn btn-outline-white" style={{ fontSize: '16px', padding: '16px 32px' }}>
-                Call {SITE.phone}
-              </a>
+              </div>
             </div>
+            {isAuto && (
+              <div style={{ flexShrink: 0, position: 'relative', width: '180px', height: '90px', background: '#ffffff', borderRadius: '12px', padding: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Image
+                  src="/images/carriers/autopac.jpg"
+                  alt="MPI Autopac"
+                  fill
+                  style={{ objectFit: 'contain', padding: '12px' }}
+                />
+              </div>
+            )}
           </div>
         </div>
       </section>
