@@ -134,7 +134,21 @@ export default function SandboxQuoteForm() {
         border: '1px solid #e4e4e7',
         boxShadow: '0 8px 40px rgba(0,0,0,0.06)',
       }}>
-        <div style={{ fontSize: '56px', marginBottom: '20px' }}>✅</div>
+        <div style={{
+          width: '64px',
+          height: '64px',
+          borderRadius: '50%',
+          background: '#fef2f2',
+          color: '#dc2626',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontSize: '28px',
+          fontWeight: 900,
+          margin: '0 auto 20px',
+        }}>
+          ✓
+        </div>
         <h3 style={{ fontSize: '28px', fontWeight: 900, color: '#09090b', marginBottom: '12px' }}>
           Quote Request Received!
         </h3>
@@ -153,7 +167,7 @@ export default function SandboxQuoteForm() {
           borderRadius: '8px',
           textDecoration: 'none',
         }}>
-          📞 Call Us Now: 204-571-1777
+          Call Us Now: 204-571-1777
         </a>
       </div>
     );
@@ -381,7 +395,7 @@ export default function SandboxQuoteForm() {
         {/* Error */}
         {error && (
           <div style={{ marginTop: '16px', padding: '12px 16px', background: '#fef2f2', border: '1px solid #fecaca', borderRadius: '8px', color: '#dc2626', fontSize: '14px', fontWeight: 600 }}>
-            ⚠️ {error}
+            {error}
           </div>
         )}
 
@@ -403,7 +417,7 @@ export default function SandboxQuoteForm() {
               disabled={loading}
               style={{ background: loading ? '#a1a1aa' : '#dc2626', color: '#fff', border: 'none', borderRadius: '8px', padding: '13px 28px', fontWeight: 800, fontSize: '15px', cursor: loading ? 'not-allowed' : 'pointer', fontFamily: 'inherit', transition: 'background 0.2s' }}
             >
-              {loading ? 'Sending...' : '🚗 Submit Quote Request'}
+              {loading ? 'Sending...' : 'Submit Quote Request'}
             </button>
           )}
         </div>

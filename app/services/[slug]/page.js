@@ -183,9 +183,19 @@ export default async function ServicePage({ params }) {
                     'SEF 27 Rental Car Insurance Included',
                     'Lay Up Endorsement Included at No Additional Cost',
                   ].map((text) => (
-                    <div key={text} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <span style={{ color: '#dc2626', fontWeight: 800 }}>•</span>
-                      <span style={{ fontSize: '15px', fontWeight: 600, color: '#d4d4d8' }}>{text}</span>
+                    <div key={text} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                      <span style={{
+                        color: '#ef4444',
+                        fontWeight: 800,
+                        fontSize: '15px',
+                        lineHeight: '22px',
+                        flexShrink: 0,
+                      }}>
+                        ✓
+                      </span>
+                      <span style={{ fontSize: '15px', fontWeight: 500, color: '#e4e4e7', lineHeight: '22px' }}>
+                        {text}
+                      </span>
                     </div>
                   ))}
                 </div>
