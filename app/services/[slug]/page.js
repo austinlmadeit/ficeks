@@ -86,34 +86,17 @@ export default async function ServicePage({ params }) {
         </div>
       </section>
 
-      {/* AUTOPAC EXPLANATION */}
-      {isAuto && (
-        <section className="section-sm" style={{ background: '#fafafa', borderBottom: '1px solid #e4e4e7' }}>
-          <div className="container">
-            <div style={{ maxWidth: '760px', margin: '0 auto', textAlign: 'center' }}>
-              <span className="section-tag">How Manitoba Auto Insurance Works</span>
-              <h2 style={{ fontSize: '32px', fontWeight: 900, marginBottom: '16px' }}>
-                MPI Autopac is Mandatory. Sandbox Mutual Makes It Better.
-              </h2>
-              <p style={{ fontSize: '16px', color: '#71717a', lineHeight: 1.75 }}>
-                Every registered Manitoba vehicle is required by law to carry <strong>Basic Autopac coverage through MPI</strong>. At Ficek Insurance, our licensed Brandon brokers handle your Autopac registration at either of our two offices — and then layer on a <strong>Sandbox Mutual Private Auto Extension</strong> to fill the significant gaps that MPI alone leaves behind.
-              </p>
-            </div>
-          </div>
-        </section>
-      )}
-
       {/* SANDBOX vs MPI COMPARISON MATRIX */}
       {isAuto && (
         <section className="section" style={{ background: '#ffffff' }}>
           <div className="container">
-            <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-              <span className="section-tag">Coverage Comparison</span>
-              <h2 style={{ fontSize: '36px', fontWeight: 900, marginBottom: '14px' }}>
-                MPI Basic vs. <span style={{ color: '#dc2626' }}>Sandbox Mutual Extension</span>
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 40px auto' }}>
+              <span className="section-tag">How Manitoba Auto Insurance Works</span>
+              <h2 style={{ fontSize: '36px', fontWeight: 900, marginBottom: '14px', lineHeight: 1.2 }}>
+                MPI Autopac is Mandatory. <span style={{ color: '#dc2626' }}>Sandbox Mutual Makes It Better.</span>
               </h2>
-              <p style={{ fontSize: '16px', color: '#71717a', maxWidth: '580px', margin: '0 auto' }}>
-                See exactly where Sandbox Mutual fills the coverage gaps that Manitoba's basic Autopac leaves unprotected.
+              <p style={{ fontSize: '16px', color: '#71717a', lineHeight: 1.75 }}>
+                Every registered Manitoba vehicle requires Basic Autopac through MPI. Sandbox Mutual provides an additional extension option layered directly on top of your MPI policy for higher liability limits, lower deductibles, and more comprehensive extended coverages.
               </p>
             </div>
 
