@@ -30,14 +30,14 @@ export default async function ServicePage({ params }) {
   const isAuto = service.slug === 'auto-insurance';
 
   const comparisonRows = [
-    { feature: 'Third-Party Liability', mpi: '$500,000 Basic', sandbox: 'Up to $10 Million', sandboxWins: true },
-    { feature: 'Collision Deductible', mpi: '$750 Standard', sandbox: '$500, $300, $200, or $100', sandboxWins: true },
-    { feature: 'Glass / Rock Chip Repair', mpi: 'Subject to deductible', sandbox: '$0 Glass Deductible option', sandboxWins: true },
-    { feature: 'Loss of Use / Rental Car', mpi: 'Basic daily limits', sandbox: 'Higher daily limits + worldwide rental', sandboxWins: true },
-    { feature: 'New Vehicle Replacement', mpi: 'Limited (24 months)', sandbox: 'Up to 60-month replacement cost', sandboxWins: true },
-    { feature: 'US & Out-of-Province Travel', mpi: 'Basic coverage only', sandbox: 'Extended liability protection', sandboxWins: true },
-    { feature: 'Multi-Vehicle / Home Bundle', mpi: 'Not available', sandbox: 'Family bundle discounts', sandboxWins: true },
-    { feature: 'Mandatory Manitoba Coverage', mpi: '✓ Required by law', sandbox: 'Layers on top of MPI (both needed)', sandboxWins: false },
+    { feature: 'Third-Party Liability', mpi: '$500,000 Basic (MPI top-up max $5M)', sandbox: 'Up to $10 Million+ Protection', sandboxWins: true },
+    { feature: 'Physical Damage / Collision Deductible', mpi: '$750 Standard ($1,000 starting 2026)', sandbox: 'Low $500, $300, $200, or $100 options', sandboxWins: true },
+    { feature: 'Glass / Rock Chip Repair', mpi: 'Subject to full deductible', sandbox: '$0 Glass Deductible / Free Chip Repair', sandboxWins: true },
+    { feature: 'Loss of Use / Rental Vehicle', mpi: 'Basic daily limits ($40–$68/day)', sandbox: 'Higher daily limits ($100+/day) + worldwide rental', sandboxWins: true },
+    { feature: 'New Vehicle Price Replacement', mpi: 'Limited to 24 months', sandbox: 'Extended 24 to 60-month replacement cost', sandboxWins: true },
+    { feature: 'US & Out-of-Province Driving', mpi: 'Basic liability only ($500k)', sandbox: 'Comprehensive liability & legal defense across US/Canada', sandboxWins: true },
+    { feature: 'Home + Auto Multi-Policy Discount', mpi: 'Not available (MPI standalone)', sandbox: 'Substantial multi-vehicle & home bundle discounts', sandboxWins: true },
+    { feature: 'Mandatory Manitoba Coverage', mpi: '✓ Required by law (Basic Autopac)', sandbox: 'Seamlessly layered on top of MPI by Ficek', sandboxWins: false },
   ];
 
   return (

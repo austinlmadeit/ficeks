@@ -265,6 +265,7 @@ export default function SandboxQuoteForm() {
               <label style={labelStyle}>Current MPI Deductible</label>
               <select style={inputStyle} value={form.currentDeductible} onChange={(e) => update('currentDeductible', e.target.value)}>
                 <option value="">Select your current deductible...</option>
+                <option>$1,000 (Standard Basic MPI)</option>
                 <option>$750 (Basic MPI)</option>
                 <option>$500 (MPI Top-Up)</option>
                 <option>$300 (MPI Top-Up)</option>
