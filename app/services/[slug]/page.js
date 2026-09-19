@@ -31,7 +31,7 @@ export default async function ServicePage({ params }) {
 
   const comparisonRows = [
     { feature: 'Third-Party Liability Limits', mpi: '$500,000 Basic (MPI top-up max $5M)', sandbox: '$1,000,000 / $2,000,000 / $5,000,000', sandboxWins: true },
-    { feature: 'Collision Deductible Options', mpi: '$750 Standard ($1,000 starting 2026)', sandbox: '$100, $200, $350, $500, $750, or $1,000', sandboxWins: true },
+    { feature: 'Collision Deductible Options', mpi: '$750 or $1,000', sandbox: '$100, $200, $350, $500, $750, or $1,000', sandboxWins: true },
     { feature: 'Comprehensive Deductible Options', mpi: 'Subject to basic deductible', sandbox: '$50, $100, $200, $350, $500, $750, or $1,000', sandboxWins: true },
     { feature: 'Leased / New Vehicle Replacement Cost', mpi: 'Limited to 24 months', sandbox: '48-Month Replacement Cost (Owned & Leased)', sandboxWins: true },
     { feature: 'SEF 27 (Rental Car Insurance)', mpi: 'Separate add-on with restricted limits', sandbox: 'Included when Liability, Coll & Comp are purchased', sandboxWins: true },
