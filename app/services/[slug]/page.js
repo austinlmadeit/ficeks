@@ -72,7 +72,7 @@ export default async function ServicePage({ params }) {
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
             {isAuto ? (
               <a href="#sandbox-quote" className="btn btn-red" style={{ fontSize: '16px', padding: '16px 32px' }}>
-                🚗 Get My Sandbox Mutual Quote →
+                Get My Sandbox Mutual Quote →
               </a>
             ) : (
               <Link href="/quote" className="btn btn-red" style={{ fontSize: '16px', padding: '16px 32px' }}>
@@ -80,7 +80,7 @@ export default async function ServicePage({ params }) {
               </Link>
             )}
             <a href={SITE.phoneHref} className="btn btn-outline-white" style={{ fontSize: '16px', padding: '16px 32px' }}>
-              📞 Call {SITE.phone}
+              Call {SITE.phone}
             </a>
           </div>
         </div>
@@ -128,7 +128,7 @@ export default async function ServicePage({ params }) {
                       Basic MPI Autopac
                     </th>
                     <th style={{ padding: '14px 20px', textAlign: 'center', background: '#fef2f2', borderBottom: '2px solid #dc2626', fontWeight: 800, color: '#dc2626', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                      🏆 Sandbox Mutual Extension
+                      Sandbox Mutual Extension
                     </th>
                   </tr>
                 </thead>
@@ -142,7 +142,6 @@ export default async function ServicePage({ params }) {
                         {row.mpi}
                       </td>
                       <td style={{ padding: '16px 20px', textAlign: 'center', background: row.sandboxWins ? (i % 2 === 0 ? '#fff9f9' : '#fef5f5') : (i % 2 === 0 ? '#ffffff' : '#fafafa'), fontWeight: row.sandboxWins ? 700 : 500, color: row.sandboxWins ? '#dc2626' : '#71717a', fontSize: '14px' }}>
-                        {row.sandboxWins && <span style={{ marginRight: '6px' }}>✅</span>}
                         {row.sandbox}
                       </td>
                     </tr>
@@ -152,7 +151,6 @@ export default async function ServicePage({ params }) {
             </div>
 
             <div style={{ marginTop: '24px', padding: '16px 20px', background: '#fef2f2', borderRadius: '10px', border: '1px solid #fecaca', display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-              <span style={{ fontSize: '20px', flexShrink: 0 }}>💡</span>
               <p style={{ fontSize: '14px', color: '#09090b', lineHeight: 1.7, margin: 0 }}>
                 <strong>Important:</strong> Sandbox Mutual Private Auto Extension works <em>alongside</em> your mandatory MPI Autopac — it does not replace it. Ficek Insurance brokers handle both your MPI registration and your Sandbox extension in one visit at our Brandon offices at <strong>1439 1st Street</strong> or <strong>1525 18th Street</strong>.
               </p>
@@ -178,15 +176,15 @@ export default async function ServicePage({ params }) {
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                   {[
-                    { icon: '🛡️', text: 'Collision Deductibles: $100, $200, $350, $500, $750, $1,000' },
-                    { icon: '🚗', text: 'Comprehensive Deductibles: $50, $100, $200, $350, $500, $750, $1,000' },
-                    { icon: '📋', text: 'Third-Party Liability: $1,000,000 / $2,000,000 / $5,000,000' },
-                    { icon: '✨', text: '48-Month Replacement Cost (Owned & Leased)' },
-                    { icon: '✈️', text: 'SEF 27 Rental Car Insurance Included' },
-                    { icon: '🅿️', text: 'Lay Up Endorsement Included at No Additional Cost' },
-                  ].map(({ icon, text }) => (
-                    <div key={text} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                      <span style={{ fontSize: '20px', flexShrink: 0 }}>{icon}</span>
+                    'Collision Deductibles: $100, $200, $350, $500, $750, $1,000',
+                    'Comprehensive Deductibles: $50, $100, $200, $350, $500, $750, $1,000',
+                    'Third-Party Liability: $1,000,000 / $2,000,000 / $5,000,000',
+                    '48-Month Replacement Cost (Owned & Leased)',
+                    'SEF 27 Rental Car Insurance Included',
+                    'Lay Up Endorsement Included at No Additional Cost',
+                  ].map((text) => (
+                    <div key={text} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                      <span style={{ color: '#dc2626', fontWeight: 800 }}>•</span>
                       <span style={{ fontSize: '15px', fontWeight: 600, color: '#d4d4d8' }}>{text}</span>
                     </div>
                   ))}
@@ -196,7 +194,7 @@ export default async function ServicePage({ params }) {
                     Prefer to talk right now?
                   </div>
                   <a href={SITE.phoneHref} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#dc2626', fontWeight: 800, fontSize: '18px', textDecoration: 'none' }}>
-                    📞 {SITE.phone}
+                    Call {SITE.phone}
                   </a>
                 </div>
               </div>
@@ -235,7 +233,7 @@ export default async function ServicePage({ params }) {
                   Request a Free Quote
                 </a>
                 <a href={SITE.phoneHref} className="btn btn-outline" style={{ justifyContent: 'center' }}>
-                  📞 Call {SITE.phone}
+                  Call {SITE.phone}
                 </a>
               </div>
             </div>
