@@ -238,52 +238,6 @@ export default function HomePage() {
       </section>
 
 
-      {/* ── LOCAL BRAND STORY & TEAM ── */}
-      <section className="section" style={{ background: '#fafafa', borderTop: '1px solid #e4e4e7' }}>
-        <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '56px', alignItems: 'center' }}>
-            <div>
-              <span className="section-tag">About Ficek Insurance</span>
-              <h2 className="section-title">Independent brokers. Family values. Since 1946.</h2>
-              <p style={{ color: '#71717a', lineHeight: 1.75, marginBottom: '18px' }}>
-                Ficek Insurance has been a fixture in Brandon, Manitoba for over 78 years. Founded on the principle of giving honest, independent advice, we are proud to serve generations of local families, farm owners, and business owners.
-              </p>
-              <p style={{ color: '#71717a', lineHeight: 1.75, marginBottom: '28px' }}>
-                When you call Ficek Insurance, you don't get an automated phone tree or an anonymous call centre — you talk directly to Rod, Heather, Danon, or Sabrina Ficek.
-              </p>
-              <div style={{ display: 'flex', gap: '14px' }}>
-                <Link href="/about/our-team" className="btn btn-red">Meet Our Brokers →</Link>
-                <Link href="/about/locations" className="btn btn-outline">Our Location</Link>
-              </div>
-            </div>
-
-            {/* Team Showcase */}
-            <div style={{ background: '#09090b', color: '#ffffff', borderRadius: '16px', padding: '36px', border: '2px solid #dc2626' }}>
-              <h3 style={{ fontSize: '24px', fontWeight: 900, marginBottom: '16px', color: '#ffffff' }}>
-                The Ficek Broker Team
-              </h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                {[
-                  { name: 'Rod Ficek', role: 'Broker / Owner', exp: 'Decades of MB insurance leadership' },
-                  { name: 'Heather Ficek', role: 'Broker / Owner', exp: 'Personal & commercial specialist' },
-                  { name: 'Danon Ficek', role: 'Insurance Broker', exp: 'Next gen family broker' },
-                  { name: 'Sabrina Ficek', role: 'Insurance Broker', exp: 'Personal lines & client advocate' },
-                ].map((m, i) => (
-                  <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', background: '#18181b', padding: '12px 16px', borderRadius: '8px', border: '1px solid #27272a' }}>
-                    <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#dc2626', color: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, fontSize: '14px' }}>
-                      {m.name.split(' ').map(n => n[0]).join('')}
-                    </div>
-                    <div>
-                      <div style={{ fontWeight: 800, fontSize: '15px', color: '#ffffff' }}>{m.name}</div>
-                      <div style={{ fontSize: '12px', color: '#ef4444', fontWeight: 700 }}>{m.role}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ── 5-STAR CLIENT REVIEWS & COMMUNITY TRUST ── */}
       <section className="section" style={{ background: '#ffffff', borderTop: '1px solid #e4e4e7' }}>
