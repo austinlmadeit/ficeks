@@ -333,54 +333,6 @@ export default function SandboxQuoteForm() {
               </div>
             </div>
             <div style={fieldStyle}>
-              <label style={labelStyle}>Coverage Interests (select all that apply)</label>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                {COVERAGE_OPTIONS.map((opt) => {
-                  const checked = form.coverageInterests.includes(opt);
-                  return (
-                    <button
-                      key={opt}
-                      type="button"
-                      onClick={() => toggleCoverage(opt)}
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '10px',
-                        padding: '11px 14px',
-                        borderRadius: '8px',
-                        border: checked ? '1.5px solid #dc2626' : '1.5px solid #e4e4e7',
-                        background: checked ? '#fef2f2' : '#fafafa',
-                        color: '#09090b',
-                        fontWeight: 600,
-                        fontSize: '14px',
-                        cursor: 'pointer',
-                        textAlign: 'left',
-                        transition: 'all 0.15s',
-                      }}
-                    >
-                      <span style={{
-                        width: '18px',
-                        height: '18px',
-                        borderRadius: '4px',
-                        border: checked ? '2px solid #dc2626' : '2px solid #d4d4d8',
-                        background: checked ? '#dc2626' : '#fff',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        flexShrink: 0,
-                        fontSize: '11px',
-                        color: '#fff',
-                        fontWeight: 900,
-                      }}>
-                        {checked ? '✓' : ''}
-                      </span>
-                      {opt}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-            <div style={fieldStyle}>
               <label style={labelStyle}>Additional Notes (optional)</label>
               <textarea
                 style={{ ...inputStyle, height: '90px', resize: 'vertical' }}
