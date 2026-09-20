@@ -14,105 +14,6 @@ export const metadata = {
 export default function HomePage() {
   return (
     <>
-      {/* ── SANDBOX.CA INSPIRED HERO BANNER ── */}
-      <section style={{
-        background: 'linear-gradient(135deg, #09090b 0%, #18181b 100%)',
-        color: '#ffffff',
-        paddingTop: '64px',
-        paddingBottom: '80px',
-        borderBottom: '4px solid #dc2626',
-        position: 'relative',
-        overflow: 'hidden',
-      }}>
-        {/* Red accent glow */}
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          right: 0,
-          width: '500px',
-          height: '500px',
-          background: 'radial-gradient(circle, rgba(220,38,38,0.2) 0%, transparent 70%)',
-          pointerEvents: 'none',
-        }} />
-
-        <div className="hero-wrapper">
-          <div className="hero-grid-3">
-            {/* Left Hero Logo Emblem (aligned where user drew red box) */}
-            <div className="hero-logo-box">
-              <div className="hero-logo-card">
-                <Image
-                  src="/images/ficek.logo.jpg"
-                  alt="Ficek Insurance Logo"
-                  width={230}
-                  height={230}
-                  quality={100}
-                  priority
-                  style={{ objectFit: 'contain', width: '100%', height: 'auto' }}
-                />
-              </div>
-            </div>
-
-            {/* Middle Headline */}
-            <div>
-              <div style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                padding: '6px 14px',
-                borderRadius: '20px',
-                background: '#dc2626',
-                color: '#ffffff',
-                fontSize: '12px',
-                fontWeight: 800,
-                letterSpacing: '1px',
-                textTransform: 'uppercase',
-                marginBottom: '20px',
-              }}>
-                🇨🇦 Brandon, MB Independent Broker
-              </div>
-
-              <h1 style={{
-                fontSize: 'clamp(36px, 5vw, 60px)',
-                fontWeight: 900,
-                color: '#ffffff',
-                lineHeight: 1.1,
-                marginBottom: '20px',
-                letterSpacing: '-0.02em',
-              }}>
-                We are Ficek Insurance & We love what we do.
-              </h1>
-
-              <p style={{
-                fontSize: '19px',
-                color: '#a1a1aa',
-                lineHeight: 1.65,
-                marginBottom: '32px',
-                maxWidth: '540px',
-              }}>
-                Whether you're looking for MPI Autopac top-ups, farm equipment coverage, or commercial liability, Ficek Insurance is here for you.
-              </p>
-
-              <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-                <a href={SITE.phoneHref} className="btn btn-red" style={{ padding: '16px 28px', fontSize: '15px' }}>
-                  📞 Call Broker: {SITE.phone}
-                </a>
-                <a href="#locations" className="btn btn-outline-white" style={{ padding: '16px 28px', fontSize: '15px' }}>
-                  📍 View 2 Locations (New Space!)
-                </a>
-              </div>
-            </div>
-
-            {/* Right Interactive Quote Tool Widget */}
-            <div>
-              <HeroQuoteWidget />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── AUTO-SLIDING CARRIER LOGO CAROUSEL SLIDESHOW ── */}
-      <CarrierCarousel />
-
       {/* ── FRONT & CENTER: BRANDON LOCATIONS & INTERACTIVE MAPS ── */}
       <section id="locations" className="section" style={{
         background: '#f8fafc',
@@ -400,6 +301,105 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── SANDBOX.CA INSPIRED HERO BANNER ── */}
+      <section style={{
+        background: 'linear-gradient(135deg, #09090b 0%, #18181b 100%)',
+        color: '#ffffff',
+        paddingTop: '64px',
+        paddingBottom: '80px',
+        borderBottom: '4px solid #dc2626',
+        position: 'relative',
+        overflow: 'hidden',
+      }}>
+        {/* Red accent glow */}
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          right: 0,
+          width: '500px',
+          height: '500px',
+          background: 'radial-gradient(circle, rgba(220,38,38,0.2) 0%, transparent 70%)',
+          pointerEvents: 'none',
+        }} />
+
+        <div className="hero-wrapper">
+          <div className="hero-grid-3">
+            {/* Left Hero Logo Emblem (aligned where user drew red box) */}
+            <div className="hero-logo-box">
+              <div className="hero-logo-card">
+                <Image
+                  src="/images/ficek.logo.jpg"
+                  alt="Ficek Insurance Logo"
+                  width={230}
+                  height={230}
+                  quality={100}
+                  priority
+                  style={{ objectFit: 'contain', width: '100%', height: 'auto' }}
+                />
+              </div>
+            </div>
+
+            {/* Middle Headline */}
+            <div>
+              <div style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '6px 14px',
+                borderRadius: '20px',
+                background: '#dc2626',
+                color: '#ffffff',
+                fontSize: '12px',
+                fontWeight: 800,
+                letterSpacing: '1px',
+                textTransform: 'uppercase',
+                marginBottom: '20px',
+              }}>
+                🇨🇦 Brandon, MB Independent Broker
+              </div>
+
+              <h1 style={{
+                fontSize: 'clamp(36px, 5vw, 60px)',
+                fontWeight: 900,
+                color: '#ffffff',
+                lineHeight: 1.1,
+                marginBottom: '20px',
+                letterSpacing: '-0.02em',
+              }}>
+                We are Ficek Insurance & We love what we do.
+              </h1>
+
+              <p style={{
+                fontSize: '19px',
+                color: '#a1a1aa',
+                lineHeight: 1.65,
+                marginBottom: '32px',
+                maxWidth: '540px',
+              }}>
+                Whether you're looking for MPI Autopac top-ups, farm equipment coverage, or commercial liability, Ficek Insurance is here for you.
+              </p>
+
+              <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
+                <a href={SITE.phoneHref} className="btn btn-red" style={{ padding: '16px 28px', fontSize: '15px' }}>
+                  📞 Call Broker: {SITE.phone}
+                </a>
+                <a href="#locations" className="btn btn-outline-white" style={{ padding: '16px 28px', fontSize: '15px' }}>
+                  📍 View Office Maps ↑
+                </a>
+              </div>
+            </div>
+
+            {/* Right Interactive Quote Tool Widget */}
+            <div>
+              <HeroQuoteWidget />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── AUTO-SLIDING CARRIER LOGO CAROUSEL SLIDESHOW ── */}
+      <CarrierCarousel />
 
       {/* ── SANDBOX.CA CATEGORY MEGA HUB (Auto, Property, Commercial, Farm) ── */}
       <section className="section" style={{ background: '#ffffff' }}>
