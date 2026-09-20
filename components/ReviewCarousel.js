@@ -3,101 +3,133 @@
 import { useState, useEffect, useCallback } from 'react';
 
 export default function ReviewCarousel({ reviews }) {
-  const pageSize = 4;
-  const totalPages = Math.ceil(reviews.length / pageSize);
-  const [page, setPage] = useState(0);
+  const cardsPerPage = 4;
+  const totalPages = Math.ceil(reviews.length / cardsPerPage);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   const nextPage = useCallback(() => {
-    setPage((p) => (p + 1) % totalPages);
+    setCurrentPage((prev) => (prev + 1) % totalPages);
   }, [totalPages]);
 
   const prevPage = useCallback(() => {
-    setPage((p) => (p - 1 + totalPages) % totalPages);
+    setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
   }, [totalPages]);
 
-  // Auto-advance every 8 seconds
+  // Auto-slide every 6 seconds if not hovered
   useEffect(() => {
-    const timer = setInterval(nextPage, 8000);
-    return () => clearInterval(timer);
-  }, [nextPage]);
-
-  const currentReviews = reviews.slice(page * pageSize, page * pageSize + pageSize);
+    if (isHovered || totalPages <= 1) return;
+    const interval = setInterval(nextPage, 6000);
+    return () => clearInterval(interval);
+  }, [nextPage, isHovered, totalPages]);
 
   return (
     <div style={{ display: 'flex', gap: '32px', alignItems: 'stretch', flexWrap: 'wrap' }}>
-      {/* Left side: Reviews carousel */}
-      <div style={{ flex: '1 1 70%', minWidth: '300px' }}>
-        <div className="grid-4" style={{ gap: '20px', marginBottom: '24px' }}>
-          {currentReviews.map((review, i) => (
-            <div
-              key={`${page}-${i}`}
-              className="card card-red-top"
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                background: '#fafafa',
-                borderRadius: '12px',
-                padding: '24px 20px',
-                border: '1px solid #e4e4e7',
-                transition: 'opacity 0.3s ease',
-              }}
-            >
-              <div>
-                <div style={{ color: '#eab308', fontSize: '18px', marginBottom: '10px' }}>
-                  {'★'.repeat(review.rating)}
-                </div>
-                {review.service && (
-                  <div style={{
-                    fontSize: '11px',
-                    fontWeight: 800,
-                    color: '#dc2626',
-                    letterSpacing: '1px',
-                    textTransform: 'uppercase',
-                    marginBottom: '10px',
-                  }}>
-                    {review.service}
-                  </div>
-                )}
-                <p style={{
-                  fontSize: '14px',
-                  color: '#3f3f46',
-                  lineHeight: 1.65,
-                  fontStyle: 'italic',
-                  marginBottom: '16px',
-                }}>
-                  &quot;{review.quote}&quot;
-                </p>
-              </div>
+      {/* Left side: Smooth Sliding Reviews Track */}
+      <div 
+        style={{ flex: '1 1 68%', minWidth: '300px', overflow: 'hidden' }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        {/* Sliding Track Viewport */}
+        <div style={{ overflow: 'hidden', borderRadius: '12px', paddingBottom: '16px' }}>
+          <div
+            style={{
+              display: 'flex',
+              transform: `translateX(-${currentPage * 100}%)`,
+              transition: 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+              width: `${totalPages * 100}%`,
+            }}
+          >
+            {Array.from({ length: totalPages }).map((_, pageIdx) => {
+              const pageReviews = reviews.slice(pageIdx * cardsPerPage, (pageIdx + 1) * cardsPerPage);
+              return (
+                <div
+                  key={pageIdx}
+                  style={{
+                    width: `${100 / totalPages}%`,
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                    gap: '18px',
+                    paddingRight: pageIdx < totalPages - 1 ? '16px' : '0px',
+                    boxSizing: 'border-box',
+                  }}
+                >
+                  {pageReviews.map((review, i) => (
+                    <div
+                      key={i}
+                      className="card card-red-top"
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'space-between',
+                        background: '#fafafa',
+                        borderRadius: '12px',
+                        padding: '22px 18px',
+                        border: '1px solid #e4e4e7',
+                        minHeight: '220px',
+                      }}
+                    >
+                      <div>
+                        <div style={{ color: '#eab308', fontSize: '16px', marginBottom: '8px' }}>
+                          {'★'.repeat(review.rating)}
+                        </div>
+                        {review.service && (
+                          <div style={{
+                            fontSize: '10px',
+                            fontWeight: 800,
+                            color: '#dc2626',
+                            letterSpacing: '1px',
+                            textTransform: 'uppercase',
+                            marginBottom: '8px',
+                          }}>
+                            {review.service}
+                          </div>
+                        )}
+                        <p style={{
+                          fontSize: '13px',
+                          color: '#3f3f46',
+                          lineHeight: 1.6,
+                          fontStyle: 'italic',
+                          marginBottom: '16px',
+                        }}>
+                          &quot;{review.quote}&quot;
+                        </p>
+                      </div>
 
-              <div style={{ paddingTop: '14px', borderTop: '1px solid #e4e4e7' }}>
-                <div style={{ fontWeight: 800, fontSize: '15px', color: '#09090b' }}>
-                  {review.author}
+                      <div style={{ paddingTop: '12px', borderTop: '1px solid #e4e4e7' }}>
+                        <div style={{ fontWeight: 800, fontSize: '14px', color: '#09090b' }}>
+                          {review.author}
+                        </div>
+                        {review.location && (
+                          <div style={{ fontSize: '11px', color: '#71717a' }}>
+                            {review.location}
+                          </div>
+                        )}
+                        <div style={{ fontSize: '10px', color: '#a1a1aa', marginTop: '2px' }}>
+                          Google Review
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                {review.location && (
-                  <div style={{ fontSize: '12px', color: '#71717a' }}>
-                    {review.location}
-                  </div>
-                )}
-                <div style={{ fontSize: '11px', color: '#a1a1aa', marginTop: '2px' }}>
-                  Google Review
-                </div>
-              </div>
-            </div>
-          ))}
+              );
+            })}
+          </div>
         </div>
 
-        {/* Navigation dots and arrows */}
+        {/* Navigation Controls: Slide Dots & Arrows */}
         {totalPages > 1 && (
           <div style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             gap: '16px',
+            marginTop: '8px',
           }}>
             <button
               onClick={prevPage}
-              aria-label="Previous reviews"
+              aria-label="Previous slide"
               style={{
                 background: '#dc2626',
                 color: '#ffffff',
@@ -111,22 +143,26 @@ export default function ReviewCarousel({ reviews }) {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
+                boxShadow: '0 2px 6px rgba(220, 38, 38, 0.3)',
+                transition: 'transform 0.2s ease',
               }}
+              onMouseDown={(e) => (e.currentTarget.style.transform = 'scale(0.92)')}
+              onMouseUp={(e) => (e.currentTarget.style.transform = 'scale(1)')}
             >
               ‹
             </button>
 
-            <div style={{ display: 'flex', gap: '8px' }}>
+            <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
               {Array.from({ length: totalPages }).map((_, idx) => (
                 <button
                   key={idx}
-                  onClick={() => setPage(idx)}
-                  aria-label={`Go to page ${idx + 1}`}
+                  onClick={() => setCurrentPage(idx)}
+                  aria-label={`Slide to page ${idx + 1}`}
                   style={{
-                    width: idx === page ? '24px' : '10px',
+                    width: idx === currentPage ? '24px' : '10px',
                     height: '10px',
                     borderRadius: '5px',
-                    background: idx === page ? '#dc2626' : '#d4d4d8',
+                    background: idx === currentPage ? '#dc2626' : '#d4d4d8',
                     border: 'none',
                     cursor: 'pointer',
                     transition: 'all 0.3s ease',
@@ -137,7 +173,7 @@ export default function ReviewCarousel({ reviews }) {
 
             <button
               onClick={nextPage}
-              aria-label="Next reviews"
+              aria-label="Next slide"
               style={{
                 background: '#dc2626',
                 color: '#ffffff',
@@ -151,7 +187,11 @@ export default function ReviewCarousel({ reviews }) {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
+                boxShadow: '0 2px 6px rgba(220, 38, 38, 0.3)',
+                transition: 'transform 0.2s ease',
               }}
+              onMouseDown={(e) => (e.currentTarget.style.transform = 'scale(0.92)')}
+              onMouseUp={(e) => (e.currentTarget.style.transform = 'scale(1)')}
             >
               ›
             </button>
@@ -161,7 +201,7 @@ export default function ReviewCarousel({ reviews }) {
 
       {/* Right side: Leave a Review CTA */}
       <div style={{
-        flex: '0 0 240px',
+        flex: '0 0 250px',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -169,31 +209,32 @@ export default function ReviewCarousel({ reviews }) {
         textAlign: 'center',
         background: '#09090b',
         borderRadius: '16px',
-        padding: '36px 24px',
+        padding: '32px 22px',
         minHeight: '280px',
       }}>
         <div style={{
-          fontSize: '40px',
-          marginBottom: '10px',
+          fontSize: '36px',
+          color: '#eab308',
+          marginBottom: '8px',
         }}>
-          ★
+          ★★★★★
         </div>
         <h3 style={{
-          fontSize: '19px',
+          fontSize: '18px',
           fontWeight: 900,
           color: '#ffffff',
-          lineHeight: 1.3,
+          lineHeight: 1.35,
           marginBottom: '10px',
         }}>
-          Did we give you five star service?
+          Did we give you 5-star service?
         </h3>
         <p style={{
-          fontSize: '13px',
+          fontSize: '12px',
           color: '#a1a1aa',
           lineHeight: 1.5,
           marginBottom: '20px',
         }}>
-          We would love to hear about your experience! Leave a review for your location:
+          We would love your feedback! Leave a 5-star review on Google:
         </p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '100%' }}>
           <a
@@ -202,10 +243,11 @@ export default function ReviewCarousel({ reviews }) {
             rel="noopener noreferrer"
             className="btn btn-red"
             style={{
-              fontSize: '13px',
-              padding: '10px 16px',
+              fontSize: '12px',
+              padding: '10px 14px',
               justifyContent: 'center',
               width: '100%',
+              borderRadius: '8px',
             }}
           >
             Review 1st Street Office
@@ -216,10 +258,11 @@ export default function ReviewCarousel({ reviews }) {
             rel="noopener noreferrer"
             className="btn btn-outline-white"
             style={{
-              fontSize: '13px',
-              padding: '10px 16px',
+              fontSize: '12px',
+              padding: '10px 14px',
               justifyContent: 'center',
               width: '100%',
+              borderRadius: '8px',
             }}
           >
             Review Richmond Ave Office
