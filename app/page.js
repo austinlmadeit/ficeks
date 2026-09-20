@@ -165,6 +165,7 @@ export default function HomePage() {
                   { name: 'Landlord & Rental Property', href: '/services/business-insurance' },
                   { name: 'High-Value Homes', href: '/services/home-insurance' },
                   { name: 'Mobile Homes', href: '/services/home-insurance' },
+                  { name: 'Vacant Property', href: '/services/home-insurance' },
                 ].map((item, idx) => (
                   <li key={idx}>
                     <Link href={item.href} style={{ fontSize: '14px', fontWeight: 700, color: '#09090b', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
@@ -196,6 +197,7 @@ export default function HomePage() {
                   { name: 'Business Interruption', href: '/services/business-insurance' },
                   { name: 'Course of Construction', href: '/services/business-insurance' },
                   { name: 'Trades Packages', href: '/services/business-insurance' },
+                  { name: 'Vacant Commercial Property', href: '/services/business-insurance' },
                 ].map((item, idx) => (
                   <li key={idx}>
                     <Link href={item.href} style={{ fontSize: '14px', fontWeight: 700, color: '#09090b', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
@@ -217,15 +219,16 @@ export default function HomePage() {
               </div>
               <h3 style={{ fontSize: '22px', fontWeight: 900, marginBottom: '8px' }}>Farm & Agriculture</h3>
               <p style={{ fontSize: '13px', color: '#71717a', lineHeight: 1.5, marginBottom: '20px' }}>
-                Specialized coverage for Manitoba farm dwellings, machinery, and agricultural ops.
+                Coverage for Manitoba farm dwellings, machinery, and agricultural ops.
               </p>
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 {[
                   { name: 'Farm Dwelling & Structures', href: '/services/farm-insurance' },
                   { name: 'Farm Machinery & Equipment', href: '/services/farm-insurance' },
                   { name: 'Livestock & Grain', href: '/services/farm-insurance' },
-                  { name: 'Agribusiness Liability', href: '/services/farm-insurance' },
+                  { name: 'Comprehensive Farmer\'s/Agricultural Liability', href: '/services/farm-insurance' },
                   { name: 'Farm Lifestyle Package', href: '/services/farm-insurance' },
+                  { name: 'Vacant Property', href: '/services/farm-insurance' },
                 ].map((item, idx) => (
                   <li key={idx}>
                     <Link href={item.href} style={{ fontSize: '14px', fontWeight: 700, color: '#09090b', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
