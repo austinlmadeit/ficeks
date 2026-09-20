@@ -68,7 +68,7 @@ export default function OurTeamPage() {
             margin: '0 auto 32px',
             lineHeight: 1.65,
           }}>
-            At Ficek Insurance, you’ll get friendly, reliable service, coverage that actually fits your needs, and competitive pricing. Got a question? Just reach out — we’re here to help every step of the way.
+            At Ficek Insurance, you’ll get friendly, reliable service, coverage that fits your needs, and competitive pricing. Got a question? Just reach out and one of our friendly brokers would love to lend a hand!
           </p>
 
           <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
