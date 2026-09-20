@@ -66,7 +66,7 @@ export default function AboutPage() {
             lineHeight: 1.65,
             marginBottom: '32px',
           }}>
-            From 1 part-time staff member to 10+ licensed insurance brokers across 2 locations — built under our motto: <em>"Let our Family Insure Your Family, Like Family."</em>
+            From 1 part-time staff member to 10+ licensed insurance brokers across 2 locations. We are Ficek Insurance & We love what we do.
           </p>
 
           <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
