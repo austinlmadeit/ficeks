@@ -211,8 +211,8 @@ export default function AboutPage() {
             {TEAM.map((member, i) => (
               <div key={i} className="card text-center" style={{ background: '#fafafa' }}>
                 <div style={{
-                  width: '140px',
-                  height: '140px',
+                  width: '250px',
+                  height: '250px',
                   borderRadius: '50%',
                   background: '#dc2626',
                   display: 'flex',

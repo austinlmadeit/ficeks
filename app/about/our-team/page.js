@@ -108,8 +108,8 @@ export default function OurTeamPage() {
               >
                 {/* Avatar Image or Initial Circle */}
                 <div style={{
-                  width: '220px',
-                  height: '220px',
+                  width: '250px',
+                  height: '250px',
                   borderRadius: '50%',
                   background: 'linear-gradient(135deg, #dc2626 0%, #09090b 100%)',
                   color: '#ffffff',
