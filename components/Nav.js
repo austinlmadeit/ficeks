@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { SITE, NAV } from '@/lib/data';
 import styles from './Nav.module.css';
@@ -23,7 +24,15 @@ export default function Nav() {
 
         {/* Ficek Brand Logo */}
         <Link href="/" className={styles.logo}>
-          <span className={styles.logoBadge}>F</span>
+          <Image
+            src="/images/ficek.logo.jpg"
+            alt="Ficek Insurance"
+            width={48}
+            height={48}
+            quality={100}
+            priority
+            className={styles.logoImage}
+          />
           <div className={styles.logoText}>
             <span className={styles.logoTitle}>FICEK</span>
             <span className={styles.logoSub}>INSURANCE</span>

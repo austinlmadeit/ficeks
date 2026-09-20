@@ -72,6 +72,14 @@
   letter-spacing: -0.5px;
 }
 
+.logoImage {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
 .logoText {
   display: flex;
   flex-direction: column;
