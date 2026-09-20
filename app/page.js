@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import HeroQuoteWidget from '@/components/HeroQuoteWidget';
 import CarrierCarousel from '@/components/CarrierCarousel';
+import ReviewCarousel from '@/components/ReviewCarousel';
 import { SITE, SERVICES, TESTIMONIALS } from '@/lib/data';
 
 export const metadata = {
@@ -255,57 +256,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid-4" style={{ gap: '24px' }}>
-            {TESTIMONIALS.map((review, i) => (
-              <div
-                key={i}
-                className="card card-red-top"
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'space-between',
-                  background: '#fafafa',
-                  borderRadius: '12px',
-                  padding: '28px 22px',
-                  border: '1px solid #e4e4e7',
-                }}
-              >
-                <div>
-                  <div style={{ color: '#eab308', fontSize: '18px', marginBottom: '12px' }}>
-                    {'★'.repeat(review.rating)}
-                  </div>
-                  <div style={{
-                    fontSize: '11px',
-                    fontWeight: 800,
-                    color: '#dc2626',
-                    letterSpacing: '1px',
-                    textTransform: 'uppercase',
-                    marginBottom: '10px',
-                  }}>
-                    {review.service}
-                  </div>
-                  <p style={{
-                    fontSize: '14px',
-                    color: '#3f3f46',
-                    lineHeight: 1.65,
-                    fontStyle: 'italic',
-                    marginBottom: '20px',
-                  }}>
-                    "{review.quote}"
-                  </p>
-                </div>
-
-                <div style={{ paddingTop: '16px', borderTop: '1px solid #e4e4e7' }}>
-                  <div style={{ fontWeight: 800, fontSize: '15px', color: '#09090b' }}>
-                    {review.author}
-                  </div>
-                  <div style={{ fontSize: '12px', color: '#71717a' }}>
-                    📍 {review.location}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ReviewCarousel reviews={TESTIMONIALS} />
         </div>
       </section>
 
