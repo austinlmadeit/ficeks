@@ -184,17 +184,18 @@ export default function HomePage() {
               <div style={{ fontSize: '12px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '4px' }}>
                 Commercial Insurance
               </div>
-              <h3 style={{ fontSize: '22px', fontWeight: 900, marginBottom: '8px' }}>Business Coverage</h3>
+              <h3 style={{ fontSize: '22px', fontWeight: 900, marginBottom: '8px' }}>Commercial & Business</h3>
               <p style={{ fontSize: '13px', color: '#71717a', lineHeight: 1.5, marginBottom: '20px' }}>
                 Grow your Manitoba business while keeping your assets and operations protected.
               </p>
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 {[
-                  { name: 'Contractors Package', href: '/services/business-insurance' },
                   { name: 'Commercial Property', href: '/services/business-insurance' },
-                  { name: 'General Liability', href: '/services/business-insurance' },
+                  { name: 'Commercial General Liability', href: '/services/business-insurance' },
                   { name: 'Commercial Auto Fleet', href: '/services/business-insurance' },
                   { name: 'Business Interruption', href: '/services/business-insurance' },
+                  { name: 'Course of Construction', href: '/services/business-insurance' },
+                  { name: 'Trades Packages', href: '/services/business-insurance' },
                 ].map((item, idx) => (
                   <li key={idx}>
                     <Link href={item.href} style={{ fontSize: '14px', fontWeight: 700, color: '#09090b', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
