@@ -1,6 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { Alex_Brush } from 'next/font/google';
 import { SITE, TEAM, COMPANY_HISTORY } from '@/lib/data';
+
+const alexBrush = Alex_Brush({
+  subsets: ['latin'],
+  weight: ['400'],
+  display: 'swap',
+});
 
 export const metadata = {
   title: 'About Ficek Insurance | Family-Owned Broker, Brandon MB',
@@ -86,7 +93,16 @@ export default function AboutPage() {
           <div className="grid-2" style={{ gap: '56px', alignItems: 'center' }}>
             <div>
               <span className="section-tag">Independent Advantage</span>
-              <h2 className="section-title">We work for you. Not the insurance carriers.</h2>
+              <h2 className="section-title" style={{
+                fontFamily: `${alexBrush.style.fontFamily}, 'Alex Brush', 'Brush Script MT', cursive`,
+                fontWeight: 400,
+                fontSize: 'clamp(32px, 4.5vw, 48px)',
+                lineHeight: 1.25,
+                color: '#18181b',
+                letterSpacing: '0.5px',
+              }}>
+                We work for you, not the insurance carriers.
+              </h2>
               <p style={{ color: '#71717a', lineHeight: 1.75, marginBottom: '16px' }}>
                 Unlike captive insurance agents who can only sell one company's policies, Ficek Insurance is 100% independent. We shop Canada’s top insurance providers on your behalf to secure the best coverage at competitive rates.
               </p>
