@@ -116,8 +116,8 @@ export default function AboutPage() {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {[
-                { title: 'Unbiased Representation', desc: 'No insurance company quotas. We represent your best financial interest.' },
-                { title: 'Multi-Market Shopping', desc: 'We compare coverage options across leading Canadian insurance markets.' },
+                { title: 'Unbiased Representation', desc: 'No insurance company quotas. We represent you and your best insurance interests.' },
+                { title: 'Multi-Carrier Shopping', desc: 'We compare coverage options across 15+ leading Canadian insurance carriers to find the best premiums and the best coverages for your unique risk portfolio.' },
                 { title: 'Local Claims Advocacy', desc: 'Direct, personal guidance when you need to file a claim.' },
               ].map((item, i) => (
                 <div key={i} className="card card-red-top" style={{ display: 'flex', gap: '16px', alignItems: 'flex-start', background: '#fafafa' }}>
