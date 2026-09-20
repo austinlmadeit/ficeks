@@ -1,5 +1,6 @@
 import { TEAM, SITE } from '@/lib/data';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Our Team | Ficek Insurance Brandon MB',
@@ -105,23 +106,29 @@ export default function OurTeamPage() {
                   borderRadius: '12px',
                 }}
               >
-                {/* Avatar Initial Circle */}
+                {/* Avatar Image or Initial Circle */}
                 <div style={{
-                  width: '84px',
-                  height: '84px',
+                  width: '100px',
+                  height: '100px',
                   borderRadius: '50%',
                   background: 'linear-gradient(135deg, #dc2626 0%, #09090b 100%)',
                   color: '#ffffff',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontSize: '24px',
+                  fontSize: '28px',
                   fontWeight: 900,
                   marginBottom: '16px',
                   boxShadow: '0 4px 14px rgba(220,38,38,0.25)',
                   border: '3px solid #ffffff',
+                  position: 'relative',
+                  overflow: 'hidden',
                 }}>
-                  {member.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                  {member.image ? (
+                    <Image src={member.image} alt={member.name} fill style={{ objectFit: 'cover' }} />
+                  ) : (
+                    member.name.split(' ').map(n => n[0]).join('').slice(0, 2)
+                  )}
                 </div>
 
                 <h3 style={{

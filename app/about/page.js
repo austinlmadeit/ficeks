@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { SITE, TEAM, COMPANY_HISTORY } from '@/lib/data';
 
 export const metadata = {
@@ -210,8 +211,8 @@ export default function AboutPage() {
             {TEAM.map((member, i) => (
               <div key={i} className="card text-center" style={{ background: '#fafafa' }}>
                 <div style={{
-                  width: '72px',
-                  height: '72px',
+                  width: '84px',
+                  height: '84px',
                   borderRadius: '50%',
                   background: '#dc2626',
                   display: 'flex',
@@ -222,8 +223,14 @@ export default function AboutPage() {
                   fontWeight: 900,
                   color: '#ffffff',
                   boxShadow: '0 4px 12px rgba(220,38,38,0.2)',
+                  position: 'relative',
+                  overflow: 'hidden',
                 }}>
-                  {member.name.split(' ').map(n => n[0]).join('')}
+                  {member.image ? (
+                    <Image src={member.image} alt={member.name} fill style={{ objectFit: 'cover' }} />
+                  ) : (
+                    member.name.split(' ').map(n => n[0]).join('').slice(0, 2)
+                  )}
                 </div>
                 <div style={{ fontWeight: 900, fontSize: '18px', marginBottom: '4px', color: '#09090b' }}>{member.name}</div>
                 <div style={{ fontSize: '13px', color: '#dc2626', fontWeight: 800 }}>{member.title}</div>
