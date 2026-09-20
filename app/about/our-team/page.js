@@ -108,8 +108,8 @@ export default function OurTeamPage() {
               >
                 {/* Avatar Image or Initial Circle */}
                 <div style={{
-                  width: '180px',
-                  height: '180px',
+                  width: '220px',
+                  height: '220px',
                   borderRadius: '50%',
                   background: 'linear-gradient(135deg, #dc2626 0%, #09090b 100%)',
                   color: '#ffffff',
@@ -125,7 +125,7 @@ export default function OurTeamPage() {
                   overflow: 'hidden',
                 }}>
                   {member.image ? (
-                    <Image src={member.image} alt={member.name} fill style={{ objectFit: 'cover' }} />
+                    <Image src={member.image} alt={member.name} fill quality={100} sizes="250px" style={{ objectFit: 'cover' }} />
                   ) : (
                     member.name.split(' ').map(n => n[0]).join('').slice(0, 2)
                   )}

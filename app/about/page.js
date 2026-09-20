@@ -211,8 +211,8 @@ export default function AboutPage() {
             {TEAM.map((member, i) => (
               <div key={i} className="card text-center" style={{ background: '#fafafa' }}>
                 <div style={{
-                  width: '120px',
-                  height: '120px',
+                  width: '140px',
+                  height: '140px',
                   borderRadius: '50%',
                   background: '#dc2626',
                   display: 'flex',
@@ -227,7 +227,7 @@ export default function AboutPage() {
                   overflow: 'hidden',
                 }}>
                   {member.image ? (
-                    <Image src={member.image} alt={member.name} fill style={{ objectFit: 'cover' }} />
+                    <Image src={member.image} alt={member.name} fill quality={100} sizes="200px" style={{ objectFit: 'cover' }} />
                   ) : (
                     member.name.split(' ').map(n => n[0]).join('').slice(0, 2)
                   )}
