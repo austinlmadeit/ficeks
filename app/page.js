@@ -41,7 +41,7 @@ export default function HomePage() {
               ✨ Now Open Across Two Brandon Offices
             </div>
             <h2 className="section-title float-in delay-100" style={{ fontSize: 'clamp(30px, 4.5vw, 46px)', marginBottom: '16px' }}>
-              Two Locations in Brandon — Visit Our New Space!
+              Two Locations in Brandon - Visit Our New Space!
             </h2>
             <p className="section-sub mx-auto float-in delay-200" style={{ fontSize: '17px', color: '#475569', lineHeight: 1.6 }}>
               We’ve expanded to serve you better! Visit our brand new 18th Street location or our established 1st Street headquarters for Autopac renewals, driver licensing, and full-service insurance.
@@ -50,7 +50,7 @@ export default function HomePage() {
 
           {/* DUAL LOCATIONS GRID */}
           <div className="grid-2" style={{ gap: '32px', alignItems: 'stretch' }}>
-            {/* 1525B 18th Street Office — HIGHLIGHTED AS OUR NEW SPACE */}
+            {/* 1525B 18th Street Office - HIGHLIGHTED AS OUR NEW SPACE */}
             <div className="location-showcase-card float-in delay-250">
               {/* Eye-catching Top Ribbon */}
               <div style={{
@@ -170,7 +170,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* 1439 1st Street Office — MAIN HEADQUARTERS */}
+            {/* 1439 1st Street Office - MAIN HEADQUARTERS */}
             <div className="location-showcase-card float-in delay-350">
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px', flexWrap: 'wrap' }}>
