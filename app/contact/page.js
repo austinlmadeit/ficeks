@@ -55,7 +55,7 @@ export default function ContactPage() {
 
       <section className="section" style={{ background: '#f8fafc', padding: '64px 0' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '56px', alignItems: 'start' }}>
+          <div className="grid-2" style={{ gap: '56px', alignItems: 'start' }}>
             {/* Interactive Contact Form Component */}
             <div style={{
               background: '#ffffff',

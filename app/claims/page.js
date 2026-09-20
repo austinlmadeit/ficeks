@@ -84,7 +84,7 @@ export default function ClaimsPage() {
       <section className="section" style={{ background: '#ffffff' }}>
         <div className="container">
           <div className="card card-red-top" style={{ padding: '36px', background: '#fafafa', marginBottom: '56px' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '36px', alignItems: 'center' }}>
+            <div className="grid-2" style={{ gap: '36px', alignItems: 'center' }}>
               <div>
                 <span style={{ fontSize: '12px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px', display: 'block' }}>
                   Motor Vehicle Accidents (Manitoba)

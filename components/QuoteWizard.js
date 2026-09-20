@@ -314,7 +314,7 @@ ${!isAuto && form.policyNumber ? `[Policy Number]: ${form.policyNumber}\n` : ''}
               </div>
 
               {isAuto ? (
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                <div className="grid-2" style={{ gap: '16px' }}>
                   <div>
                     <label style={{ display: 'block', fontSize: '12px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '6px' }}>
                       Current Insurer or D/L Number
@@ -365,7 +365,7 @@ ${!isAuto && form.policyNumber ? `[Policy Number]: ${form.policyNumber}\n` : ''}
                 </div>
               ) : (
                 <>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                  <div className="grid-2" style={{ gap: '16px' }}>
                     <div>
                       <label style={{ display: 'block', fontSize: '12px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '6px' }}>
                         Current Insurer
@@ -453,7 +453,7 @@ ${!isAuto && form.policyNumber ? `[Policy Number]: ${form.policyNumber}\n` : ''}
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+              <div className="grid-2" style={{ gap: '16px' }}>
                 <div>
                   <label style={{ display: 'block', fontSize: '12px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '6px' }}>
                     Full Name *
@@ -500,7 +500,7 @@ ${!isAuto && form.policyNumber ? `[Policy Number]: ${form.policyNumber}\n` : ''}
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+              <div className="grid-2" style={{ gap: '16px' }}>
                 <div>
                   <label style={{ display: 'block', fontSize: '12px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '6px' }}>
                     Email Address
@@ -545,7 +545,7 @@ ${!isAuto && form.policyNumber ? `[Policy Number]: ${form.policyNumber}\n` : ''}
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+              <div className="grid-2" style={{ gap: '16px' }}>
                 <div>
                   <label style={{ display: 'block', fontSize: '12px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '6px' }}>
                     Preferred Brandon Office

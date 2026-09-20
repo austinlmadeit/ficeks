@@ -228,7 +228,7 @@ export default function SandboxQuoteForm() {
         {/* Step 1 */}
         {step === 1 && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+            <div className="grid-2" style={{ gap: '16px' }}>
               <div style={fieldStyle}>
                 <label style={labelStyle}>First Name *</label>
                 <input style={inputStyle} placeholder="Austin" value={form.firstName} onChange={(e) => update('firstName', e.target.value)} />
@@ -262,7 +262,7 @@ export default function SandboxQuoteForm() {
         {/* Step 2 */}
         {step === 2 && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr 2fr', gap: '16px' }}>
+            <div className="grid-3" style={{ gap: '16px' }}>
               <div style={fieldStyle}>
                 <label style={labelStyle}>Year *</label>
                 <input style={inputStyle} placeholder="2022" maxLength={4} value={form.vehicleYear} onChange={(e) => update('vehicleYear', e.target.value)} />
@@ -309,7 +309,7 @@ export default function SandboxQuoteForm() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <div style={fieldStyle}>
               <label style={labelStyle}>Preferred Liability Limit *</label>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
+              <div className="grid-3" style={{ gap: '10px' }}>
                 {['$1 Million', '$2 Million', '$5 Million'].map((opt) => (
                   <button
                     key={opt}

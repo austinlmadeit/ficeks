@@ -82,7 +82,7 @@ export default function AboutPage() {
       {/* ── INDEPENDENT BROKER ADVANTAGE ── */}
       <section className="section" style={{ background: '#ffffff' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '56px', alignItems: 'center' }}>
+          <div className="grid-2" style={{ gap: '56px', alignItems: 'center' }}>
             <div>
               <span className="section-tag">Independent Advantage</span>
               <h2 className="section-title">We work for you. Not the insurance carriers.</h2>

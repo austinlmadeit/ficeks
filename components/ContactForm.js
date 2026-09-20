@@ -106,7 +106,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
+      <div className="grid-2" style={{ gap: '14px' }}>
         <div>
           <label style={labelStyle}>Full Name *</label>
           <input
@@ -131,7 +131,7 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
+      <div className="grid-2" style={{ gap: '14px' }}>
         <div>
           <label style={labelStyle}>Email Address *</label>
           <input

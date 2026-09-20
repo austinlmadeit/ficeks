@@ -133,7 +133,7 @@ export default function HeroQuoteWidget() {
           </div>
 
           {/* Form Inputs */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '16px' }}>
+          <div className="grid-2" style={{ gap: '12px', marginBottom: '16px' }}>
             <div>
               <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, color: '#71717a', marginBottom: '4px' }}>
                 Full Name *

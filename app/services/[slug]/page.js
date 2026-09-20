@@ -185,7 +185,7 @@ export default async function ServicePage({ params }) {
       {isAuto && (
         <section id="sandbox-quote" className="section" style={{ background: 'linear-gradient(135deg, #09090b 0%, #1c1c1f 100%)', borderTop: '4px solid #dc2626' }}>
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'start' }}>
+            <div className="grid-2" style={{ gap: '60px', alignItems: 'start' }}>
               <div style={{ color: '#ffffff' }}>
                 <span style={{ display: 'inline-block', background: '#dc2626', color: '#fff', fontWeight: 800, fontSize: '11px', letterSpacing: '1px', textTransform: 'uppercase', padding: '5px 12px', borderRadius: '4px', marginBottom: '20px' }}>
                   Free Quote — No Obligation
@@ -241,7 +241,7 @@ export default async function ServicePage({ params }) {
       {/* COVERAGE HIGHLIGHTS */}
       <section className="section" style={{ background: isAuto ? '#fafafa' : '#ffffff', borderTop: '1px solid #e4e4e7' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'start' }}>
+          <div className="grid-2" style={{ gap: '64px', alignItems: 'start' }}>
             <div>
               <span className="section-tag">Key Protection</span>
               <h2 style={{ fontSize: '36px', fontWeight: 900, marginBottom: '28px' }}>

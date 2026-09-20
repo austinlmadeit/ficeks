@@ -55,7 +55,7 @@ export default function QuotePage() {
 
       <section className="section" style={{ background: '#f8fafc', padding: '64px 0' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 0.8fr', gap: '48px', alignItems: 'start' }}>
+          <div className="grid-2" style={{ gap: '48px', alignItems: 'start' }}>
             {/* Interactive 3-Step Wizard */}
             <div>
               <QuoteWizard />

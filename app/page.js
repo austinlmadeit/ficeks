@@ -34,9 +34,7 @@ export default function HomePage() {
         }} />
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
+          <div className="grid-2" style={{
             gap: '48px',
             alignItems: 'center',
           }}>
