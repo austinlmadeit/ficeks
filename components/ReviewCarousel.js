@@ -161,7 +161,7 @@ export default function ReviewCarousel({ reviews }) {
 
       {/* Right side: Leave a Review CTA */}
       <div style={{
-        flex: '0 0 220px',
+        flex: '0 0 240px',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -169,47 +169,62 @@ export default function ReviewCarousel({ reviews }) {
         textAlign: 'center',
         background: '#09090b',
         borderRadius: '16px',
-        padding: '40px 28px',
+        padding: '36px 24px',
         minHeight: '280px',
       }}>
         <div style={{
-          fontSize: '48px',
-          marginBottom: '12px',
+          fontSize: '40px',
+          marginBottom: '10px',
         }}>
           ★
         </div>
         <h3 style={{
-          fontSize: '20px',
+          fontSize: '19px',
           fontWeight: 900,
           color: '#ffffff',
           lineHeight: 1.3,
-          marginBottom: '12px',
+          marginBottom: '10px',
         }}>
           Did we give you five star service?
         </h3>
         <p style={{
-          fontSize: '14px',
+          fontSize: '13px',
           color: '#a1a1aa',
-          lineHeight: 1.6,
-          marginBottom: '24px',
+          lineHeight: 1.5,
+          marginBottom: '20px',
         }}>
-          We would love to hear about your experience. Leave us a review on Google!
+          We would love to hear about your experience! Leave a review for your location:
         </p>
-        <a
-          href="https://share.google/gKhy3vXGGOJbKRUF5"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-red"
-          style={{
-            fontSize: '14px',
-            padding: '12px 24px',
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-          }}
-        >
-          Leave a Review
-        </a>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '100%' }}>
+          <a
+            href="https://share.google/gKhy3vXGGOJbKRUF5"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-red"
+            style={{
+              fontSize: '13px',
+              padding: '10px 16px',
+              justifyContent: 'center',
+              width: '100%',
+            }}
+          >
+            Review 1st Street Office
+          </a>
+          <a
+            href="https://share.google/tNPbQMipfx1EJtWeC"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-outline-white"
+            style={{
+              fontSize: '13px',
+              padding: '10px 16px',
+              justifyContent: 'center',
+              width: '100%',
+            }}
+          >
+            Review Richmond Ave Office
+          </a>
+        </div>
       </div>
     </div>
   );
