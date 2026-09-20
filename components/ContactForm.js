@@ -104,15 +104,6 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
-      <div>
-        <h3 style={{ fontSize: '20px', fontWeight: 900, color: '#09090b', marginBottom: '4px' }}>
-          Send Us a Direct Message
-        </h3>
-        <p style={{ fontSize: '13px', color: '#71717a', margin: 0 }}>
-          Fill out the form below and one of our licensed insurance brokers will follow up promptly.
-        </p>
-      </div>
-
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
         <div>
           <label style={labelStyle}>Full Name *</label>
