@@ -677,20 +677,28 @@ ${!isAuto && form.policyNumber ? `[Policy Number]: ${form.policyNumber}\n` : ''}
               Continue to Step {step + 1} →
             </button>
           ) : (
-            <button
-              type="button"
-              onClick={handleSubmit}
-              disabled={loading}
-              className="btn btn-red"
-              style={{
-                padding: '14px 36px',
-                fontSize: '16px',
-                background: loading ? '#9ca3af' : '#dc2626',
-                cursor: loading ? 'not-allowed' : 'pointer',
-              }}
-            >
-              {loading ? 'Submitting...' : '🚀 Submit Free Quote Request'}
-            </button>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'flex-end' }}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                <input type="checkbox" required id="consent" style={{ marginTop: '4px', width: '16px', height: '16px', accentColor: '#dc2626' }} />
+                <label htmlFor="consent" style={{ fontSize: '13px', color: '#71717a', lineHeight: 1.5, textAlign: 'left', maxWidth: '300px' }}>
+                  I agree to the <a href="/terms" target="_blank" style={{ color: '#09090b', textDecoration: 'underline' }}>Terms</a> and <a href="/privacy" target="_blank" style={{ color: '#09090b', textDecoration: 'underline' }}>Privacy Policy</a>.
+                </label>
+              </div>
+              <button
+                type="button"
+                onClick={handleSubmit}
+                disabled={loading}
+                className="btn btn-red"
+                style={{
+                  padding: '14px 36px',
+                  fontSize: '16px',
+                  background: loading ? '#9ca3af' : '#dc2626',
+                  cursor: loading ? 'not-allowed' : 'pointer',
+                }}
+              >
+                {loading ? 'Submitting...' : '🚀 Submit Free Quote Request'}
+              </button>
+            </div>
           )}
         </div>
       </div>

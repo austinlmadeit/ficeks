@@ -134,6 +134,8 @@ export default function Footer() {
             <span style={{ background: '#27272a', color: '#ef4444', padding: '4px 10px', borderRadius: '20px', fontSize: '11px', fontWeight: 800 }}>
               🔴 RED & BLACK BRAND BUILD
             </span>
+            <Link href="/privacy" style={{ color: '#a1a1aa' }}>Privacy Policy</Link>
+            <Link href="/terms" style={{ color: '#a1a1aa' }}>Terms of Service</Link>
             <Link href="/dev-notes" style={{ color: '#ef4444' }}>Dev Notes</Link>
           </span>
         </div>

@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 
 import { useState } from 'react';
 
@@ -364,16 +365,25 @@ export default function SandboxQuoteForm() {
               Next Step →
             </button>
           ) : (
-            <button
-              onClick={submit}
-              disabled={loading}
-              style={{ background: loading ? '#a1a1aa' : '#dc2626', color: '#fff', border: 'none', borderRadius: '8px', padding: '13px 28px', fontWeight: 800, fontSize: '15px', cursor: loading ? 'not-allowed' : 'pointer', fontFamily: 'inherit', transition: 'background 0.2s' }}
-            >
-              {loading ? 'Sending...' : 'Submit Quote Request'}
-            </button>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'flex-end' }}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                <input type="checkbox" required id="consent" style={{ marginTop: '4px', width: '16px', height: '16px', accentColor: '#dc2626' }} />
+                <label htmlFor="consent" style={{ fontSize: '13px', color: '#71717a', lineHeight: 1.5, textAlign: 'left', maxWidth: '300px' }}>
+                  I agree to the <a href="/terms" target="_blank" style={{ color: '#09090b', textDecoration: 'underline' }}>Terms</a> and <a href="/privacy" target="_blank" style={{ color: '#09090b', textDecoration: 'underline' }}>Privacy Policy</a>.
+                </label>
+              </div>
+              <button
+                onClick={submit}
+                disabled={loading}
+                style={{ background: loading ? '#a1a1aa' : '#dc2626', color: '#fff', border: 'none', borderRadius: '8px', padding: '13px 28px', fontWeight: 800, fontSize: '15px', cursor: loading ? 'not-allowed' : 'pointer', fontFamily: 'inherit', transition: 'background 0.2s' }}
+              >
+                {loading ? 'Sending...' : 'Submit Quote Request'}
+              </button>
+            </div>
           )}
         </div>
       </div>
     </div>
   );
 }
+

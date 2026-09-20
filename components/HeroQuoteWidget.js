@@ -205,6 +205,13 @@ export default function HeroQuoteWidget() {
             </div>
           )}
 
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '16px' }}>
+            <input type="checkbox" required id="consentHero" style={{ marginTop: '4px', width: '16px', height: '16px', accentColor: '#dc2626' }} />
+            <label htmlFor="consentHero" style={{ fontSize: '12px', color: '#71717a', lineHeight: 1.5 }}>
+              I agree to the <Link href="/terms" target="_blank" style={{ color: '#09090b', textDecoration: 'underline' }}>Terms</Link> and <Link href="/privacy" target="_blank" style={{ color: '#09090b', textDecoration: 'underline' }}>Privacy Policy</Link>.
+            </label>
+          </div>
+
           <button
             type="submit"
             disabled={loading}
