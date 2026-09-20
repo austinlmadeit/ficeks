@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { SITE, SERVICES } from '@/lib/data';
 
 export default function Footer() {
@@ -11,7 +12,7 @@ export default function Footer() {
     <footer style={{
       background: '#09090b',
       color: '#ffffff',
-      borderTop: '4px solid #dc2626',
+      borderTop: '1px solid #27272a',
       paddingTop: '64px',
     }}>
       <div className="container">
@@ -23,8 +24,17 @@ export default function Footer() {
         }}>
           {/* Brand Column */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
-              <span style={{ background: '#dc2626', color: '#ffffff', fontWeight: 900, fontSize: '18px', padding: '4px 10px', borderRadius: '4px', fontFamily: 'var(--font-heading)' }}>F</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+              <div style={{ width: '42px', height: '42px', background: '#ffffff', borderRadius: '6px', padding: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <Image
+                  src="/images/ficek.logo.jpg"
+                  alt="Ficek Insurance"
+                  width={34}
+                  height={34}
+                  quality={100}
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
               <div>
                 <div style={{ fontSize: '20px', fontWeight: 900, color: '#ffffff', fontFamily: 'var(--font-heading)', lineHeight: 1 }}>FICEK</div>
                 <div style={{ fontSize: '9px', fontWeight: 700, color: '#dc2626', letterSpacing: '2px' }}>INSURANCE</div>
