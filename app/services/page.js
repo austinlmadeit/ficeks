@@ -21,7 +21,7 @@ export default function ServicesPage() {
             Insurance for every part of your life
           </h1>
           <p style={{ fontSize: '18px', color: 'var(--muted)', maxWidth: '540px', margin: '0 auto', lineHeight: 1.7 }}>
-            As an independent broker, we offer coverage across 9 insurance categories — and we compare rates to find you the best deal.
+            As an independent broker, we offer coverage for all of life&apos;s unique needs and we compare rates with leading carriers to find you the best deal.
           </p>
         </div>
       </section>
