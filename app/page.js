@@ -272,7 +272,7 @@ export default function HomePage() {
             Ready to find your best insurance rate?
           </h2>
           <p style={{ fontSize: '18px', color: '#fecaca', marginBottom: '28px', maxWidth: '520px', margin: '0 auto 28px' }}>
-            Talk to a licensed Brandon broker today or submit a quick quote request online.
+            Speak to one of our friendly brokers today, or submit a quick quote request online.
           </p>
           <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/quote" className="btn btn-black" style={{ fontSize: '16px', padding: '16px 32px' }}>
