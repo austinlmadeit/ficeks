@@ -172,7 +172,7 @@ export default function OurTeamPage() {
                 Looking to speak with a licensed Brandon broker?
               </h3>
               <p style={{ color: '#a1a1aa', fontSize: '15px', margin: 0, maxWidth: '600px' }}>
-                Visit us in person at 1525 18th Street or 1439 1st Street in Brandon, MB, or give our office a call today.
+                Visit us in person at 1525B 18th Street or 1439 1st Street in Brandon, MB, or give our office a call today.
               </p>
             </div>
             <Link href="/contact" className="btn btn-red" style={{ padding: '14px 28px' }}>

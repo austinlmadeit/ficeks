@@ -566,7 +566,7 @@ ${!isAuto && form.policyNumber ? `[Policy Number]: ${form.policyNumber}\n` : ''}
                     }}
                   >
                     <option value="1439 1st Street (Main Office)">1439 1st Street (Main Office HQ)</option>
-                    <option value="1525 18th Street Office">1525 18th Street Office</option>
+                    <option value="1525B 18th Street Office">1525B 18th Street Office</option>
                     <option value="Either Brandon Location">Either Brandon Location</option>
                   </select>
                 </div>

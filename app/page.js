@@ -50,7 +50,7 @@ export default function HomePage() {
 
           {/* DUAL LOCATIONS GRID */}
           <div className="grid-2" style={{ gap: '32px', alignItems: 'stretch' }}>
-            {/* 1525 18th Street Office — HIGHLIGHTED AS OUR NEW SPACE */}
+            {/* 1525B 18th Street Office — HIGHLIGHTED AS OUR NEW SPACE */}
             <div
               className="card"
               style={{
@@ -104,7 +104,7 @@ export default function HomePage() {
                 </div>
 
                 <h3 style={{ fontSize: '26px', fontWeight: 900, color: '#09090b', marginBottom: '8px' }}>
-                  1525 18th Street Office
+                  1525B 18th Street Office
                 </h3>
 
                 <p style={{ fontSize: '15px', color: '#475569', lineHeight: 1.6, marginBottom: '20px' }}>
@@ -122,8 +122,8 @@ export default function HomePage() {
                   border: '1px solid #cbd5e1',
                 }}>
                   <iframe
-                    title="1525 18th Street Office - New Location Map"
-                    src="https://maps.google.com/maps?q=1525%2018th%20Street%20Brandon%20MB%20R7A%205A9&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    title="1525B 18th Street Office - New Location Map"
+                    src="https://maps.google.com/maps?q=1525B%2018th%20Street%20Brandon%20MB%20R7A%205A9&t=&z=15&ie=UTF8&iwloc=&output=embed"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -140,7 +140,7 @@ export default function HomePage() {
                       Street Address
                     </div>
                     <div style={{ fontSize: '16px', fontWeight: 800, color: '#09090b' }}>
-                      1525 18th Street, Brandon, MB R7A 5A9
+                      1525B 18th Street, Brandon, MB R7A 5A9
                     </div>
                   </div>
 
@@ -166,7 +166,7 @@ export default function HomePage() {
 
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=1525+18th+Street+Brandon+MB+R7A+5A9"
+                  href="https://www.google.com/maps/search/?api=1&query=1525B+18th+Street+Brandon+MB+R7A+5A9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-red"

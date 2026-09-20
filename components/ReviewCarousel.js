@@ -131,7 +131,7 @@ export default function ReviewCarousel({ reviews }) {
             transition: 'all 0.2s ease',
           }}
         >
-          1525 18th Street Office ({eighteenthStCount})
+          1525B 18th Street Office ({eighteenthStCount})
         </button>
       </div>
 

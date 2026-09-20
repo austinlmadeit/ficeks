@@ -128,7 +128,7 @@ export default function Footer() {
               </div>
 
               <div style={{ borderTop: '1px solid #27272a', paddingTop: '12px' }}>
-                <strong style={{ color: '#ffffff', display: 'block', fontSize: '14px', marginBottom: '2px' }}>1525 18th Street Office</strong>
+                <strong style={{ color: '#ffffff', display: 'block', fontSize: '14px', marginBottom: '2px' }}>1525B 18th Street Office</strong>
                 <div>Brandon, MB R7A 5A9</div>
                 <div style={{ marginTop: '4px' }}>
                   <a href="tel:+12047281957" style={{ color: '#dc2626', fontWeight: 800, fontSize: '15px' }}>204-728-1957</a>

@@ -3,7 +3,7 @@ import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
   title: 'Contact Us | Ficek Insurance Brandon MB',
-  description: `Contact licensed independent brokers at Ficek Insurance in Brandon, Manitoba. 1439 1st Street (204-571-1777) and 1525 18th Street (204-728-1957). Email: ${SITE.email}.`,
+  description: `Contact licensed independent brokers at Ficek Insurance in Brandon, Manitoba. 1439 1st Street (204-571-1777) and 1525B 18th Street (204-728-1957). Email: ${SITE.email}.`,
 };
 
 export default function ContactPage() {

@@ -3,7 +3,7 @@ import { SITE, OFFICES } from '@/lib/data';
 
 export const metadata = {
   title: 'Brandon MB Office Locations | Ficek Insurance',
-  description: 'Visit Ficek Insurance in Brandon, Manitoba — 1439 1st Street (Main Office HQ) and 1525 18th Street (18th St Branch). Interactive maps, hours, and contact info.',
+  description: 'Visit Ficek Insurance in Brandon, Manitoba — 1439 1st Street (Main Office HQ) and 1525B 18th Street (18th St Branch). Interactive maps, hours, and contact info.',
 };
 
 export default function LocationsPage() {
@@ -65,7 +65,7 @@ export default function LocationsPage() {
             lineHeight: 1.65,
             marginBottom: '32px',
           }}>
-            Serving Brandon and Westman families across 2 local offices — <strong>1439 1st Street</strong> (Main Office) and <strong>1525 18th Street</strong>. Walk-ins welcome for Autopac and insurance consultations!
+            Serving Brandon and Westman families across 2 local offices — <strong>1439 1st Street</strong> (Main Office) and <strong>1525B 18th Street</strong>. Walk-ins welcome for Autopac and insurance consultations!
           </p>
 
           <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
