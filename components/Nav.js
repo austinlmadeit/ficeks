@@ -19,11 +19,7 @@ export default function Nav() {
   return (
     <header className={styles.header}>
       <div className={`${styles.inner} container`}>
-        {/* Far Left 24/7 Emergency Claims Badge */}
-        <Link href="/claims" className={styles.claimsBadge}>
-          <span className={styles.claimsPulse} />
-          🚨 24/7 Claims
-        </Link>
+        {/* Claims badge removed */}
 
         {/* Ficek Brand Logo */}
         <Link href="/" className={styles.logo}>

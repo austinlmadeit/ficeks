@@ -113,19 +113,13 @@ export default function ContactPage() {
               {/* General Inquiries Card */}
               <div className="card" style={{ background: '#ffffff', padding: '24px', borderRadius: '12px' }}>
                 <h3 style={{ fontSize: '18px', fontWeight: 900, color: '#09090b', marginBottom: '10px' }}>
-                  Direct Email & Claims
+                  Direct Email
                 </h3>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '14px' }}>
                   <div>
                     <strong>General Email: </strong>
                     <a href={`mailto:${SITE.email}`} style={{ color: '#dc2626', fontWeight: 700, textDecoration: 'none' }}>
                       {SITE.email}
-                    </a>
-                  </div>
-                  <div>
-                    <strong>Emergency Claims: </strong>
-                    <a href="/claims" style={{ color: '#dc2626', fontWeight: 700, textDecoration: 'none' }}>
-                      Visit 24/7 Claims Hub →
                     </a>
                   </div>
                 </div>
