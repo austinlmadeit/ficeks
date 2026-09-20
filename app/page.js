@@ -158,7 +158,7 @@ export default function HomePage() {
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 {[
                   { name: 'Homeowners Insurance', href: '/services/home-insurance' },
-                  { name: 'Condo & Life Lease', href: '/services/condo-insurance' },
+                  { name: 'Condo', href: '/services/condo-insurance' },
                   { name: 'Tenants & Renters', href: '/services/home-insurance' },
                   { name: 'Cabins & Cottages', href: '/services/home-insurance' },
                   { name: 'Landlord & Rental Property', href: '/services/business-insurance' },
