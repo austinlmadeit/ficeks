@@ -163,6 +163,8 @@ export default function HomePage() {
                   { name: 'Tenants & Renters', href: '/services/home-insurance' },
                   { name: 'Cabins & Cottages', href: '/services/home-insurance' },
                   { name: 'Landlord & Rental Property', href: '/services/business-insurance' },
+                  { name: 'High-Value Homes', href: '/services/home-insurance' },
+                  { name: 'Mobile Homes', href: '/services/home-insurance' },
                 ].map((item, idx) => (
                   <li key={idx}>
                     <Link href={item.href} style={{ fontSize: '14px', fontWeight: 700, color: '#09090b', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
