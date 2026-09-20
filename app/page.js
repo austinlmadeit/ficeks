@@ -43,8 +43,8 @@ export default function HomePage() {
                 <Image
                   src="/images/ficek.logo.jpg"
                   alt="Ficek Insurance Logo"
-                  width={180}
-                  height={180}
+                  width={230}
+                  height={230}
                   quality={100}
                   priority
                   style={{ objectFit: 'contain', width: '100%', height: 'auto' }}
