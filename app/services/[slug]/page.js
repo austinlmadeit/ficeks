@@ -65,7 +65,6 @@ export default async function ServicePage({ params }) {
           </Link>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '40px' }}>
             <div style={{ maxWidth: '720px' }}>
-              {!isAuto && <div style={{ fontSize: '48px', marginBottom: '16px' }}>{service.icon}</div>}
               <h1 style={{ fontSize: 'clamp(36px, 5.5vw, 56px)', fontWeight: 900, color: '#ffffff', lineHeight: 1.1, marginBottom: '20px', letterSpacing: '-0.02em' }}>
                 {service.title}
               </h1>
