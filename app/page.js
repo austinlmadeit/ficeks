@@ -3,7 +3,7 @@ import Image from 'next/image';
 import HeroQuoteWidget from '@/components/HeroQuoteWidget';
 import CarrierCarousel from '@/components/CarrierCarousel';
 import ReviewCarousel from '@/components/ReviewCarousel';
-import { SITE, SERVICES, TESTIMONIALS } from '@/lib/data';
+import { SITE, SERVICES, TESTIMONIALS, OFFICES } from '@/lib/data';
 
 export const metadata = {
   title: 'Ficek Insurance | Home, Auto, Farm & Business Insurance Brandon MB',
@@ -96,9 +96,9 @@ export default function HomePage() {
                 <a href={SITE.phoneHref} className="btn btn-red" style={{ padding: '16px 28px', fontSize: '15px' }}>
                   📞 Call Broker: {SITE.phone}
                 </a>
-                <Link href="/about/locations" className="btn btn-outline-white" style={{ padding: '16px 28px', fontSize: '15px' }}>
-                  📍 Find Our Office
-                </Link>
+                <a href="#locations" className="btn btn-outline-white" style={{ padding: '16px 28px', fontSize: '15px' }}>
+                  📍 View 2 Locations (New Space!)
+                </a>
               </div>
             </div>
 
@@ -112,6 +112,294 @@ export default function HomePage() {
 
       {/* ── AUTO-SLIDING CARRIER LOGO CAROUSEL SLIDESHOW ── */}
       <CarrierCarousel />
+
+      {/* ── FRONT & CENTER: BRANDON LOCATIONS & INTERACTIVE MAPS ── */}
+      <section id="locations" className="section" style={{
+        background: '#f8fafc',
+        borderBottom: '1px solid #e2e8f0',
+        paddingTop: '64px',
+        paddingBottom: '72px',
+      }}>
+        <div className="container">
+          <div className="text-center" style={{ marginBottom: '48px', maxWidth: '820px', margin: '0 auto 48px' }}>
+            <div style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              padding: '6px 16px',
+              borderRadius: '20px',
+              background: '#dc2626',
+              color: '#ffffff',
+              fontSize: '12px',
+              fontWeight: 800,
+              letterSpacing: '1px',
+              textTransform: 'uppercase',
+              marginBottom: '16px',
+              boxShadow: '0 2px 8px rgba(220, 38, 38, 0.25)',
+            }}>
+              ✨ Now Open Across Two Brandon Offices
+            </div>
+            <h2 className="section-title" style={{ fontSize: 'clamp(30px, 4.5vw, 46px)', marginBottom: '16px' }}>
+              Two Locations in Brandon — Visit Our New Space!
+            </h2>
+            <p className="section-sub mx-auto" style={{ fontSize: '17px', color: '#475569', lineHeight: 1.6 }}>
+              We’ve expanded to serve you better! Visit our brand new 18th Street location or our established 1st Street headquarters for Autopac renewals, driver licensing, and full-service insurance.
+            </p>
+          </div>
+
+          {/* DUAL LOCATIONS GRID */}
+          <div className="grid-2" style={{ gap: '32px', alignItems: 'stretch' }}>
+            {/* 1525 18th Street Office — HIGHLIGHTED AS OUR NEW SPACE */}
+            <div
+              className="card"
+              style={{
+                background: '#ffffff',
+                border: '2px solid #dc2626',
+                borderRadius: '16px',
+                padding: '32px 28px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                boxShadow: '0 12px 36px rgba(220, 38, 38, 0.12)',
+                position: 'relative',
+                overflow: 'hidden',
+              }}
+            >
+              {/* Eye-catching Top Ribbon */}
+              <div style={{
+                position: 'absolute',
+                top: 0,
+                right: 0,
+                background: '#dc2626',
+                color: '#ffffff',
+                padding: '6px 20px',
+                fontSize: '11px',
+                fontWeight: 900,
+                letterSpacing: '1px',
+                textTransform: 'uppercase',
+                borderBottomLeftRadius: '12px',
+                boxShadow: '0 2px 8px rgba(220, 38, 38, 0.3)',
+              }}>
+                ✨ OUR NEW LOCATION
+              </div>
+
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px', flexWrap: 'wrap' }}>
+                  <span style={{
+                    fontSize: '12px',
+                    fontWeight: 900,
+                    color: '#ffffff',
+                    background: '#dc2626',
+                    padding: '4px 12px',
+                    borderRadius: '6px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.5px',
+                  }}>
+                    ✨ Brand New Space
+                  </span>
+                  <span style={{ fontSize: '13px', fontWeight: 700, color: '#64748b' }}>
+                    📍 18th Street (Between Humpty's & South End Service)
+                  </span>
+                </div>
+
+                <h3 style={{ fontSize: '26px', fontWeight: 900, color: '#09090b', marginBottom: '8px' }}>
+                  1525 18th Street Office
+                </h3>
+
+                <p style={{ fontSize: '15px', color: '#475569', lineHeight: 1.6, marginBottom: '20px' }}>
+                  <strong style={{ color: '#dc2626' }}>We just opened our new location!</strong> Come check out our fresh, modern new space. Enjoy extended evening hours until 7:00 PM on weekdays and Saturday hours for fast Autopac renewals, driver licensing, and friendly broker service.
+                </p>
+
+                {/* Embedded Interactive Google Map */}
+                <div style={{
+                  position: 'relative',
+                  width: '100%',
+                  height: '250px',
+                  borderRadius: '10px',
+                  overflow: 'hidden',
+                  marginBottom: '20px',
+                  border: '1px solid #cbd5e1',
+                }}>
+                  <iframe
+                    title="1525 18th Street Office - New Location Map"
+                    src="https://maps.google.com/maps?q=1525%2018th%20Street%20Brandon%20MB%20R7A%205A9&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+
+                {/* Office Details */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '24px', borderTop: '1px solid #f1f5f9', paddingTop: '16px' }}>
+                  <div>
+                    <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
+                      Street Address
+                    </div>
+                    <div style={{ fontSize: '16px', fontWeight: 800, color: '#09090b' }}>
+                      1525 18th Street, Brandon, MB R7A 5A9
+                    </div>
+                  </div>
+
+                  <div>
+                    <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
+                      Direct Phone
+                    </div>
+                    <a href="tel:+12047281957" style={{ fontSize: '16px', fontWeight: 800, color: '#dc2626', textDecoration: 'none' }}>
+                      📞 204-728-1957
+                    </a>
+                  </div>
+
+                  <div>
+                    <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
+                      Office Hours (Extended Evenings & Saturdays!)
+                    </div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#09090b' }}>
+                      ⏰ Mon – Fri: 9:00 AM – 7:00 PM <span style={{ color: '#dc2626', fontWeight: 800 }}>(Open Late!)</span> | Sat: 10:00 AM – 5:00 PM
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=1525+18th+Street+Brandon+MB+R7A+5A9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-red"
+                  style={{ flex: '1 1 auto', justifyContent: 'center' }}
+                >
+                  📍 Get Directions to 18th St
+                </a>
+                <a
+                  href="tel:+12047281957"
+                  className="btn btn-black"
+                  style={{ flex: '1 1 auto', justifyContent: 'center' }}
+                >
+                  📞 Call 204-728-1957
+                </a>
+              </div>
+            </div>
+
+            {/* 1439 1st Street Office — MAIN HEADQUARTERS */}
+            <div
+              className="card card-red-top"
+              style={{
+                background: '#ffffff',
+                borderRadius: '16px',
+                padding: '32px 28px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                border: '1px solid #e2e8f0',
+                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.05)',
+                boxSizing: 'border-box',
+              }}
+            >
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px', flexWrap: 'wrap' }}>
+                  <span style={{
+                    fontSize: '12px',
+                    fontWeight: 900,
+                    color: '#ffffff',
+                    background: '#09090b',
+                    padding: '4px 12px',
+                    borderRadius: '6px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.5px',
+                  }}>
+                    🏆 Main Office HQ
+                  </span>
+                  <span style={{ fontSize: '13px', fontWeight: 700, color: '#64748b' }}>
+                    📍 1st St & Richmond Avenue
+                  </span>
+                </div>
+
+                <h3 style={{ fontSize: '26px', fontWeight: 900, color: '#09090b', marginBottom: '8px' }}>
+                  1439 1st Street Office
+                </h3>
+
+                <p style={{ fontSize: '15px', color: '#475569', lineHeight: 1.6, marginBottom: '20px' }}>
+                  Our established main Brandon headquarters. Serving the community since 1986 with full Autopac registration, driver licensing, personal property, commercial fleet, and agricultural insurance.
+                </p>
+
+                {/* Embedded Interactive Google Map */}
+                <div style={{
+                  position: 'relative',
+                  width: '100%',
+                  height: '250px',
+                  borderRadius: '10px',
+                  overflow: 'hidden',
+                  marginBottom: '20px',
+                  border: '1px solid #cbd5e1',
+                }}>
+                  <iframe
+                    title="1439 1st Street Office - Main HQ Map"
+                    src="https://maps.google.com/maps?q=1439%201st%20Street%20Brandon%20MB%20R7A%206Z4&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+
+                {/* Office Details */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '24px', borderTop: '1px solid #f1f5f9', paddingTop: '16px' }}>
+                  <div>
+                    <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
+                      Street Address
+                    </div>
+                    <div style={{ fontSize: '16px', fontWeight: 800, color: '#09090b' }}>
+                      1439 1st Street, Brandon, MB R7A 6Z4
+                    </div>
+                  </div>
+
+                  <div>
+                    <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
+                      Direct Phone
+                    </div>
+                    <a href="tel:+12045711777" style={{ fontSize: '16px', fontWeight: 800, color: '#dc2626', textDecoration: 'none' }}>
+                      📞 204-571-1777
+                    </a>
+                  </div>
+
+                  <div>
+                    <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
+                      Office Hours
+                    </div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#09090b' }}>
+                      ⏰ Monday – Friday: 9:00 AM – 5:00 PM
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=1439+1st+Street+Brandon+MB+R7A+6Z4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-red"
+                  style={{ flex: '1 1 auto', justifyContent: 'center' }}
+                >
+                  📍 Get Directions to 1st St
+                </a>
+                <a
+                  href="tel:+12045711777"
+                  className="btn btn-black"
+                  style={{ flex: '1 1 auto', justifyContent: 'center' }}
+                >
+                  📞 Call 204-571-1777
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ── SANDBOX.CA CATEGORY MEGA HUB (Auto, Property, Commercial, Farm) ── */}
       <section className="section" style={{ background: '#ffffff' }}>
