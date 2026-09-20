@@ -87,7 +87,7 @@ export default async function ServicePage({ params }) {
               </div>
             </div>
             {isAuto && (
-              <div style={{ flexShrink: 0, position: 'relative', width: '320px', height: '160px', background: '#ffffff', borderRadius: '16px', padding: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ flexShrink: 0, position: 'relative', width: '450px', height: '225px', background: '#ffffff', borderRadius: '16px', padding: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Image
                   src="/images/carriers/autopac.jpg"
                   alt="MPI Autopac"
