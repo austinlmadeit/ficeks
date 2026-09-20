@@ -128,6 +128,7 @@ export default function HomePage() {
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 {[
                   { name: 'Autopac (MPI)', href: '/services/auto-insurance' },
+                  { name: 'Sandbox Auto Insurance', href: '/services/auto-insurance' },
                   { name: 'Car & Truck Coverage', href: '/services/auto-insurance' },
                   { name: 'Commercial Vehicles', href: '/services/business-insurance' },
                   { name: 'Motorcycles & ATVs', href: '/services/toys-bikes-orvs' },
