@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Alex_Brush } from 'next/font/google';
+import { Lobster } from 'next/font/google';
 import { SITE, TEAM, COMPANY_HISTORY } from '@/lib/data';
 
-const alexBrush = Alex_Brush({
+const lobster = Lobster({
   subsets: ['latin'],
   weight: ['400'],
   display: 'swap',
@@ -94,11 +94,11 @@ export default function AboutPage() {
             <div>
               <span className="section-tag">Independent Advantage</span>
               <h2 className="section-title" style={{
-                fontFamily: `${alexBrush.style.fontFamily}, 'Alex Brush', 'Brush Script MT', cursive`,
+                fontFamily: `${lobster.style.fontFamily}, 'Lobster', 'Pacifico', cursive`,
                 fontWeight: 400,
-                fontSize: 'clamp(32px, 4.5vw, 48px)',
+                fontSize: 'clamp(32px, 4.5vw, 50px)',
                 lineHeight: 1.25,
-                color: '#18181b',
+                color: '#09090b',
                 letterSpacing: '0.5px',
               }}>
                 We work for you, not the insurance carriers.
