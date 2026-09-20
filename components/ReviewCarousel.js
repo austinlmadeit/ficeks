@@ -24,21 +24,42 @@ export default function ReviewCarousel({ reviews }) {
   }, [nextPage, isHovered, totalPages]);
 
   return (
-    <div style={{ display: 'flex', gap: '32px', alignItems: 'stretch', flexWrap: 'wrap' }}>
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: '1fr 260px',
+      gap: '28px',
+      alignItems: 'stretch',
+    }} className="review-carousel-container">
+      <style jsx>{`
+        @media (max-width: 1024px) {
+          .review-carousel-container {
+            grid-template-columns: 1fr !important;
+          }
+          .review-grid-page {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+        @media (max-width: 640px) {
+          .review-grid-page {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
+
       {/* Left side: Smooth Sliding Reviews Track */}
       <div 
-        style={{ flex: '1 1 68%', minWidth: '300px', overflow: 'hidden' }}
+        style={{ width: '100%', overflow: 'hidden' }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         {/* Sliding Track Viewport */}
-        <div style={{ overflow: 'hidden', borderRadius: '12px', paddingBottom: '16px' }}>
+        <div style={{ overflow: 'hidden', width: '100%', borderRadius: '12px', paddingBottom: '12px' }}>
           <div
             style={{
               display: 'flex',
               transform: `translateX(-${currentPage * 100}%)`,
               transition: 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
-              width: `${totalPages * 100}%`,
+              width: '100%',
             }}
           >
             {Array.from({ length: totalPages }).map((_, pageIdx) => {
@@ -46,12 +67,13 @@ export default function ReviewCarousel({ reviews }) {
               return (
                 <div
                   key={pageIdx}
+                  className="review-grid-page"
                   style={{
-                    width: `${100 / totalPages}%`,
+                    flex: '0 0 100%',
+                    width: '100%',
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                    gap: '18px',
-                    paddingRight: pageIdx < totalPages - 1 ? '16px' : '0px',
+                    gridTemplateColumns: 'repeat(4, 1fr)',
+                    gap: '16px',
                     boxSizing: 'border-box',
                   }}
                 >
@@ -67,11 +89,12 @@ export default function ReviewCarousel({ reviews }) {
                         borderRadius: '12px',
                         padding: '22px 18px',
                         border: '1px solid #e4e4e7',
-                        minHeight: '220px',
+                        minHeight: '230px',
+                        boxSizing: 'border-box',
                       }}
                     >
                       <div>
-                        <div style={{ color: '#eab308', fontSize: '16px', marginBottom: '8px' }}>
+                        <div style={{ color: '#eab308', fontSize: '15px', marginBottom: '8px' }}>
                           {'★'.repeat(review.rating)}
                         </div>
                         {review.service && (
@@ -89,9 +112,9 @@ export default function ReviewCarousel({ reviews }) {
                         <p style={{
                           fontSize: '13px',
                           color: '#3f3f46',
-                          lineHeight: 1.6,
+                          lineHeight: 1.55,
                           fontStyle: 'italic',
-                          marginBottom: '16px',
+                          marginBottom: '14px',
                         }}>
                           &quot;{review.quote}&quot;
                         </p>
@@ -125,7 +148,7 @@ export default function ReviewCarousel({ reviews }) {
             alignItems: 'center',
             justifyContent: 'center',
             gap: '16px',
-            marginTop: '8px',
+            marginTop: '12px',
           }}>
             <button
               onClick={prevPage}
@@ -201,7 +224,6 @@ export default function ReviewCarousel({ reviews }) {
 
       {/* Right side: Leave a Review CTA */}
       <div style={{
-        flex: '0 0 250px',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -209,11 +231,12 @@ export default function ReviewCarousel({ reviews }) {
         textAlign: 'center',
         background: '#09090b',
         borderRadius: '16px',
-        padding: '32px 22px',
-        minHeight: '280px',
+        padding: '32px 20px',
+        minHeight: '260px',
+        boxSizing: 'border-box',
       }}>
         <div style={{
-          fontSize: '36px',
+          fontSize: '32px',
           color: '#eab308',
           marginBottom: '8px',
         }}>
@@ -224,7 +247,7 @@ export default function ReviewCarousel({ reviews }) {
           fontWeight: 900,
           color: '#ffffff',
           lineHeight: 1.35,
-          marginBottom: '10px',
+          marginBottom: '8px',
         }}>
           Did we give you 5-star service?
         </h3>
@@ -248,6 +271,7 @@ export default function ReviewCarousel({ reviews }) {
               justifyContent: 'center',
               width: '100%',
               borderRadius: '8px',
+              boxSizing: 'border-box',
             }}
           >
             Review 1st Street Office
@@ -263,6 +287,7 @@ export default function ReviewCarousel({ reviews }) {
               justifyContent: 'center',
               width: '100%',
               borderRadius: '8px',
+              boxSizing: 'border-box',
             }}
           >
             Review Richmond Ave Office
