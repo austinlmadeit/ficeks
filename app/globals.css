@@ -224,17 +224,7 @@ h1, h2, h3, h4, h5, h6 {
   .section { padding: 64px 0; }
 }
 
-/* ── Dev Banner ── */
-.dev-banner {
-  background: var(--black);
-  color: #ffffff;
-  text-align: center;
-  padding: 10px 16px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  border-bottom: 2px solid var(--red);
-}
+
 
 /* ── Hero Layout with Left Logo ── */
 .hero-wrapper {

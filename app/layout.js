@@ -78,9 +78,6 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body style={{ fontFamily: 'var(--font-body, Inter, sans-serif)' }}>
-        <div className="dev-banner">
-          🔴 FICEK BRAND REDESIGN · <Link href="/dev-notes" style={{ textDecoration: 'underline', color: '#ef4444', fontWeight: 800 }}>View Dev Notes & Audit Tracker</Link>
-        </div>
         <Nav />
         <main>{children}</main>
         <Footer />

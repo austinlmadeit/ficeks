@@ -94,7 +94,7 @@ export default function Footer() {
           {/* Column 3: Company */}
           <div>
             <h4 style={{ fontSize: '12px', fontWeight: 800, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#dc2626', marginBottom: '20px' }}>
-              Company & Audit
+              Company
             </h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {[
@@ -103,10 +103,9 @@ export default function Footer() {
                 { label: 'Locations', href: '/about/locations' },
                 { label: 'Contact Us', href: '/contact' },
                 { label: 'Request a Quote', href: '/quote' },
-                { label: '🔬 Dev Notes & Audit Tracker', href: '/dev-notes' },
               ].map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} style={{ fontSize: '14px', color: l.href === '/dev-notes' ? '#ef4444' : '#a1a1aa', fontWeight: l.href === '/dev-notes' ? 700 : 400 }}>
+                  <Link href={l.href} style={{ fontSize: '14px', color: '#a1a1aa' }}>
                     {l.label}
                   </Link>
                 </li>
@@ -147,12 +146,8 @@ export default function Footer() {
         <div style={{ borderTop: '1px solid #27272a', padding: '24px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px', fontSize: '13px', color: '#a1a1aa' }}>
           <span>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</span>
           <span style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <span style={{ background: '#27272a', color: '#ef4444', padding: '4px 10px', borderRadius: '20px', fontSize: '11px', fontWeight: 800 }}>
-              🔴 RED & BLACK BRAND BUILD
-            </span>
             <Link href="/privacy" style={{ color: '#a1a1aa' }}>Privacy Policy</Link>
             <Link href="/terms" style={{ color: '#a1a1aa' }}>Terms of Service</Link>
-            <Link href="/dev-notes" style={{ color: '#ef4444' }}>Dev Notes</Link>
           </span>
         </div>
       </div>
