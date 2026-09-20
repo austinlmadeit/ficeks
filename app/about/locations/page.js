@@ -89,7 +89,7 @@ export default function LocationsPage() {
           </div>
 
           {/* DUAL OFFICE CARDS GRID WITH EMBEDDED GOOGLE MAPS */}
-          <div className="grid-2" style={{ gap: '36px', marginBottom: '64px' }}>
+          <div className="grid-2" style={{ gap: '36px' }}>
             {OFFICES.map((office) => (
               <div key={office.id} className="card card-red-top" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', background: '#fafafa', padding: '28px', borderRadius: '12px' }}>
                 <div>
@@ -192,37 +192,6 @@ export default function LocationsPage() {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* ── CLIENT AMENITIES & WALK-IN CHECKLIST ── */}
-          <div style={{
-            background: '#09090b',
-            color: '#ffffff',
-            padding: '40px',
-            borderRadius: '12px',
-          }}>
-            <div className="text-center" style={{ marginBottom: '32px' }}>
-              <span style={{ fontSize: '12px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                Client Services & Amenities
-              </span>
-              <h3 style={{ fontSize: '28px', fontWeight: 900, color: '#ffffff', marginTop: '6px' }}>
-                What to Expect When You Visit Our Brandon Offices
-              </h3>
-            </div>
-
-            <div className="grid-3" style={{ gap: '24px' }}>
-              {[
-                { icon: '🚶‍♂️', title: 'Walk-Ins Always Welcome', desc: 'No appointment needed for MPI Autopac, driver licensing, or quick coverage questions.' },
-                { icon: '🅿️', title: 'Free Client Parking', desc: 'Dedicated free parking lots at both 1439 1st Street and 1525 18th Street.' },
-                { icon: '📄', title: 'Document & Form Assistance', desc: 'Our brokers help you complete vehicle Bill of Sales, Exclusive Use agreements, and RST tax refunds.' },
-              ].map((item, i) => (
-                <div key={i} style={{ background: '#18181b', padding: '24px', borderRadius: '8px', borderLeft: '4px solid #dc2626' }}>
-                  <div style={{ fontSize: '32px', marginBottom: '12px' }}>{item.icon}</div>
-                  <h4 style={{ fontSize: '17px', fontWeight: 800, color: '#ffffff', marginBottom: '6px' }}>{item.title}</h4>
-                  <p style={{ fontSize: '14px', color: '#a1a1aa', lineHeight: 1.5, margin: 0 }}>{item.desc}</p>
-                </div>
-              ))}
-            </div>
           </div>
 
         </div>
