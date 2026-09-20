@@ -44,7 +44,7 @@ export default function QuotePage() {
           }}>
             ⚡ Free Independent Broker Comparison
           </div>
-          <h1 style={{ fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 900, letterSpacing: '-0.02em', marginBottom: '16px', color: '#ffffff' }}>
+          <h1 className="float-in delay-100" style={{ fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 900, letterSpacing: '-0.02em', marginBottom: '16px', color: '#ffffff' }}>
             Request Your Free Insurance Quote
           </h1>
           <p style={{ fontSize: '18px', color: '#a1a1aa', maxWidth: '640px', lineHeight: 1.65 }}>

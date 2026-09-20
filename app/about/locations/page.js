@@ -47,7 +47,7 @@ export default function LocationsPage() {
             📍 2 Brandon Offices (1st St & 18th St)
           </div>
 
-          <h1 style={{
+          <h1 className="float-in delay-100" style={{
             fontSize: 'clamp(36px, 5.5vw, 56px)',
             fontWeight: 900,
             color: '#ffffff',
@@ -84,7 +84,7 @@ export default function LocationsPage() {
         <div className="container">
 
           <div className="text-center" style={{ marginBottom: '56px' }}>
-            <span className="section-tag">Brandon Offices</span>
+            <span className="section-tag float-in-down">Brandon Offices</span>
             <h2 className="section-title">Two Locations to Serve You Better</h2>
           </div>
 

@@ -17,7 +17,7 @@ export default function ServicesPage() {
       }}>
         <div className="container">
           <span className="section-label">What We Offer</span>
-          <h1 style={{ fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 800, fontFamily: 'var(--font-heading)', letterSpacing: '-0.5px', marginBottom: '20px' }}>
+          <h1 className="float-in delay-100" style={{ fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 800, fontFamily: 'var(--font-heading)', letterSpacing: '-0.5px', marginBottom: '20px' }}>
             Insurance for every part of your life
           </h1>
           <p style={{ fontSize: '18px', color: 'var(--muted)', maxWidth: '540px', margin: '0 auto', lineHeight: 1.7 }}>

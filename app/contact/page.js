@@ -44,7 +44,7 @@ export default function ContactPage() {
           }}>
             📍 Two Brandon Locations to Serve You Better
           </div>
-          <h1 style={{ fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 900, letterSpacing: '-0.02em', marginBottom: '16px', color: '#ffffff' }}>
+          <h1 className="float-in delay-100" style={{ fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 900, letterSpacing: '-0.02em', marginBottom: '16px', color: '#ffffff' }}>
             Questions? We&apos;d love to lend a hand.
           </h1>
           <p style={{ fontSize: '18px', color: '#a1a1aa', maxWidth: '600px', lineHeight: 1.65 }}>

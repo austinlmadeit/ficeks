@@ -23,7 +23,7 @@ export default function HomePage() {
       }}>
         <div className="container">
           <div className="text-center" style={{ marginBottom: '48px', maxWidth: '820px', margin: '0 auto 48px' }}>
-            <div style={{
+            <div className="float-in-down" style={{
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
@@ -40,10 +40,10 @@ export default function HomePage() {
             }}>
               ✨ Now Open Across Two Brandon Offices
             </div>
-            <h2 className="section-title" style={{ fontSize: 'clamp(30px, 4.5vw, 46px)', marginBottom: '16px' }}>
+            <h2 className="section-title float-in delay-100" style={{ fontSize: 'clamp(30px, 4.5vw, 46px)', marginBottom: '16px' }}>
               Two Locations in Brandon — Visit Our New Space!
             </h2>
-            <p className="section-sub mx-auto" style={{ fontSize: '17px', color: '#475569', lineHeight: 1.6 }}>
+            <p className="section-sub mx-auto float-in delay-200" style={{ fontSize: '17px', color: '#475569', lineHeight: 1.6 }}>
               We’ve expanded to serve you better! Visit our brand new 18th Street location or our established 1st Street headquarters for Autopac renewals, driver licensing, and full-service insurance.
             </p>
           </div>
@@ -51,21 +51,7 @@ export default function HomePage() {
           {/* DUAL LOCATIONS GRID */}
           <div className="grid-2" style={{ gap: '32px', alignItems: 'stretch' }}>
             {/* 1525B 18th Street Office — HIGHLIGHTED AS OUR NEW SPACE */}
-            <div
-              className="card"
-              style={{
-                background: '#ffffff',
-                border: '2px solid #dc2626',
-                borderRadius: '16px',
-                padding: '32px 28px',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                boxShadow: '0 12px 36px rgba(220, 38, 38, 0.12)',
-                position: 'relative',
-                overflow: 'hidden',
-              }}
-            >
+            <div className="location-showcase-card float-in delay-250">
               {/* Eye-catching Top Ribbon */}
               <div style={{
                 position: 'absolute',
@@ -185,20 +171,7 @@ export default function HomePage() {
             </div>
 
             {/* 1439 1st Street Office — MAIN HEADQUARTERS */}
-            <div
-              className="card card-red-top"
-              style={{
-                background: '#ffffff',
-                borderRadius: '16px',
-                padding: '32px 28px',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                border: '1px solid #e2e8f0',
-                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.05)',
-                boxSizing: 'border-box',
-              }}
-            >
+            <div className="location-showcase-card float-in delay-350">
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px', flexWrap: 'wrap' }}>
                   <span style={{
@@ -326,7 +299,7 @@ export default function HomePage() {
         <div className="hero-wrapper">
           <div className="hero-grid-3">
             {/* Left Hero Logo Emblem (aligned where user drew red box) */}
-            <div className="hero-logo-box">
+            <div className="hero-logo-box float-in-scale delay-150">
               <div className="hero-logo-card">
                 <Image
                   src="/images/ficek.logo.jpg"
@@ -342,7 +315,7 @@ export default function HomePage() {
 
             {/* Middle Headline */}
             <div>
-              <div style={{
+              <div className="float-in-down delay-100" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
@@ -359,7 +332,7 @@ export default function HomePage() {
                 🇨🇦 Brandon, MB Independent Broker
               </div>
 
-              <h1 style={{
+              <h1 className="float-in delay-200" style={{
                 fontSize: 'clamp(36px, 5vw, 60px)',
                 fontWeight: 900,
                 color: '#ffffff',
@@ -370,7 +343,7 @@ export default function HomePage() {
                 We are Ficek Insurance & We love what we do.
               </h1>
 
-              <p style={{
+              <p className="float-in delay-300" style={{
                 fontSize: '19px',
                 color: '#a1a1aa',
                 lineHeight: 1.65,
@@ -380,7 +353,7 @@ export default function HomePage() {
                 Whether you're looking for MPI Autopac top-ups, farm equipment coverage, or commercial liability, Ficek Insurance is here for you.
               </p>
 
-              <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
+              <div className="float-in delay-400" style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
                 <a href={SITE.phoneHref} className="btn btn-red" style={{ padding: '16px 28px', fontSize: '15px' }}>
                   📞 Call Broker: {SITE.phone}
                 </a>
@@ -391,7 +364,7 @@ export default function HomePage() {
             </div>
 
             {/* Right Interactive Quote Tool Widget */}
-            <div>
+            <div className="float-in-scale delay-300">
               <HeroQuoteWidget />
             </div>
           </div>

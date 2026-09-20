@@ -50,7 +50,7 @@ export default function OurTeamPage() {
             👥 Licensed Brandon Brokers & Leaders
           </div>
 
-          <h1 style={{
+          <h1 className="float-in delay-100" style={{
             fontSize: 'clamp(36px, 5.5vw, 56px)',
             fontWeight: 900,
             color: '#ffffff',
@@ -87,7 +87,7 @@ export default function OurTeamPage() {
         <div className="container">
 
           <div className="text-center" style={{ marginBottom: '56px' }}>
-            <span className="section-tag">Brandon Office Team</span>
+            <span className="section-tag float-in-down">Brandon Office Team</span>
             <h2 className="section-title">Meet the Ficek Team</h2>
           </div>
 

@@ -55,7 +55,7 @@ export default function AboutPage() {
             🇨🇦 Our Family Story Since 1986
           </div>
 
-          <h1 style={{
+          <h1 className="float-in delay-100" style={{
             fontSize: 'clamp(36px, 5.5vw, 56px)',
             fontWeight: 900,
             color: '#ffffff',
@@ -92,7 +92,7 @@ export default function AboutPage() {
         <div className="container">
           <div className="grid-2" style={{ gap: '56px', alignItems: 'center' }}>
             <div>
-              <span className="section-tag">Independent Advantage</span>
+              <span className="section-tag float-in-down">Independent Advantage</span>
               <h2 className="section-title" style={{
                 fontFamily: `${lobster.style.fontFamily}, 'Lobster', 'Pacifico', cursive`,
                 fontWeight: 400,
@@ -137,7 +137,7 @@ export default function AboutPage() {
       <section className="section" style={{ background: '#f4f4f5', borderTop: '1px solid #e4e4e7', borderBottom: '2px solid #09090b' }}>
         <div className="container">
           <div className="text-center" style={{ marginBottom: '64px' }}>
-            <span className="section-tag">Historical Timeline Map</span>
+            <span className="section-tag float-in-down">Historical Timeline Map</span>
             <h2 className="section-title">The Ficek Family History Roadmap</h2>
             <p className="section-sub mx-auto">
               Follow our journey from founding roots in 1986 to becoming Brandon’s trusted family-owned brokerage.
@@ -219,7 +219,7 @@ export default function AboutPage() {
       <section className="section" style={{ background: '#ffffff' }}>
         <div className="container">
           <div className="text-center" style={{ marginBottom: '48px' }}>
-            <span className="section-tag">Brandon Office Team</span>
+            <span className="section-tag float-in-down">Brandon Office Team</span>
             <h2 className="section-title">Meet the Ficek Team</h2>
           </div>
 
