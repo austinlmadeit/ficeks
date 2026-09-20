@@ -107,24 +107,30 @@ export default function Footer() {
           {/* Column 4: Office Info */}
           <div>
             <h4 style={{ fontSize: '12px', fontWeight: 800, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#dc2626', marginBottom: '20px' }}>
-              Brandon Office
+              Brandon Offices
             </h4>
-            <ul style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '14px', color: '#a1a1aa' }}>
-              <li>
-                <strong style={{ color: '#ffffff', display: 'block' }}>{SITE.address.street}</strong>
-                {SITE.address.city}, {SITE.address.province} {SITE.address.postal}
-              </li>
-              <li>
-                <a href={SITE.phoneHref} style={{ color: '#dc2626', fontWeight: 800, fontSize: '16px' }}>{SITE.phone}</a>
-              </li>
-              <li>
-                <a href={`mailto:${SITE.email}`} style={{ color: '#a1a1aa' }}>{SITE.email}</a>
-              </li>
-              <li style={{ lineHeight: 1.5 }}>
-                Monday–Friday: 9:00 AM – 5:00 PM<br />
-                Weekends: Closed
-              </li>
-            </ul>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', fontSize: '14px', color: '#a1a1aa' }}>
+              <div>
+                <strong style={{ color: '#ffffff', display: 'block', fontSize: '14px', marginBottom: '2px' }}>1439 1st Street (Main Office)</strong>
+                <div>Brandon, MB R7A 6Z4</div>
+                <div style={{ marginTop: '4px' }}>
+                  <a href="tel:+12045711777" style={{ color: '#dc2626', fontWeight: 800, fontSize: '15px' }}>204-571-1777</a>
+                </div>
+              </div>
+
+              <div style={{ borderTop: '1px solid #27272a', paddingTop: '12px' }}>
+                <strong style={{ color: '#ffffff', display: 'block', fontSize: '14px', marginBottom: '2px' }}>1525 18th Street Office</strong>
+                <div>Brandon, MB R7A 5A9</div>
+                <div style={{ marginTop: '4px' }}>
+                  <a href="tel:+12047281957" style={{ color: '#dc2626', fontWeight: 800, fontSize: '15px' }}>204-728-1957</a>
+                </div>
+              </div>
+
+              <div style={{ borderTop: '1px solid #27272a', paddingTop: '12px' }}>
+                <span style={{ fontSize: '12px', color: '#71717a', display: 'block', marginBottom: '2px' }}>General Email:</span>
+                <a href={`mailto:${SITE.email}`} style={{ color: '#ffffff', fontWeight: 600 }}>{SITE.email}</a>
+              </div>
+            </div>
           </div>
         </div>
 

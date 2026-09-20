@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export const metadata = {
   title: 'Our Team | Ficek Insurance Brandon MB',
-  description: 'Meet the 12 licensed insurance brokers and leaders at Ficek Insurance Brandon — Rod & Heather Ficek, Danon, Sabrina, Beatriz, Micheal, Brian, Linda, Brooke, Austin, Manas, Adrian, and Zarina.',
+  description: 'Meet the licensed insurance brokers and leaders at Ficek Insurance Brandon — Rod & Heather Ficek, Danon, Beatriz, Micheal, Brian, Linda, Brooke, Austin, Manas, Adrian, and Zarina.',
 };
 
 export default function OurTeamPage() {

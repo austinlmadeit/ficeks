@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import HeroQuoteWidget from '@/components/HeroQuoteWidget';
 import CarrierCarousel from '@/components/CarrierCarousel';
 import ReviewCarousel from '@/components/ReviewCarousel';
@@ -7,7 +8,7 @@ import { SITE, SERVICES, TESTIMONIALS } from '@/lib/data';
 export const metadata = {
   title: 'Ficek Insurance | Home, Auto, Farm & Business Insurance Brandon MB',
   description:
-    'Welcome to Ficek Insurance. Family-owned independent insurance brokerage serving Brandon, Manitoba since 1946. Autopac MPI, home, commercial, and farm coverage.',
+    'Welcome to Ficek Insurance. Family-owned independent insurance brokerage serving Brandon, Manitoba since 1986. Autopac MPI, home, commercial, and farm coverage.',
 };
 
 export default function HomePage() {
@@ -34,12 +35,24 @@ export default function HomePage() {
           pointerEvents: 'none',
         }} />
 
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="grid-2" style={{
-            gap: '48px',
-            alignItems: 'center',
-          }}>
-            {/* Left Headline */}
+        <div className="hero-wrapper">
+          <div className="hero-grid-3">
+            {/* Left Hero Logo Emblem (aligned where user drew red box) */}
+            <div className="hero-logo-box">
+              <div className="hero-logo-card">
+                <Image
+                  src="/images/ficek.logo.jpg"
+                  alt="Ficek Insurance Logo"
+                  width={180}
+                  height={180}
+                  quality={100}
+                  priority
+                  style={{ objectFit: 'contain', width: '100%', height: 'auto' }}
+                />
+              </div>
+            </div>
+
+            {/* Middle Headline */}
             <div>
               <div style={{
                 display: 'inline-flex',

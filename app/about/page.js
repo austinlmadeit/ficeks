@@ -11,7 +11,7 @@ const lobster = Lobster({
 
 export const metadata = {
   title: 'About Ficek Insurance | Family-Owned Broker, Brandon MB',
-  description: 'Learn about Ficek Insurance — a family-owned independent brokerage serving Brandon, Manitoba since 1946. Read our history from A.C. Clark Insurance to present day.',
+  description: 'Learn about Ficek Insurance — a family-owned independent brokerage serving Brandon, Manitoba since 1986. Read our history from A.C. Clark Insurance to present day.',
 };
 
 export default function AboutPage() {
@@ -52,7 +52,7 @@ export default function AboutPage() {
             textTransform: 'uppercase',
             marginBottom: '20px',
           }}>
-            🇨🇦 Our Family Story Since 1946
+            🇨🇦 Our Family Story Since 1986
           </div>
 
           <h1 style={{
@@ -140,7 +140,7 @@ export default function AboutPage() {
             <span className="section-tag">Historical Timeline Map</span>
             <h2 className="section-title">The Ficek Family History Roadmap</h2>
             <p className="section-sub mx-auto">
-              Follow our journey from founding roots in 1946 to becoming Brandon’s trusted family-owned brokerage.
+              Follow our journey from founding roots in 1986 to becoming Brandon’s trusted family-owned brokerage.
             </p>
           </div>
 
