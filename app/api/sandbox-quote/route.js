@@ -57,7 +57,7 @@ export async function POST(request) {
           <div class="wrapper">
             <div class="header">
               <h1>🚗 New Sandbox Auto Quote Request</h1>
-              <p>Submitted via ficek-insurance-redesign.vercel.app — ${new Date().toLocaleString('en-CA', { timeZone: 'America/Winnipeg', dateStyle: 'full', timeStyle: 'short' })} (CST)</p>
+              <p>Submitted via ficekinsurance.com — ${new Date().toLocaleString('en-CA', { timeZone: 'America/Winnipeg', dateStyle: 'full', timeStyle: 'short' })} (CST)</p>
             </div>
 
             <div class="section">
