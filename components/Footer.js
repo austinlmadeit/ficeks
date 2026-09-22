@@ -144,7 +144,21 @@ export default function Footer() {
         </div>
 
         <div style={{ borderTop: '1px solid #27272a', padding: '24px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px', fontSize: '13px', color: '#a1a1aa' }}>
-          <span>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</span>
+          <div>
+            <div>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</div>
+            <div style={{ fontSize: '11px', color: '#ffffff', marginTop: '6px', letterSpacing: '0.2px', opacity: 0.9 }}>
+              Made with love, care and obsession —{' '}
+              <a
+                href="https://www.instagram.com/austinlmadeit/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: '#dc2626', fontWeight: 600, textDecoration: 'none' }}
+              >
+                @austinlmadeit
+              </a>{' '}
+              💜
+            </div>
+          </div>
           <span style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
             <Link href="/privacy" style={{ color: '#a1a1aa' }}>Privacy Policy</Link>
             <Link href="/terms" style={{ color: '#a1a1aa' }}>Terms of Service</Link>

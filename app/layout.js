@@ -41,6 +41,11 @@ export const metadata = {
     title: 'Ficek Insurance | Independent Broker Brandon MB',
     description: SITE.description,
   },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
   robots: {
     index: true,
     follow: true,
