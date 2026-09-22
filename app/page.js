@@ -23,22 +23,22 @@ export default function HomePage() {
       }}>
         <div className="container">
           <div className="text-center" style={{ marginBottom: '48px', maxWidth: '820px', margin: '0 auto 48px' }}>
-            <div className="float-in-down" style={{
+            <div className="float-in" style={{
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
-              padding: '6px 16px',
-              borderRadius: '20px',
+              padding: '6px 18px',
+              borderRadius: '9999px',
               background: '#dc2626',
               color: '#ffffff',
-              fontSize: '12px',
+              fontSize: '13px',
               fontWeight: 800,
               letterSpacing: '1px',
               textTransform: 'uppercase',
               marginBottom: '16px',
               boxShadow: '0 2px 8px rgba(220, 38, 38, 0.25)',
             }}>
-              ✨ Now Open Across Two Brandon Offices
+              Now Open Across Two Brandon Offices
             </div>
             <h2 className="section-title float-in delay-100" style={{ fontSize: 'clamp(30px, 4.5vw, 46px)', marginBottom: '16px' }}>
               Two Locations in Brandon: Visit Our New Space!
@@ -67,7 +67,7 @@ export default function HomePage() {
                 borderBottomLeftRadius: '12px',
                 boxShadow: '0 2px 8px rgba(220, 38, 38, 0.3)',
               }}>
-                ✨ OUR NEW LOCATION
+                OUR NEW LOCATION
               </div>
 
               <div>
@@ -82,7 +82,7 @@ export default function HomePage() {
                     textTransform: 'uppercase',
                     letterSpacing: '0.5px',
                   }}>
-                    ✨ Brand New Space
+                    Brand New Space
                   </span>
                   <span style={{ fontSize: '13px', fontWeight: 700, color: '#64748b' }}>
                     📍 18th Street (Between Humpty's & South End Service)
@@ -144,7 +144,7 @@ export default function HomePage() {
                       Office Hours (Extended Evenings & Saturdays!)
                     </div>
                     <div style={{ fontSize: '14px', fontWeight: 700, color: '#09090b' }}>
-                      ⏰ Mon – Fri: 9:00 AM – 7:00 PM <span style={{ color: '#dc2626', fontWeight: 800 }}>(Open Late!)</span> | Sat: 10:00 AM – 5:00 PM
+                      Mon – Fri: 9:00 AM – 7:00 PM <span style={{ color: '#dc2626', fontWeight: 800 }}>(Open Late!)</span> | Sat: 10:00 AM – 5:00 PM
                     </div>
                   </div>
                 </div>
@@ -184,7 +184,7 @@ export default function HomePage() {
                     textTransform: 'uppercase',
                     letterSpacing: '0.5px',
                   }}>
-                    🏆 Main Office HQ
+                    Main Office HQ
                   </span>
                   <span style={{ fontSize: '13px', fontWeight: 700, color: '#64748b' }}>
                     📍 1st St & Richmond Avenue
@@ -246,7 +246,7 @@ export default function HomePage() {
                       Office Hours
                     </div>
                     <div style={{ fontSize: '14px', fontWeight: 700, color: '#09090b' }}>
-                      ⏰ Monday – Friday: 9:00 AM – 5:00 PM
+                      Monday – Friday: 9:00 AM – 5:00 PM
                     </div>
                   </div>
                 </div>

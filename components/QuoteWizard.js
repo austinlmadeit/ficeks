@@ -31,7 +31,6 @@ export default function QuoteWizard() {
     phone: '',
     email: '',
     postalCode: '',
-    preferredOffice: '1439 1st Street (Main Office)',
     bestTimeToCall: 'Morning (9am – 12pm)',
     message: '',
   });
@@ -74,7 +73,6 @@ export default function QuoteWizard() {
 [Coverage Details]: ${form.propertyOrVehicleDetails || 'None specified'}
 [${isAuto ? 'Current Insurer or D/L Number' : 'Current Insurer'}]: ${form.currentInsurerOrMPI || 'Not stated'}
 ${!isAuto && form.policyNumber ? `[Policy Number]: ${form.policyNumber}\n` : ''}[Renewal Timeline]: ${form.estimatedRenewal || 'Immediate / ASAP'}
-[Preferred Ficek Office]: ${form.preferredOffice}
 [Client Notes]: ${form.message || 'No additional notes provided.'}
       `.trim();
 
@@ -89,7 +87,6 @@ ${!isAuto && form.policyNumber ? `[Policy Number]: ${form.policyNumber}\n` : ''}
           postalCode: form.postalCode,
           insuranceType: form.insuranceType,
           bestTimeToCall: form.bestTimeToCall,
-          preferredBroker: form.preferredOffice,
           message: detailedMessage,
         }),
       });
@@ -545,56 +542,30 @@ ${!isAuto && form.policyNumber ? `[Policy Number]: ${form.policyNumber}\n` : ''}
                 </div>
               </div>
 
-              <div className="grid-2" style={{ gap: '16px' }}>
-                <div>
-                  <label style={{ display: 'block', fontSize: '12px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '6px' }}>
-                    Preferred Brandon Office
-                  </label>
-                  <select
-                    value={form.preferredOffice}
-                    onChange={(e) => update('preferredOffice', e.target.value)}
-                    style={{
-                      width: '100%',
-                      padding: '12px 14px',
-                      borderRadius: '8px',
-                      border: '1.5px solid #e4e4e7',
-                      fontSize: '14px',
-                      color: '#09090b',
-                      outline: 'none',
-                      boxSizing: 'border-box',
-                      background: '#fff',
-                    }}
-                  >
-                    <option value="1439 1st Street (Main Office)">1439 1st Street (Main Office HQ)</option>
-                    <option value="1525B 18th Street Office">1525B 18th Street Office</option>
-                    <option value="Either Brandon Location">Either Brandon Location</option>
-                  </select>
-                </div>
-                <div>
-                  <label style={{ display: 'block', fontSize: '12px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '6px' }}>
-                    Best Time to Call
-                  </label>
-                  <select
-                    value={form.bestTimeToCall}
-                    onChange={(e) => update('bestTimeToCall', e.target.value)}
-                    style={{
-                      width: '100%',
-                      padding: '12px 14px',
-                      borderRadius: '8px',
-                      border: '1.5px solid #e4e4e7',
-                      fontSize: '14px',
-                      color: '#09090b',
-                      outline: 'none',
-                      boxSizing: 'border-box',
-                      background: '#fff',
-                    }}
-                  >
-                    <option value="Morning (9am – 12pm)">Morning (9am – 12pm)</option>
-                    <option value="Afternoon (12pm – 4pm)">Afternoon (12pm – 4pm)</option>
-                    <option value="Late Afternoon (4pm – 7pm)">Late Afternoon (4pm – 7pm)</option>
-                    <option value="Anytime during business hours">Anytime during business hours</option>
-                  </select>
-                </div>
+              <div>
+                <label style={{ display: 'block', fontSize: '12px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '6px' }}>
+                  Best Time to Call
+                </label>
+                <select
+                  value={form.bestTimeToCall}
+                  onChange={(e) => update('bestTimeToCall', e.target.value)}
+                  style={{
+                    width: '100%',
+                    padding: '12px 14px',
+                    borderRadius: '8px',
+                    border: '1.5px solid #e4e4e7',
+                    fontSize: '14px',
+                    color: '#09090b',
+                    outline: 'none',
+                    boxSizing: 'border-box',
+                    background: '#fff',
+                  }}
+                >
+                  <option value="Morning (9am – 12pm)">Morning (9am – 12pm)</option>
+                  <option value="Afternoon (12pm – 4pm)">Afternoon (12pm – 4pm)</option>
+                  <option value="Late Afternoon (4pm – 7pm)">Late Afternoon (4pm – 7pm)</option>
+                  <option value="Anytime during business hours">Anytime during business hours</option>
+                </select>
               </div>
 
               <div>

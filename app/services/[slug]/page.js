@@ -260,9 +260,9 @@ export default async function ServicePage({ params }) {
                 As an independent broker in Brandon, we shop multiple insurance markets to find you optimal coverage at competitive rates.
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <a href="#sandbox-quote" className="btn btn-red" style={{ justifyContent: 'center' }}>
+                <Link href="/quote" className="btn btn-red" style={{ justifyContent: 'center' }}>
                   Request a Free Quote
-                </a>
+                </Link>
                 <a href={SITE.phoneHref} className="btn btn-outline" style={{ justifyContent: 'center' }}>
                   Call {SITE.phone}
                 </a>
