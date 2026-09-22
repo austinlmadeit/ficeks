@@ -225,7 +225,7 @@ export default function HeroQuoteWidget() {
               cursor: loading ? 'not-allowed' : 'pointer',
             }}
           >
-            {loading ? 'Submitting...' : 'Calculate & Request Quote →'}
+            {loading ? 'Submitting...' : 'Request Quote →'}
           </button>
           <p style={{ fontSize: '12px', color: '#71717a', textAlign: 'center', marginTop: '10px' }}>
             🔒 Free & no obligation. A Ficek broker responds in 1 business day.

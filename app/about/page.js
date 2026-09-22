@@ -110,7 +110,7 @@ export default function AboutPage() {
                 When you make a claim, we act as your personal advocate. When your coverage needs change, we review your policies and find better options for your family or business.
               </p>
               <Link href="/quote" className="btn btn-red">
-                Calculate & Request Quote →
+                Request Quote →
               </Link>
             </div>
 
