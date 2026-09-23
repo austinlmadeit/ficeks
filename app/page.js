@@ -272,6 +272,17 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+
+          {/* Shared Find Us CTA - centered under both cards */}
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '36px' }}>
+            <Link
+              href="/find-us"
+              className="btn btn-outline"
+              style={{ padding: '16px 34px', fontSize: '15px', textAlign: 'center' }}
+            >
+              Find Us: Directions, Landmarks &amp; Photos &rarr;
+            </Link>
+          </div>
         </div>
       </section>
 
