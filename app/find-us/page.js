@@ -316,8 +316,7 @@ export default function FindUsPage() {
             </h2>
             <p className="section-sub" style={{ fontSize: '16px', color: SLATE, lineHeight: 1.7 }}>
               Both Brandon offices serve clients from across Westman. If you are driving in from
-              one of these communities, give us a call ahead and we will have your paperwork ready
-              before you arrive.
+              one of these communities, give us a call ahead and we will see how we can assist you.
             </p>
           </div>
 
