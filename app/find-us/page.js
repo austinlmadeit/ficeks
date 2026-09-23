@@ -143,9 +143,11 @@ export default function FindUsPage() {
                   {office.full}
                 </p>
 
-                <p style={{ fontSize: '16px', color: SLATE, lineHeight: 1.7 }}>
-                  {guide.summary}
-                </p>
+                {guide.summary && (
+                  <p style={{ fontSize: '16px', color: SLATE, lineHeight: 1.7 }}>
+                    {guide.summary}
+                  </p>
+                )}
               </div>
 
               {/* Map + key details */}
@@ -267,25 +269,29 @@ export default function FindUsPage() {
                 </InfoCard>
               </div>
 
-              {/* Best for */}
-              <div style={{
-                background: guide.isNew ? 'rgba(220, 38, 38, 0.06)' : '#f1f5f9',
-                border: `1px solid ${guide.isNew ? 'rgba(220, 38, 38, 0.2)' : '#e2e8f0'}`,
-                borderRadius: '12px',
-                padding: '24px 28px',
-                marginBottom: '40px',
-              }}>
-                <div style={{ fontSize: '13px', fontWeight: 900, color: RED, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '12px' }}>
-                  Why clients choose this office
+              {/* Best for (optional) */}
+              {guide.bestFor?.length > 0 && (
+                <>
+                <div style={{
+                  background: guide.isNew ? 'rgba(220, 38, 38, 0.06)' : '#f1f5f9',
+                  border: `1px solid ${guide.isNew ? 'rgba(220, 38, 38, 0.2)' : '#e2e8f0'}`,
+                  borderRadius: '12px',
+                  padding: '24px 28px',
+                  marginBottom: '40px',
+                }}>
+                  <div style={{ fontSize: '13px', fontWeight: 900, color: RED, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '12px' }}>
+                    Why clients choose this office
+                  </div>
+                  <ul style={{ margin: 0, paddingLeft: '18px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    {guide.bestFor.map((reason) => (
+                      <li key={reason} style={{ fontSize: '15px', color: SLATE, lineHeight: 1.6 }}>
+                        {reason}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <ul style={{ margin: 0, paddingLeft: '18px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  {guide.bestFor.map((reason) => (
-                    <li key={reason} style={{ fontSize: '15px', color: SLATE, lineHeight: 1.6 }}>
-                      {reason}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                </>
+              )}
 
               {/* Gallery */}
               <h3 style={{ fontSize: '22px', fontWeight: 900, color: INK, marginBottom: '6px' }}>
