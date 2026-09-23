@@ -4,10 +4,13 @@ Drop office/building photos for the Find Us page (`/find-us`) in this folder.
 
 ## Naming convention
 
-Use the office id as the prefix so the galleries stay easy to scan:
+Prefix with the office, then describe the shot:
 
-- `18th-street-01.jpg`, `18th-street-02.jpg`, ... — 1525B 18th Street office
-- `1st-street-01.jpg`, `1st-street-02.jpg`, ... — 1439 1st Street office
+- `18th-street-*.jpg` — 1525B 18th Street office
+- `1st-street-*.jpg` — 1439 1st Street office
+
+Display order comes from the `gallery` array in `lib/data.js`, NOT from the
+filename, so a new photo can be slotted anywhere without renaming anything.
 
 ## Wiring a photo into the site
 
