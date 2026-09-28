@@ -52,6 +52,7 @@ Variables configured in `.env.local` and in Vercel project settings:
 ```ini
 RESEND_API_KEY=re_xxxxxxxxxxxx
 LEAD_NOTIFICATION_EMAIL=info@ficekinsurance.com
+RESEND_FROM_EMAIL=Ficek Insurance Website <leads@send.ficekinsurance.com>
 RESEND_FROM_EMAIL=Ficek Insurance Website <onboarding@resend.dev>
 ```
 
@@ -176,3 +177,4 @@ npx vercel --prod --yes
 
 - **Domain Registrar / DNS**: Points to Vercel nameservers / DNS aliases for `ficekinsurance.com` and `www.ficekinsurance.com`.
 - **Lead Email Notifications**: Handled by Resend and routed to `info@ficekinsurance.com`. This is set by the `LEAD_NOTIFICATION_EMAIL` environment variable in Vercel; the value there overrides the default in the code.
+- **Sender address**: `RESEND_FROM_EMAIL` sets the `from` address on lead emails. It must be an address on a domain verified in Resend. The fallback, `onboarding@resend.dev`, is Resend's shared testing sender and can ONLY deliver to the email address that owns the Resend account: with that fallback in play, sending to any other recipient fails with a 403 and no lead email arrives. Verify the domain in Resend and set this variable before changing `LEAD_NOTIFICATION_EMAIL`.
