@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useFormGuard, HoneypotField } from './FormGuard';
 import Link from 'next/link';
 
 export default function ContactForm() {
@@ -14,6 +15,7 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const guard = useFormGuard();
 
   const update = (field, val) => setForm(prev => ({ ...prev, [field]: val }));
 
@@ -32,6 +34,7 @@ export default function ContactForm() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          ...guard.payload(),
           formType: 'contact',
           name: form.name,
           phone: form.phone,
@@ -104,6 +107,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
+      <HoneypotField guard={guard} />
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
         <div>
           <label style={labelStyle}>Full Name *</label>

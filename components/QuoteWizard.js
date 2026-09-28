@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useFormGuard, HoneypotField } from './FormGuard';
 import Link from 'next/link';
 import { SITE, SERVICES } from '@/lib/data';
 
@@ -18,6 +19,7 @@ export default function QuoteWizard() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const guard = useFormGuard();
 
   const [form, setForm] = useState({
     insuranceType: 'Auto & MPI Autopac',
@@ -80,6 +82,7 @@ ${!isAuto && form.policyNumber ? `[Policy Number]: ${form.policyNumber}\n` : ''}
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          ...guard.payload(),
           formType: 'general_quote',
           name: form.name,
           phone: form.phone,
@@ -168,6 +171,7 @@ ${!isAuto && form.policyNumber ? `[Policy Number]: ${form.policyNumber}\n` : ''}
     }}>
       {/* Progress Header */}
       <div style={{ background: '#09090b', padding: '28px 36px', color: '#ffffff' }}>
+      <HoneypotField guard={guard} />
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '8px' }}>
           <span style={{ fontSize: '11px', fontWeight: 900, color: '#dc2626', letterSpacing: '1.5px', textTransform: 'uppercase' }}>
             Ficek Independent Quote Engine

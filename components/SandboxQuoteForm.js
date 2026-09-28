@@ -2,6 +2,7 @@
 import Link from 'next/link';
 
 import { useState } from 'react';
+import { useFormGuard, HoneypotField } from './FormGuard';
 
 const COVERAGE_OPTIONS = [
   'Collision Deductible Buy-Down ($100, $200, $350, $500)',
@@ -20,6 +21,7 @@ export default function SandboxQuoteForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const guard = useFormGuard();
 
   const [form, setForm] = useState({
     firstName: '',
@@ -85,7 +87,7 @@ export default function SandboxQuoteForm() {
       const res = await fetch('/api/sandbox-quote', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, ...guard.payload() }),
       });
       const data = await res.json();
       if (data.success) {
@@ -184,6 +186,7 @@ export default function SandboxQuoteForm() {
     }}>
       {/* Progress Header */}
       <div style={{ background: '#09090b', padding: '24px 32px' }}>
+      <HoneypotField guard={guard} />
         <div style={{ fontSize: '12px', fontWeight: 800, color: '#dc2626', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '14px' }}>
           Get My Sandbox Mutual Auto Quote
         </div>

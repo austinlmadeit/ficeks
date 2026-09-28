@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useFormGuard, HoneypotField } from './FormGuard';
 import Link from 'next/link';
 import { SITE } from '@/lib/data';
 
@@ -21,6 +22,7 @@ export default function HeroQuoteWidget() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const guard = useFormGuard();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -38,6 +40,7 @@ export default function HeroQuoteWidget() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          ...guard.payload(),
           formType: 'quick_quote',
           name: fullName,
           phone: phone,
@@ -100,6 +103,7 @@ export default function HeroQuoteWidget() {
 
       {!submitted ? (
         <form onSubmit={handleSubmit}>
+          <HoneypotField guard={guard} />
           {/* Coverage Selectors Grid */}
           <div style={{
             display: 'grid',

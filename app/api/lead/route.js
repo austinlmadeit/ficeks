@@ -1,4 +1,5 @@
 import { Resend } from 'resend';
+import { inspectSubmission, escapeHtml } from '@/lib/form-guard';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -16,6 +17,15 @@ export async function POST(request) {
       bestTimeToCall,
       preferredBroker,
     } = body;
+
+    // Drop automated submissions before anything is sent.
+    // Respond 200 with success so the sender cannot tell it was filtered and
+    // adapt; a visible rejection just teaches the operator what to change.
+    const verdict = inspectSubmission(body);
+    if (verdict.bot) {
+      console.warn('Blocked suspected bot lead:', verdict.reason);
+      return Response.json({ success: true });
+    }
 
     if (!name || !phone) {
       return Response.json({ success: false, error: 'Name and phone number are required.' }, { status: 400 });
@@ -65,28 +75,28 @@ export async function POST(request) {
               <div class="row">
                 <div class="field">
                   <label>Full Name</label>
-                  <span>${name}</span>
+                  <span>${escapeHtml(name)}</span>
                 </div>
                 <div class="field">
                   <label>Phone Number</label>
-                  <span><a href="tel:${phone}" style="color:#dc2626;text-decoration:none;">${phone}</a></span>
+                  <span><a href="tel:${escapeHtml(phone)}" style="color:#dc2626;text-decoration:none;">${escapeHtml(phone)}</a></span>
                 </div>
               </div>
               <div class="row">
                 <div class="field">
                   <label>Email Address</label>
-                  <span>${email ? `<a href="mailto:${email}" style="color:#dc2626;text-decoration:none;">${email}</a>` : 'Not provided'}</span>
+                  <span>${email ? `<a href="mailto:${escapeHtml(email)}" style="color:#dc2626;text-decoration:none;">${escapeHtml(email)}</a>` : 'Not provided'}</span>
                 </div>
                 <div class="field">
                   <label>Postal Code / Location</label>
-                  <span>${postalCode || 'Brandon / Westman'}</span>
+                  <span>${escapeHtml(postalCode || 'Brandon / Westman')}</span>
                 </div>
               </div>
               ${bestTimeToCall ? `
               <div class="row">
                 <div class="field">
                   <label>Best Time to Call</label>
-                  <span>${bestTimeToCall}</span>
+                  <span>${escapeHtml(bestTimeToCall)}</span>
                 </div>
               </div>` : ''}
             </div>
@@ -96,25 +106,25 @@ export async function POST(request) {
               <div class="row">
                 <div class="field">
                   <label>Insurance Type Requested</label>
-                  <div class="highlight"><span>${typeTitle}</span></div>
+                  <div class="highlight"><span>${escapeHtml(typeTitle)}</span></div>
                 </div>
                 ${preferredBroker ? `
                 <div class="field">
                   <label>Preferred Broker / Office</label>
-                  <span>${preferredBroker}</span>
+                  <span>${escapeHtml(preferredBroker)}</span>
                 </div>` : ''}
               </div>
 
               ${message ? `
               <div class="field" style="margin-top:16px;">
                 <label>Client Message / Coverage Notes</label>
-                <div class="notes">${message}</div>
+                <div class="notes">${escapeHtml(message)}</div>
               </div>` : ''}
             </div>
 
             <div class="footer">
               Ficek Insurance Brokerage Lead Management<br />
-              Direct Client Call: <strong><a href="tel:${phone}" style="color:#dc2626;">${phone}</a></strong>
+              Direct Client Call: <strong><a href="tel:${escapeHtml(phone)}" style="color:#dc2626;">${escapeHtml(phone)}</a></strong>
             </div>
           </div>
         </body>
@@ -128,7 +138,7 @@ export async function POST(request) {
       from: fromEmail,
       to: [toEmail],
       replyTo: email || toEmail,
-      subject: `${formTitle} — ${name} (${typeTitle})`,
+      subject: `${formTitle} — ${String(name).replace(/[\r\n]+/g, ' ').slice(0, 120)} (${typeTitle})`,
       html: emailHtml,
     });
 

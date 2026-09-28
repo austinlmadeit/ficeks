@@ -1,4 +1,5 @@
 import { Resend } from 'resend';
+import { inspectSubmission, escapeHtml } from '@/lib/form-guard';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -23,6 +24,18 @@ export async function POST(request) {
       coverageInterests,
       additionalNotes,
     } = body;
+
+    // Drop automated submissions before anything is sent. Responds success so
+    // the sender cannot tell it was filtered. See lib/form-guard.js.
+    const verdict = inspectSubmission(body);
+    if (verdict.bot) {
+      console.warn('Blocked suspected bot sandbox quote:', verdict.reason);
+      return Response.json({ success: true });
+    }
+
+    if (!firstName || !phone) {
+      return Response.json({ success: false, error: 'Name and phone number are required.' }, { status: 400 });
+    }
 
     const coverageList = Array.isArray(coverageInterests)
       ? coverageInterests.join(', ')
@@ -66,21 +79,21 @@ export async function POST(request) {
               <div class="row">
                 <div class="field">
                   <label>Full Name</label>
-                  <span>${firstName} ${lastName}</span>
+                  <span>${escapeHtml(firstName)} ${escapeHtml(lastName)}</span>
                 </div>
                 <div class="field">
                   <label>Best Time to Call</label>
-                  <span>${bestTimeToCall || 'Anytime'}</span>
+                  <span>${escapeHtml(bestTimeToCall || 'Anytime')}</span>
                 </div>
               </div>
               <div class="row">
                 <div class="field">
                   <label>Phone Number</label>
-                  <span><a href="tel:${phone}" style="color:#dc2626;text-decoration:none;">${phone}</a></span>
+                  <span><a href="tel:${escapeHtml(phone)}" style="color:#dc2626;text-decoration:none;">${escapeHtml(phone)}</a></span>
                 </div>
                 <div class="field">
                   <label>Email Address</label>
-                  <span><a href="mailto:${email}" style="color:#dc2626;text-decoration:none;">${email}</a></span>
+                  <span><a href="mailto:${escapeHtml(email)}" style="color:#dc2626;text-decoration:none;">${escapeHtml(email)}</a></span>
                 </div>
               </div>
             </div>
@@ -91,25 +104,25 @@ export async function POST(request) {
               <div class="row">
                 <div class="field">
                   <label>Vehicle Year</label>
-                  <span>${vehicleYear || '—'}</span>
+                  <span>${escapeHtml(vehicleYear || '—')}</span>
                 </div>
                 <div class="field">
                   <label>Make</label>
-                  <span>${vehicleMake || '—'}</span>
+                  <span>${escapeHtml(vehicleMake || '—')}</span>
                 </div>
                 <div class="field">
                   <label>Model</label>
-                  <span>${vehicleModel || '—'}</span>
+                  <span>${escapeHtml(vehicleModel || '—')}</span>
                 </div>
               </div>
               <div class="row">
                 <div class="field">
                   <label>Current MPI Deductible</label>
-                  <div class="highlight"><span>${currentDeductible || '—'}</span></div>
+                  <div class="highlight"><span>${escapeHtml(currentDeductible || '—')}</span></div>
                 </div>
                 <div class="field">
                   <label>DSR Rating</label>
-                  <div class="highlight"><span>${dsrRating || 'Unknown'}</span></div>
+                  <div class="highlight"><span>${escapeHtml(dsrRating || 'Unknown')}</span></div>
                 </div>
               </div>
             </div>
@@ -120,23 +133,23 @@ export async function POST(request) {
               <div class="row">
                 <div class="field">
                   <label>Preferred Liability Limit</label>
-                  <div class="highlight"><span>${preferredLiability || '—'}</span></div>
+                  <div class="highlight"><span>${escapeHtml(preferredLiability || '—')}</span></div>
                 </div>
               </div>
               <div class="field" style="margin-bottom:12px;">
                 <label>Coverage Interests</label>
-                <span style="font-size:14px;color:#09090b;">${coverageList}</span>
+                <span style="font-size:14px;color:#09090b;">${escapeHtml(coverageList)}</span>
               </div>
               ${additionalNotes ? `
               <div class="field">
                 <label>Additional Notes from Client</label>
-                <div class="notes">${additionalNotes}</div>
+                <div class="notes">${escapeHtml(additionalNotes)}</div>
               </div>` : ''}
             </div>
 
             <div class="footer">
               This lead was submitted via the Ficek Insurance website auto insurance quote form.<br />
-              Reply directly to this email or call the client at <strong>${phone}</strong>.
+              Reply directly to this email or call the client at <strong>${escapeHtml(phone)}</strong>.
             </div>
           </div>
         </body>
@@ -145,9 +158,9 @@ export async function POST(request) {
 
     const { data, error } = await resend.emails.send({
       from: 'Ficek Insurance Website <onboarding@resend.dev>',
-      to: ['austin.l@ficekinsurance.com'],
+      to: [process.env.LEAD_NOTIFICATION_EMAIL || 'austin.l@ficekinsurance.com'],
       replyTo: email,
-      subject: `🚗 New Sandbox Auto Quote Request — ${firstName} ${lastName} (${vehicleYear || ''} ${vehicleMake || ''} ${vehicleModel || ''})`,
+      subject: `🚗 New Sandbox Auto Quote Request — ${String(`${firstName} ${lastName}`).replace(/[\r\n]+/g, ' ').slice(0, 120)} (${vehicleYear || ''} ${vehicleMake || ''} ${vehicleModel || ''})`,
       html: emailHtml,
     });
 
