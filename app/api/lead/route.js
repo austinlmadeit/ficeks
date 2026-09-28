@@ -131,7 +131,7 @@ export async function POST(request) {
       </html>
     `;
 
-    const toEmail = process.env.LEAD_NOTIFICATION_EMAIL || 'austin.l@ficekinsurance.com';
+    const toEmail = process.env.LEAD_NOTIFICATION_EMAIL || 'info@ficekinsurance.com';
     const fromEmail = process.env.RESEND_FROM_EMAIL || 'Ficek Insurance Website <onboarding@resend.dev>';
 
     const { data, error } = await resend.emails.send({

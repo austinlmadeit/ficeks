@@ -51,7 +51,7 @@ cp .env.example .env.local
 Variables configured in `.env.local` and in Vercel project settings:
 ```ini
 RESEND_API_KEY=re_xxxxxxxxxxxx
-LEAD_NOTIFICATION_EMAIL=austin.l@ficekinsurance.com
+LEAD_NOTIFICATION_EMAIL=info@ficekinsurance.com
 RESEND_FROM_EMAIL=Ficek Insurance Website <onboarding@resend.dev>
 ```
 
@@ -175,4 +175,4 @@ npx vercel --prod --yes
 ## 7. Contact & Project Credentials
 
 - **Domain Registrar / DNS**: Points to Vercel nameservers / DNS aliases for `ficekinsurance.com` and `www.ficekinsurance.com`.
-- **Lead Email Notifications**: Handled by Resend and routed to `austin.l@ficekinsurance.com`.
+- **Lead Email Notifications**: Handled by Resend and routed to `info@ficekinsurance.com`. This is set by the `LEAD_NOTIFICATION_EMAIL` environment variable in Vercel; the value there overrides the default in the code.

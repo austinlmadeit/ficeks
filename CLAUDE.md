@@ -26,7 +26,7 @@ npx vercel --prod --yes
 
 - **Next.js 16.2.12** (App Router, Turbopack) & **React 19.2.4**
 - **Single Source of Truth**: `lib/data.js` holds all team members, locations, carrier partners, reviews, and service definitions.
-- **Lead Capture**: `app/api/lead/route.js` & `app/api/sandbox-quote/route.js` send leads via Resend to `austin.l@ficekinsurance.com`.
+- **Lead Capture**: `app/api/lead/route.js` & `app/api/sandbox-quote/route.js` send leads via Resend to `info@ficekinsurance.com` (override with the `LEAD_NOTIFICATION_EMAIL` environment variable).
 - **Global Styles**: `app/globals.css` (button utilities, animation keyframes, `.location-showcase-card`, `.hero-logo-card`).
 
 ## Critical Business Rules
