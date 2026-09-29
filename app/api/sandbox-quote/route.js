@@ -1,7 +1,18 @@
 import { Resend } from 'resend';
 import { inspectSubmission, escapeHtml } from '@/lib/form-guard';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// The Resend client is created on first use, not at module scope. Next.js
+// evaluates route modules while collecting page data during the build, so
+// constructing it here would make the build itself require a runtime secret
+// and fail wherever RESEND_API_KEY is not present (for example, preview
+// deployments that only have production-scoped variables).
+let resendClient = null;
+function getResend() {
+  const key = process.env.RESEND_API_KEY;
+  if (!key) return null;
+  if (!resendClient) resendClient = new Resend(key);
+  return resendClient;
+}
 
 export async function POST(request) {
   try {
@@ -155,6 +166,15 @@ export async function POST(request) {
         </body>
       </html>
     `;
+
+    const resend = getResend();
+    if (!resend) {
+      console.error('RESEND_API_KEY is not set; cannot send lead notification email.');
+      return Response.json(
+        { success: false, error: 'We could not send your message right now. Please call us at 204-571-1777.' },
+        { status: 503 },
+      );
+    }
 
     const { data, error } = await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL || 'Ficek Insurance Website <onboarding@resend.dev>',
