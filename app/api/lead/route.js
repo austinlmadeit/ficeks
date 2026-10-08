@@ -142,7 +142,12 @@ export async function POST(request) {
       </html>
     `;
 
-    const toEmail = process.env.LEAD_NOTIFICATION_EMAIL || 'info@ficekinsurance.com';
+    // While leads are sent from Resend's shared testing address
+    // (onboarding@resend.dev), Resend only delivers to the email address that
+    // owns the Resend account. The default below must match that owner, or
+    // every lead is rejected with a 403. Change it, or set
+    // LEAD_NOTIFICATION_EMAIL, only together with the account or domain setup.
+    const toEmail = process.env.LEAD_NOTIFICATION_EMAIL || 'austin.l@ficekinsurance.com';
     const fromEmail = process.env.RESEND_FROM_EMAIL || 'Ficek Insurance Website <onboarding@resend.dev>';
 
     const resend = getResend();

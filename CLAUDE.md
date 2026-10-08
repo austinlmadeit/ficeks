@@ -26,7 +26,7 @@ npx vercel --prod --yes
 
 - **Next.js 16.2.12** (App Router, Turbopack) & **React 19.2.4**
 - **Single Source of Truth**: `lib/data.js` holds all team members, locations, carrier partners, reviews, and service definitions.
-- **Lead Capture**: `app/api/lead/route.js` & `app/api/sandbox-quote/route.js` send leads via Resend to `info@ficekinsurance.com` (override with the `LEAD_NOTIFICATION_EMAIL` environment variable).
+- **Lead Capture**: `app/api/lead/route.js` & `app/api/sandbox-quote/route.js` send leads via Resend to `austin.l@ficekinsurance.com` (override with the `LEAD_NOTIFICATION_EMAIL` environment variable). While the sender is Resend's testing address `onboarding@resend.dev`, the recipient MUST be the Resend account owner's address or every lead fails with a 403. Moving leads to `info@ficekinsurance.com` requires a Resend account owned by `info@` (or a verified domain) first.
 - **Global Styles**: `app/globals.css` (button utilities, animation keyframes, `.location-showcase-card`, `.hero-logo-card`).
 
 ## Critical Business Rules
