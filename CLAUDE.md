@@ -43,3 +43,15 @@ npx vercel --prod --yes
    - Clean, professional corporate tone without emoji clutter (no `✨`, `🏆`, or `⏰` in headings/badges).
    - No em-dashes (`—`) in headlines; use colons (`:`) or hyphens (`-`).
    - SGI logo is `/images/carriers/sgi.updated.webp`.
+
+## Changing Lead Capture
+
+Applies to any change touching the quote/contact forms, `app/api/lead`, `app/api/sandbox-quote`, `lib/form-guard.js`, Resend, or the `RESEND_*` / `LEAD_NOTIFICATION_EMAIL` environment variables.
+
+A failed lead email is invisible to the office: the customer sees an error and nobody else sees anything. Between Sept 29 and Oct 8 2026 every website lead failed unnoticed because the recipient was changed without a matching Resend account change, and the change was reported as done after local tests that could not reproduce the failure.
+
+1. **Local tests are not enough.** A dummy `RESEND_API_KEY` proves the code reaches Resend, not that Resend will deliver. Account and recipient problems only appear with the real key.
+2. **Test on the branch's Preview deployment** with a real submission before merging to `main` (requires `RESEND_API_KEY` in the Vercel Preview environment).
+3. **After it deploys to Production, submit a test lead on the live site** and confirm the email arrived, including the spam folder. Check Vercel Logs for `Resend Lead API error`, `Resend error`, or `RESEND_API_KEY is not set`.
+4. **If you cannot run the live test yourself** (for example, the site or Vercel is unreachable from your environment), say so plainly and ask a person to run it. Do not report the change as done until someone has.
+5. **Never change the recipient and the sending account separately.** While the sender is `onboarding@resend.dev`, `LEAD_NOTIFICATION_EMAIL` (and the code default) must be the Resend account owner's address, or every lead fails with a 403. Change the key, recipient, and sender together, then run step 3.
