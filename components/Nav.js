@@ -58,9 +58,21 @@ export default function Nav() {
               {item.children && openDropdown === item.href && (
                 <div className={styles.dropdown}>
                   {item.children.map((child) => (
+                    child.external ? (
+                    <a
+                      key={child.href}
+                      href={child.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.dropdownLink}
+                    >
+                      {child.label} ↗
+                    </a>
+                  ) : (
                     <Link key={child.href} href={child.href} className={styles.dropdownLink}>
                       {child.label}
                     </Link>
+                  )
                   ))}
                 </div>
               )}
@@ -102,9 +114,21 @@ export default function Nav() {
               {item.children && (
                 <div className={styles.mobileChildren}>
                   {item.children.map((child) => (
+                    child.external ? (
+                    <a
+                      key={child.href}
+                      href={child.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.mobileChildLink}
+                    >
+                      {child.label} ↗
+                    </a>
+                  ) : (
                     <Link key={child.href} href={child.href} className={styles.mobileChildLink}>
                       {child.label}
                     </Link>
+                  )
                   ))}
                 </div>
               )}
