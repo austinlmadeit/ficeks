@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -10,6 +10,20 @@ import styles from './Nav.module.css';
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const closeTimer = useRef(null);
+
+  // Hover menus close after a short grace period rather than instantly, so a
+  // small slip outside the menu (a diagonal move toward a lower item, or a
+  // wobble past its edge) doesn't snap it shut. Re-entering cancels the close.
+  const openMenu = (href) => {
+    clearTimeout(closeTimer.current);
+    setOpenDropdown(href);
+  };
+  const scheduleClose = () => {
+    clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setOpenDropdown(null), 250);
+  };
+  useEffect(() => () => clearTimeout(closeTimer.current), []);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -45,8 +59,8 @@ export default function Nav() {
             <div
               key={item.href}
               className={styles.navItem}
-              onMouseEnter={() => item.children && setOpenDropdown(item.href)}
-              onMouseLeave={() => setOpenDropdown(null)}
+              onMouseEnter={() => item.children && openMenu(item.href)}
+              onMouseLeave={scheduleClose}
             >
               <Link
                 href={item.href}

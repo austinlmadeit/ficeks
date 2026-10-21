@@ -155,6 +155,18 @@
   z-index: 100;
 }
 
+/* Invisible strip spanning the gap between the menu label and the dropdown.
+   It belongs to the dropdown, so the pointer is never outside the menu while
+   crossing the gap and the menu doesn't close on the way down. */
+.dropdown::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: -2px;
+  right: -2px;
+  height: 12px;
+}
+
 .dropdownLink {
   display: block;
   padding: 10px 14px;
