@@ -134,7 +134,7 @@ ficek-insurance-redesign/
 When making changes, adhere to the following decisions established with the client:
 
 1. **Dual Brandon Locations**:
-   - **Main Headquarters**: `1439 1st Street, Brandon, MB R7A 6Z4` (Phone: `204-571-1777`, Hours: Mon–Fri 9:00 AM – 5:00 PM).
+   - **Main Headquarters**: `1439 1st Street, Brandon, MB R7A 2Y7` (Phone: `204-571-1777`, Hours: Mon–Fri 9:00 AM – 5:00 PM).
    - **New Location**: Must **always** be formatted as `1525B 18th Street, Brandon, MB R7A 5A9` (Phone: `204-728-1957`, Hours: Mon–Fri 9:00 AM – 7:00 PM, Sat 10:00 AM – 5:00 PM).
    - Both locations are featured at the top of `app/page.js` with interactive Google Maps iframes. Hovering over either location card dynamically highlights it with the red brand accent border (`.location-showcase-card:hover`).
 

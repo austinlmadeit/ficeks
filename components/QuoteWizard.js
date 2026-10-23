@@ -529,7 +529,7 @@ ${!isAuto && form.policyNumber ? `[Policy Number]: ${form.policyNumber}\n` : ''}
                   </label>
                   <input
                     type="text"
-                    placeholder="e.g. R7A 6Z4"
+                    placeholder="e.g. R7A 2Y7"
                     value={form.postalCode}
                     onChange={(e) => update('postalCode', e.target.value)}
                     style={{

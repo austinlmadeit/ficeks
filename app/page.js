@@ -211,7 +211,7 @@ export default function HomePage() {
                 }}>
                   <iframe
                     title="1439 1st Street Office - Main HQ Map"
-                    src="https://maps.google.com/maps?q=1439%201st%20Street%20Brandon%20MB%20R7A%206Z4&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    src="https://maps.google.com/maps?q=1439%201st%20Street%20Brandon%20MB%20R7A%202Y7&t=&z=15&ie=UTF8&iwloc=&output=embed"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -228,7 +228,7 @@ export default function HomePage() {
                       Street Address
                     </div>
                     <div style={{ fontSize: '16px', fontWeight: 800, color: '#09090b' }}>
-                      1439 1st Street, Brandon, MB R7A 6Z4
+                      1439 1st Street, Brandon, MB R7A 2Y7
                     </div>
                   </div>
 
@@ -254,7 +254,7 @@ export default function HomePage() {
 
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=1439+1st+Street+Brandon+MB+R7A+6Z4"
+                  href="https://www.google.com/maps/search/?api=1&query=1439+1st+Street+Brandon+MB+R7A+2Y7"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-red"
