@@ -32,7 +32,7 @@ npx vercel --prod --yes
 ## Critical Business Rules
 
 1. **Dual Locations**:
-   - Main HQ: `1439 1st Street, Brandon, MB R7A 6Z4` (204-571-1777)
+   - Main HQ: `1439 1st Street, Brandon, MB R7A 2Y7` (204-571-1777)
    - New Space: Strictly formatted as `1525B 18th Street, Brandon, MB R7A 5A9` (204-728-1957, open late until 7 PM)
 2. **Team Roster**:
    - Rod Ficek (Owner/Senior Broker) must ALWAYS be at index 0 in `TEAM` in `lib/data.js`.
