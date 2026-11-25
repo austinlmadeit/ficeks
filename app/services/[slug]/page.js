@@ -49,18 +49,18 @@ export default async function ServicePage({ params }) {
         color: '#ffffff',
         paddingTop: '80px',
         paddingBottom: '80px',
-        borderBottom: '4px solid #dc2626',
+        borderBottom: '4px solid #d91b3d',
         position: 'relative',
         overflow: 'hidden',
       }}>
         <div style={{
           position: 'absolute', top: 0, right: 0,
           width: '500px', height: '500px',
-          background: 'radial-gradient(circle, rgba(220,38,38,0.18) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(217, 27, 61, 0.18) 0%, transparent 70%)',
           pointerEvents: 'none',
         }} />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <Link href="/services" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#ef4444', fontSize: '14px', fontWeight: 700, marginBottom: '24px' }}>
+          <Link href="/services" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#f53053', fontSize: '14px', fontWeight: 700, marginBottom: '24px' }}>
             ← All Insurance Categories
           </Link>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '40px' }}>
@@ -107,7 +107,7 @@ export default async function ServicePage({ params }) {
             <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 40px auto' }}>
               <span className="section-tag">How Manitoba Auto Insurance Works</span>
               <h2 style={{ fontSize: '36px', fontWeight: 900, marginBottom: '14px', lineHeight: 1.2 }}>
-                MPI Autopac is Mandatory. <span style={{ color: '#dc2626' }}>Sandbox Mutual Makes It Better.</span>
+                MPI Autopac is Mandatory. <span style={{ color: '#d91b3d' }}>Sandbox Mutual Makes It Better.</span>
               </h2>
               <p style={{ fontSize: '16px', color: '#71717a', lineHeight: 1.75 }}>
                 Every registered Manitoba vehicle requires Basic Autopac through MPI. Sandbox Mutual provides an additional extension option layered directly on top of your MPI policy for higher limits, lower deductibles, and more comprehensive extended coverages.
@@ -130,7 +130,7 @@ export default async function ServicePage({ params }) {
                         />
                       </div>
                     </th>
-                    <th style={{ padding: '12px 18px', textAlign: 'center', background: '#fef2f2', borderBottom: '1px solid #fecaca', verticalAlign: 'bottom' }}>
+                    <th style={{ padding: '12px 18px', textAlign: 'center', background: '#fef2f4', borderBottom: '1px solid #fecad3', verticalAlign: 'bottom' }}>
                       <div style={{ position: 'relative', width: '44px', height: '44px', margin: '0 auto' }}>
                         <Image
                           src="/images/carriers/smi 2.0.webp"
@@ -148,7 +148,7 @@ export default async function ServicePage({ params }) {
                     <th style={{ padding: '14px 18px', textAlign: 'center', background: '#f4f4f5', borderBottom: '2px solid #e4e4e7', fontWeight: 800, color: '#71717a', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                       Basic MPI Autopac
                     </th>
-                    <th style={{ padding: '14px 18px', textAlign: 'center', background: '#fef2f2', borderBottom: '2px solid #dc2626', fontWeight: 800, color: '#dc2626', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                    <th style={{ padding: '14px 18px', textAlign: 'center', background: '#fef2f4', borderBottom: '2px solid #d91b3d', fontWeight: 800, color: '#d91b3d', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                       Sandbox Mutual Extension
                     </th>
                   </tr>
@@ -162,7 +162,7 @@ export default async function ServicePage({ params }) {
                       <td style={{ padding: '16px 18px', textAlign: 'center', color: '#71717a', background: i % 2 === 0 ? '#ffffff' : '#fafafa', fontSize: '14px' }}>
                         {row.mpi}
                       </td>
-                      <td style={{ padding: '16px 18px', textAlign: 'center', background: row.sandboxWins ? (i % 2 === 0 ? '#fff9f9' : '#fef5f5') : (i % 2 === 0 ? '#ffffff' : '#fafafa'), fontWeight: row.sandboxWins ? 700 : 500, color: row.sandboxWins ? '#dc2626' : '#71717a', fontSize: '14px' }}>
+                      <td style={{ padding: '16px 18px', textAlign: 'center', background: row.sandboxWins ? (i % 2 === 0 ? '#fff9f9' : '#fef5f5') : (i % 2 === 0 ? '#ffffff' : '#fafafa'), fontWeight: row.sandboxWins ? 700 : 500, color: row.sandboxWins ? '#d91b3d' : '#71717a', fontSize: '14px' }}>
                         {row.sandbox}
                       </td>
                     </tr>
@@ -171,7 +171,7 @@ export default async function ServicePage({ params }) {
               </table>
             </div>
 
-            <div style={{ marginTop: '24px', padding: '16px 20px', background: '#fef2f2', borderRadius: '10px', border: '1px solid #fecaca', display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+            <div style={{ marginTop: '24px', padding: '16px 20px', background: '#fef2f4', borderRadius: '10px', border: '1px solid #fecad3', display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
               <p style={{ fontSize: '14px', color: '#09090b', lineHeight: 1.7, margin: 0 }}>
                 <strong>Important:</strong> Sandbox Mutual Private Auto Extension works <em>alongside</em> your mandatory MPI Autopac and does not replace it. Ficek Insurance brokers handle both your MPI registration and your Sandbox extension in one visit at our Brandon offices at <strong>1439 1st Street</strong> or <strong>1525B 18th Street</strong>.
               </p>
@@ -182,11 +182,11 @@ export default async function ServicePage({ params }) {
 
       {/* 3-STEP SANDBOX QUOTE LEAD CAPTURE */}
       {isAuto && (
-        <section id="sandbox-quote" className="section" style={{ background: 'linear-gradient(135deg, #09090b 0%, #1c1c1f 100%)', borderTop: '4px solid #dc2626' }}>
+        <section id="sandbox-quote" className="section" style={{ background: 'linear-gradient(135deg, #09090b 0%, #1c1c1f 100%)', borderTop: '4px solid #d91b3d' }}>
           <div className="container">
             <div className="grid-2" style={{ gap: '60px', alignItems: 'start' }}>
               <div style={{ color: '#ffffff' }}>
-                <span style={{ display: 'inline-block', background: '#dc2626', color: '#fff', fontWeight: 800, fontSize: '11px', letterSpacing: '1px', textTransform: 'uppercase', padding: '5px 12px', borderRadius: '4px', marginBottom: '20px' }}>
+                <span style={{ display: 'inline-block', background: '#d91b3d', color: '#fff', fontWeight: 800, fontSize: '11px', letterSpacing: '1px', textTransform: 'uppercase', padding: '5px 12px', borderRadius: '4px', marginBottom: '20px' }}>
                   Free Quote — No Obligation
                 </span>
                 <h2 style={{ fontSize: '36px', fontWeight: 900, lineHeight: 1.15, marginBottom: '18px', color: '#ffffff' }}>
@@ -206,7 +206,7 @@ export default async function ServicePage({ params }) {
                   ].map((text) => (
                     <div key={text} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                       <span style={{
-                        color: '#ef4444',
+                        color: '#f53053',
                         fontWeight: 800,
                         fontSize: '15px',
                         lineHeight: '22px',
@@ -224,7 +224,7 @@ export default async function ServicePage({ params }) {
                   <div style={{ fontSize: '13px', color: '#71717a', marginBottom: '10px', fontWeight: 600 }}>
                     Prefer to talk right now?
                   </div>
-                  <a href={SITE.phoneHref} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#dc2626', fontWeight: 800, fontSize: '18px', textDecoration: 'none' }}>
+                  <a href={SITE.phoneHref} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#d91b3d', fontWeight: 800, fontSize: '18px', textDecoration: 'none' }}>
                     Call {SITE.phone}
                   </a>
                 </div>

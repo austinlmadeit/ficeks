@@ -12,7 +12,7 @@ export default function QuotePage() {
       <section style={{
         background: '#09090b',
         color: '#ffffff',
-        borderBottom: '4px solid #dc2626',
+        borderBottom: '4px solid #d91b3d',
         padding: '80px 0 60px',
         position: 'relative',
         overflow: 'hidden',
@@ -23,7 +23,7 @@ export default function QuotePage() {
           right: 0,
           width: '500px',
           height: '500px',
-          background: 'radial-gradient(circle, rgba(220,38,38,0.2) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(217, 27, 61, 0.2) 0%, transparent 70%)',
           pointerEvents: 'none',
         }} />
 
@@ -34,7 +34,7 @@ export default function QuotePage() {
             gap: '8px',
             padding: '6px 14px',
             borderRadius: '20px',
-            background: '#dc2626',
+            background: '#d91b3d',
             color: '#ffffff',
             fontSize: '12px',
             fontWeight: 800,
@@ -65,7 +65,7 @@ export default function QuotePage() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
               {/* Phone Card */}
               <div className="card card-red-top" style={{ background: '#ffffff', padding: '28px', borderRadius: '12px' }}>
-                <span style={{ fontSize: '11px', fontWeight: 900, color: '#dc2626', letterSpacing: '1px', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
+                <span style={{ fontSize: '11px', fontWeight: 900, color: '#d91b3d', letterSpacing: '1px', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                   Need Immediate Help?
                 </span>
                 <h3 style={{ fontSize: '20px', fontWeight: 900, marginBottom: '12px', color: '#09090b' }}>
@@ -81,11 +81,11 @@ export default function QuotePage() {
                       display: 'flex',
                       alignItems: 'center',
                       gap: '10px',
-                      background: '#fef2f2',
-                      border: '1.5px solid #fecaca',
+                      background: '#fef2f4',
+                      border: '1.5px solid #fecad3',
                       borderRadius: '8px',
                       padding: '12px 16px',
-                      color: '#dc2626',
+                      color: '#d91b3d',
                       fontWeight: 800,
                       fontSize: '16px',
                       textDecoration: 'none',
@@ -129,7 +129,7 @@ export default function QuotePage() {
                     { title: 'Zero Obligation or Pressure', desc: 'Our quotes are free and designed to educate you on real coverage differences.' },
                   ].map((item, idx) => (
                     <div key={idx} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
-                      <span style={{ color: '#dc2626', fontWeight: 900, fontSize: '15px' }}>✓</span>
+                      <span style={{ color: '#d91b3d', fontWeight: 900, fontSize: '15px' }}>✓</span>
                       <div>
                         <strong style={{ fontSize: '14px', color: '#09090b', display: 'block' }}>{item.title}</strong>
                         <span style={{ fontSize: '13px', color: '#71717a', lineHeight: 1.4 }}>{item.desc}</span>

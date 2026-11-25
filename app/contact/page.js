@@ -12,7 +12,7 @@ export default function ContactPage() {
       <section style={{
         background: '#09090b',
         color: '#ffffff',
-        borderBottom: '4px solid #dc2626',
+        borderBottom: '4px solid #d91b3d',
         padding: '80px 0 60px',
         position: 'relative',
         overflow: 'hidden',
@@ -23,7 +23,7 @@ export default function ContactPage() {
           right: 0,
           width: '500px',
           height: '500px',
-          background: 'radial-gradient(circle, rgba(220,38,38,0.2) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(217, 27, 61, 0.2) 0%, transparent 70%)',
           pointerEvents: 'none',
         }} />
 
@@ -34,7 +34,7 @@ export default function ContactPage() {
             gap: '8px',
             padding: '6px 14px',
             borderRadius: '20px',
-            background: '#dc2626',
+            background: '#d91b3d',
             color: '#ffffff',
             fontSize: '12px',
             fontWeight: 800,
@@ -82,7 +82,7 @@ export default function ContactPage() {
               {OFFICES.map((office) => (
                 <div key={office.id} className="card card-red-top" style={{ background: '#ffffff', padding: '24px', borderRadius: '12px' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
-                    <span style={{ fontSize: '11px', fontWeight: 900, color: '#dc2626', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 900, color: '#d91b3d', letterSpacing: '1px', textTransform: 'uppercase' }}>
                       {office.badge}
                     </span>
                     <span style={{ fontSize: '12px', fontWeight: 700, color: '#71717a' }}>
@@ -98,7 +98,7 @@ export default function ContactPage() {
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '14px' }}>
                     <div>
                       <strong>Phone: </strong>
-                      <a href={office.phoneHref} style={{ color: '#dc2626', fontWeight: 800, textDecoration: 'none' }}>
+                      <a href={office.phoneHref} style={{ color: '#d91b3d', fontWeight: 800, textDecoration: 'none' }}>
                         {office.phone}
                       </a>
                     </div>
@@ -118,7 +118,7 @@ export default function ContactPage() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '14px' }}>
                   <div>
                     <strong>General Email: </strong>
-                    <a href={`mailto:${SITE.email}`} style={{ color: '#dc2626', fontWeight: 700, textDecoration: 'none' }}>
+                    <a href={`mailto:${SITE.email}`} style={{ color: '#d91b3d', fontWeight: 700, textDecoration: 'none' }}>
                       {SITE.email}
                     </a>
                   </div>

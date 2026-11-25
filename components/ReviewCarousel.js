@@ -74,8 +74,8 @@ export default function ReviewCarousel({ reviews }) {
             fontSize: '13px',
             fontWeight: 700,
             cursor: 'pointer',
-            border: filter === 'written' ? '1px solid #dc2626' : '1px solid #e4e4e7',
-            background: filter === 'written' ? '#dc2626' : '#f4f4f5',
+            border: filter === 'written' ? '1px solid #d91b3d' : '1px solid #e4e4e7',
+            background: filter === 'written' ? '#d91b3d' : '#f4f4f5',
             color: filter === 'written' ? '#ffffff' : '#3f3f46',
             transition: 'all 0.2s ease',
           }}
@@ -91,8 +91,8 @@ export default function ReviewCarousel({ reviews }) {
             fontSize: '13px',
             fontWeight: 700,
             cursor: 'pointer',
-            border: filter === 'all' ? '1px solid #dc2626' : '1px solid #e4e4e7',
-            background: filter === 'all' ? '#dc2626' : '#f4f4f5',
+            border: filter === 'all' ? '1px solid #d91b3d' : '1px solid #e4e4e7',
+            background: filter === 'all' ? '#d91b3d' : '#f4f4f5',
             color: filter === 'all' ? '#ffffff' : '#3f3f46',
             transition: 'all 0.2s ease',
           }}
@@ -108,8 +108,8 @@ export default function ReviewCarousel({ reviews }) {
             fontSize: '13px',
             fontWeight: 700,
             cursor: 'pointer',
-            border: filter === '1st' ? '1px solid #dc2626' : '1px solid #e4e4e7',
-            background: filter === '1st' ? '#dc2626' : '#f4f4f5',
+            border: filter === '1st' ? '1px solid #d91b3d' : '1px solid #e4e4e7',
+            background: filter === '1st' ? '#d91b3d' : '#f4f4f5',
             color: filter === '1st' ? '#ffffff' : '#3f3f46',
             transition: 'all 0.2s ease',
           }}
@@ -125,8 +125,8 @@ export default function ReviewCarousel({ reviews }) {
             fontSize: '13px',
             fontWeight: 700,
             cursor: 'pointer',
-            border: filter === '18th' ? '1px solid #dc2626' : '1px solid #e4e4e7',
-            background: filter === '18th' ? '#dc2626' : '#f4f4f5',
+            border: filter === '18th' ? '1px solid #d91b3d' : '1px solid #e4e4e7',
+            background: filter === '18th' ? '#d91b3d' : '#f4f4f5',
             color: filter === '18th' ? '#ffffff' : '#3f3f46',
             transition: 'all 0.2s ease',
           }}
@@ -220,7 +220,7 @@ export default function ReviewCarousel({ reviews }) {
                             <div style={{
                               fontSize: '10px',
                               fontWeight: 800,
-                              color: '#dc2626',
+                              color: '#d91b3d',
                               letterSpacing: '1px',
                               textTransform: 'uppercase',
                               marginBottom: '8px',
@@ -279,7 +279,7 @@ export default function ReviewCarousel({ reviews }) {
                 onClick={prevPage}
                 aria-label="Previous slide"
                 style={{
-                  background: '#dc2626',
+                  background: '#d91b3d',
                   color: '#ffffff',
                   border: 'none',
                   borderRadius: '50%',
@@ -291,7 +291,7 @@ export default function ReviewCarousel({ reviews }) {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  boxShadow: '0 2px 6px rgba(220, 38, 38, 0.3)',
+                  boxShadow: '0 2px 6px rgba(217, 27, 61, 0.3)',
                   transition: 'transform 0.2s ease',
                 }}
                 onMouseDown={(e) => (e.currentTarget.style.transform = 'scale(0.92)')}
@@ -312,7 +312,7 @@ export default function ReviewCarousel({ reviews }) {
                         width: idx === currentPage ? '24px' : '10px',
                         height: '10px',
                         borderRadius: '5px',
-                        background: idx === currentPage ? '#dc2626' : '#d4d4d8',
+                        background: idx === currentPage ? '#d91b3d' : '#d4d4d8',
                         border: 'none',
                         cursor: 'pointer',
                         transition: 'all 0.3s ease',
@@ -338,7 +338,7 @@ export default function ReviewCarousel({ reviews }) {
                 onClick={nextPage}
                 aria-label="Next slide"
                 style={{
-                  background: '#dc2626',
+                  background: '#d91b3d',
                   color: '#ffffff',
                   border: 'none',
                   borderRadius: '50%',
@@ -350,7 +350,7 @@ export default function ReviewCarousel({ reviews }) {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  boxShadow: '0 2px 6px rgba(220, 38, 38, 0.3)',
+                  boxShadow: '0 2px 6px rgba(217, 27, 61, 0.3)',
                   transition: 'transform 0.2s ease',
                 }}
                 onMouseDown={(e) => (e.currentTarget.style.transform = 'scale(0.92)')}

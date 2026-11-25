@@ -16,7 +16,7 @@ export default function OurTeamPage() {
         color: '#ffffff',
         paddingTop: '80px',
         paddingBottom: '80px',
-        borderBottom: '4px solid #dc2626',
+        borderBottom: '4px solid #d91b3d',
         textAlign: 'center',
         position: 'relative',
         overflow: 'hidden',
@@ -28,7 +28,7 @@ export default function OurTeamPage() {
           transform: 'translateX(50%)',
           width: '600px',
           height: '600px',
-          background: 'radial-gradient(circle, rgba(220,38,38,0.18) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(217, 27, 61, 0.18) 0%, transparent 70%)',
           pointerEvents: 'none',
         }} />
 
@@ -39,7 +39,7 @@ export default function OurTeamPage() {
             gap: '8px',
             padding: '6px 14px',
             borderRadius: '20px',
-            background: '#dc2626',
+            background: '#d91b3d',
             color: '#ffffff',
             fontSize: '12px',
             fontWeight: 800,
@@ -111,7 +111,7 @@ export default function OurTeamPage() {
                   width: '250px',
                   height: '250px',
                   borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #dc2626 0%, #09090b 100%)',
+                  background: 'linear-gradient(135deg, #d91b3d 0%, #09090b 100%)',
                   color: '#ffffff',
                   display: 'flex',
                   alignItems: 'center',
@@ -119,7 +119,7 @@ export default function OurTeamPage() {
                   fontSize: '28px',
                   fontWeight: 900,
                   marginBottom: '16px',
-                  boxShadow: '0 4px 14px rgba(220,38,38,0.25)',
+                  boxShadow: '0 4px 14px rgba(217, 27, 61, 0.25)',
                   border: '3px solid #ffffff',
                   position: 'relative',
                   overflow: 'hidden',
@@ -144,7 +144,7 @@ export default function OurTeamPage() {
                 <div style={{
                   fontSize: '13px',
                   fontWeight: 800,
-                  color: '#dc2626',
+                  color: '#d91b3d',
                   textTransform: 'uppercase',
                   letterSpacing: '0.5px',
                 }}>

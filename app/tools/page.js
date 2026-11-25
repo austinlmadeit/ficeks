@@ -29,7 +29,7 @@ export default function ToolsPage() {
         color: '#ffffff',
         paddingTop: '80px',
         paddingBottom: '80px',
-        borderBottom: '4px solid #dc2626',
+        borderBottom: '4px solid #d91b3d',
         position: 'relative',
         overflow: 'hidden',
       }}>
@@ -39,7 +39,7 @@ export default function ToolsPage() {
           right: 0,
           width: '500px',
           height: '500px',
-          background: 'radial-gradient(circle, rgba(220,38,38,0.2) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(217, 27, 61, 0.2) 0%, transparent 70%)',
           pointerEvents: 'none',
         }} />
 
@@ -50,7 +50,7 @@ export default function ToolsPage() {
             gap: '8px',
             padding: '6px 14px',
             borderRadius: '20px',
-            background: '#dc2626',
+            background: '#d91b3d',
             color: '#ffffff',
             fontSize: '12px',
             fontWeight: 800,
@@ -99,12 +99,12 @@ export default function ToolsPage() {
                   padding: '12px 24px',
                   borderRadius: '8px',
                   border: 'none',
-                  background: activeTab === t.id ? '#dc2626' : '#ffffff',
+                  background: activeTab === t.id ? '#d91b3d' : '#ffffff',
                   color: activeTab === t.id ? '#ffffff' : '#09090b',
                   fontWeight: 800,
                   fontSize: '14px',
                   cursor: 'pointer',
-                  boxShadow: activeTab === t.id ? '0 4px 12px rgba(220,38,38,0.2)' : 'none',
+                  boxShadow: activeTab === t.id ? '0 4px 12px rgba(217, 27, 61, 0.2)' : 'none',
                   transition: 'all 0.2s ease',
                 }}
               >
@@ -120,7 +120,7 @@ export default function ToolsPage() {
         <section className="section" style={{ background: '#ffffff' }}>
           <div className="container" style={{ maxWidth: '840px' }}>
             <div className="card card-red-top" style={{ padding: '36px', background: '#fafafa' }}>
-              <div style={{ fontSize: '12px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px' }}>
+              <div style={{ fontSize: '12px', fontWeight: 800, color: '#d91b3d', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px' }}>
                 Tool #1: Home Contents Calculator
               </div>
               <h2 style={{ fontSize: '28px', fontWeight: 900, marginBottom: '12px' }}>
@@ -141,7 +141,7 @@ export default function ToolsPage() {
                   <div key={idx} style={{ background: '#ffffff', padding: '16px 20px', borderRadius: '8px', border: '1px solid #e4e4e7' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 700, marginBottom: '8px', fontSize: '15px' }}>
                       <span>{item.label}</span>
-                      <span style={{ color: '#dc2626', fontWeight: 900 }}>${item.value.toLocaleString()}</span>
+                      <span style={{ color: '#d91b3d', fontWeight: 900 }}>${item.value.toLocaleString()}</span>
                     </div>
                     <input
                       type="range"
@@ -150,7 +150,7 @@ export default function ToolsPage() {
                       step="1000"
                       value={item.value}
                       onChange={(e) => item.setter(Number(e.target.value))}
-                      style={{ width: '100%', accentColor: '#dc2626', cursor: 'pointer' }}
+                      style={{ width: '100%', accentColor: '#d91b3d', cursor: 'pointer' }}
                     />
                   </div>
                 ))}
@@ -160,7 +160,7 @@ export default function ToolsPage() {
                 <div style={{ fontSize: '13px', color: '#a1a1aa', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 700, marginBottom: '4px' }}>
                   Estimated Personal Property Value
                 </div>
-                <div style={{ fontSize: '42px', fontWeight: 900, color: '#ef4444', marginBottom: '16px' }}>
+                <div style={{ fontSize: '42px', fontWeight: 900, color: '#f53053', marginBottom: '16px' }}>
                   ${totalContentsValue.toLocaleString()}
                 </div>
                 <Link href="/quote" className="btn btn-red" style={{ padding: '12px 28px', fontSize: '15px' }}>
@@ -177,7 +177,7 @@ export default function ToolsPage() {
         <section className="section" style={{ background: '#ffffff' }}>
           <div className="container" style={{ maxWidth: '840px' }}>
             <div className="card card-red-top" style={{ padding: '36px', background: '#fafafa' }}>
-              <div style={{ fontSize: '12px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px' }}>
+              <div style={{ fontSize: '12px', fontWeight: 800, color: '#d91b3d', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px' }}>
                 Tool #2: Commercial Gap Quiz
               </div>
               <h2 style={{ fontSize: '28px', fontWeight: 900, marginBottom: '12px' }}>
@@ -195,7 +195,7 @@ export default function ToolsPage() {
                   <div style={{ display: 'flex', gap: '16px' }}>
                     <button
                       onClick={() => setHasEmployees('yes')}
-                      style={{ padding: '8px 20px', borderRadius: '6px', border: '1px solid #dc2626', background: hasEmployees === 'yes' ? '#dc2626' : '#ffffff', color: hasEmployees === 'yes' ? '#ffffff' : '#09090b', fontWeight: 700, cursor: 'pointer' }}
+                      style={{ padding: '8px 20px', borderRadius: '6px', border: '1px solid #d91b3d', background: hasEmployees === 'yes' ? '#d91b3d' : '#ffffff', color: hasEmployees === 'yes' ? '#ffffff' : '#09090b', fontWeight: 700, cursor: 'pointer' }}
                     >
                       Yes
                     </button>
@@ -215,7 +215,7 @@ export default function ToolsPage() {
                   <div style={{ display: 'flex', gap: '16px' }}>
                     <button
                       onClick={() => setHasCommercialVehicle('yes')}
-                      style={{ padding: '8px 20px', borderRadius: '6px', border: '1px solid #dc2626', background: hasCommercialVehicle === 'yes' ? '#dc2626' : '#ffffff', color: hasCommercialVehicle === 'yes' ? '#ffffff' : '#09090b', fontWeight: 700, cursor: 'pointer' }}
+                      style={{ padding: '8px 20px', borderRadius: '6px', border: '1px solid #d91b3d', background: hasCommercialVehicle === 'yes' ? '#d91b3d' : '#ffffff', color: hasCommercialVehicle === 'yes' ? '#ffffff' : '#09090b', fontWeight: 700, cursor: 'pointer' }}
                     >
                       Yes
                     </button>
@@ -235,7 +235,7 @@ export default function ToolsPage() {
                   <div style={{ display: 'flex', gap: '16px' }}>
                     <button
                       onClick={() => setHasCyberData('yes')}
-                      style={{ padding: '8px 20px', borderRadius: '6px', border: '1px solid #dc2626', background: hasCyberData === 'yes' ? '#dc2626' : '#ffffff', color: hasCyberData === 'yes' ? '#ffffff' : '#09090b', fontWeight: 700, cursor: 'pointer' }}
+                      style={{ padding: '8px 20px', borderRadius: '6px', border: '1px solid #d91b3d', background: hasCyberData === 'yes' ? '#d91b3d' : '#ffffff', color: hasCyberData === 'yes' ? '#ffffff' : '#09090b', fontWeight: 700, cursor: 'pointer' }}
                     >
                       Yes
                     </button>
@@ -249,7 +249,7 @@ export default function ToolsPage() {
                 </div>
               </div>
 
-              <div style={{ background: '#ffffff', padding: '24px', borderRadius: '12px', border: '2px solid #dc2626' }}>
+              <div style={{ background: '#ffffff', padding: '24px', borderRadius: '12px', border: '2px solid #d91b3d' }}>
                 <h3 style={{ fontSize: '20px', fontWeight: 900, marginBottom: '12px', color: '#09090b' }}>
                   Recommended Coverage Protection:
                 </h3>

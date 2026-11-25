@@ -15,7 +15,7 @@ export default function LocationsPage() {
         color: '#ffffff',
         paddingTop: '80px',
         paddingBottom: '80px',
-        borderBottom: '4px solid #dc2626',
+        borderBottom: '4px solid #d91b3d',
         position: 'relative',
         overflow: 'hidden',
       }}>
@@ -25,7 +25,7 @@ export default function LocationsPage() {
           right: 0,
           width: '500px',
           height: '500px',
-          background: 'radial-gradient(circle, rgba(220,38,38,0.2) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(217, 27, 61, 0.2) 0%, transparent 70%)',
           pointerEvents: 'none',
         }} />
 
@@ -36,7 +36,7 @@ export default function LocationsPage() {
             gap: '8px',
             padding: '6px 14px',
             borderRadius: '20px',
-            background: '#dc2626',
+            background: '#d91b3d',
             color: '#ffffff',
             fontSize: '12px',
             fontWeight: 800,
@@ -98,8 +98,8 @@ export default function LocationsPage() {
                     <span style={{
                       fontSize: '12px',
                       fontWeight: 900,
-                      color: office.id === 'main' ? '#ffffff' : '#dc2626',
-                      background: office.id === 'main' ? '#dc2626' : 'rgba(220,38,38,0.1)',
+                      color: office.id === 'main' ? '#ffffff' : '#d91b3d',
+                      background: office.id === 'main' ? '#d91b3d' : 'rgba(217, 27, 61, 0.1)',
                       padding: '4px 12px',
                       borderRadius: '4px',
                       textTransform: 'uppercase',
@@ -144,7 +144,7 @@ export default function LocationsPage() {
                   {/* Address, Phone & Hours Info */}
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '24px', borderTop: '1px solid #e4e4e7', paddingTop: '16px' }}>
                     <div>
-                      <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
+                      <div style={{ fontSize: '11px', fontWeight: 800, color: '#d91b3d', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
                         Street Address
                       </div>
                       <div style={{ fontSize: '16px', fontWeight: 800, color: '#09090b' }}>
@@ -153,16 +153,16 @@ export default function LocationsPage() {
                     </div>
 
                     <div>
-                      <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
+                      <div style={{ fontSize: '11px', fontWeight: 800, color: '#d91b3d', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
                         Phone Number
                       </div>
-                      <a href={office.phoneHref} style={{ fontSize: '16px', fontWeight: 800, color: '#dc2626', textDecoration: 'none' }}>
+                      <a href={office.phoneHref} style={{ fontSize: '16px', fontWeight: 800, color: '#d91b3d', textDecoration: 'none' }}>
                         📞 {office.phone}
                       </a>
                     </div>
 
                     <div>
-                      <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
+                      <div style={{ fontSize: '11px', fontWeight: 800, color: '#d91b3d', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
                         Office Hours
                       </div>
                       <div style={{ fontSize: '14px', fontWeight: 700, color: '#09090b' }}>

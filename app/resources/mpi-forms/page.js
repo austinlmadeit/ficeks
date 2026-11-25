@@ -29,7 +29,7 @@ export default function MPIFormsPage() {
         color: '#ffffff',
         paddingTop: '64px',
         paddingBottom: '64px',
-        borderBottom: '4px solid #dc2626',
+        borderBottom: '4px solid #d91b3d',
         position: 'relative',
         overflow: 'hidden',
       }}>
@@ -39,7 +39,7 @@ export default function MPIFormsPage() {
           right: 0,
           width: '500px',
           height: '500px',
-          background: 'radial-gradient(circle, rgba(220,38,38,0.2) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(217, 27, 61, 0.2) 0%, transparent 70%)',
           pointerEvents: 'none',
         }} />
 
@@ -50,7 +50,7 @@ export default function MPIFormsPage() {
             gap: '8px',
             padding: '6px 14px',
             borderRadius: '20px',
-            background: '#dc2626',
+            background: '#d91b3d',
             color: '#ffffff',
             fontSize: '12px',
             fontWeight: 800,
@@ -113,7 +113,7 @@ export default function MPIFormsPage() {
             <span style={{ fontSize: '14px', fontWeight: 800, color: '#71717a', textTransform: 'uppercase', letterSpacing: '1px' }}>
               Showing {filteredItems.length} Official Resources
             </span>
-            <a href="https://www.mpi.mb.ca/document-type/forms/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '13px', fontWeight: 800, color: '#dc2626', textDecoration: 'none' }}>
+            <a href="https://www.mpi.mb.ca/document-type/forms/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '13px', fontWeight: 800, color: '#d91b3d', textDecoration: 'none' }}>
               🌐 Full MPI Portal Directory ↗
             </a>
           </div>
@@ -145,8 +145,8 @@ export default function MPIFormsPage() {
                     <span style={{
                       fontSize: '11px',
                       fontWeight: 800,
-                      color: '#dc2626',
-                      background: 'rgba(220,38,38,0.08)',
+                      color: '#d91b3d',
+                      background: 'rgba(217, 27, 61, 0.08)',
                       padding: '2px 8px',
                       borderRadius: '4px',
                       textTransform: 'uppercase',

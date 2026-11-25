@@ -23,7 +23,7 @@ export default function AboutPage() {
         color: '#ffffff',
         paddingTop: '80px',
         paddingBottom: '80px',
-        borderBottom: '4px solid #dc2626',
+        borderBottom: '4px solid #d91b3d',
         position: 'relative',
         overflow: 'hidden',
       }}>
@@ -33,7 +33,7 @@ export default function AboutPage() {
           right: 0,
           width: '500px',
           height: '500px',
-          background: 'radial-gradient(circle, rgba(220,38,38,0.2) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(217, 27, 61, 0.2) 0%, transparent 70%)',
           pointerEvents: 'none',
         }} />
 
@@ -44,7 +44,7 @@ export default function AboutPage() {
             gap: '8px',
             padding: '6px 14px',
             borderRadius: '20px',
-            background: '#dc2626',
+            background: '#d91b3d',
             color: '#ffffff',
             fontSize: '12px',
             fontWeight: 800,
@@ -121,7 +121,7 @@ export default function AboutPage() {
                 { title: 'Local Claims Advocacy', desc: 'Direct, personal guidance when you need to file a claim.' },
               ].map((item, i) => (
                 <div key={i} className="card card-red-top" style={{ display: 'flex', gap: '16px', alignItems: 'flex-start', background: '#fafafa' }}>
-                  <span style={{ fontSize: '24px', color: '#dc2626', lineHeight: 1 }}>•</span>
+                  <span style={{ fontSize: '24px', color: '#d91b3d', lineHeight: 1 }}>•</span>
                   <div>
                     <div style={{ fontWeight: 800, fontSize: '17px', color: '#09090b', marginBottom: '4px' }}>{item.title}</div>
                     <div style={{ fontSize: '14px', color: '#71717a', lineHeight: 1.5 }}>{item.desc}</div>
@@ -152,7 +152,7 @@ export default function AboutPage() {
               top: '20px',
               bottom: '40px',
               width: '4px',
-              background: 'linear-gradient(180deg, #dc2626 0%, #09090b 100%)',
+              background: 'linear-gradient(180deg, #d91b3d 0%, #09090b 100%)',
               borderRadius: '2px',
             }} />
 
@@ -164,14 +164,14 @@ export default function AboutPage() {
                     width: '60px',
                     height: '60px',
                     borderRadius: '50%',
-                    background: '#dc2626',
+                    background: '#d91b3d',
                     color: '#ffffff',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     fontWeight: 900,
                     fontSize: '13px',
-                    boxShadow: '0 4px 14px rgba(220,38,38,0.3)',
+                    boxShadow: '0 4px 14px rgba(217, 27, 61, 0.3)',
                     flexShrink: 0,
                     zIndex: 2,
                     border: '3px solid #ffffff',
@@ -185,8 +185,8 @@ export default function AboutPage() {
                       <span style={{
                         fontSize: '13px',
                         fontWeight: 900,
-                        color: '#dc2626',
-                        background: 'rgba(220,38,38,0.08)',
+                        color: '#d91b3d',
+                        background: 'rgba(217, 27, 61, 0.08)',
                         padding: '4px 12px',
                         borderRadius: '4px',
                       }}>
@@ -200,7 +200,7 @@ export default function AboutPage() {
                     <h3 style={{ fontSize: '20px', fontWeight: 900, color: '#09090b', marginBottom: '4px' }}>
                       {item.title}
                     </h3>
-                    <div style={{ fontSize: '13px', fontWeight: 700, color: '#dc2626', marginBottom: '12px' }}>
+                    <div style={{ fontSize: '13px', fontWeight: 700, color: '#d91b3d', marginBottom: '12px' }}>
                       {item.subtitle}
                     </div>
 
@@ -230,7 +230,7 @@ export default function AboutPage() {
                   width: '250px',
                   height: '250px',
                   borderRadius: '50%',
-                  background: '#dc2626',
+                  background: '#d91b3d',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -238,7 +238,7 @@ export default function AboutPage() {
                   fontSize: '22px',
                   fontWeight: 900,
                   color: '#ffffff',
-                  boxShadow: '0 4px 12px rgba(220,38,38,0.2)',
+                  boxShadow: '0 4px 12px rgba(217, 27, 61, 0.2)',
                   position: 'relative',
                   overflow: 'hidden',
                 }}>
@@ -249,7 +249,7 @@ export default function AboutPage() {
                   )}
                 </div>
                 <div style={{ fontWeight: 900, fontSize: '18px', marginBottom: '4px', color: '#09090b' }}>{member.name}</div>
-                <div style={{ fontSize: '13px', color: '#dc2626', fontWeight: 800 }}>{member.title}</div>
+                <div style={{ fontSize: '13px', color: '#d91b3d', fontWeight: 800 }}>{member.title}</div>
               </div>
             ))}
           </div>

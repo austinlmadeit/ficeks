@@ -24,8 +24,8 @@ export default function CarrierCarousel() {
           fontWeight: 800,
           letterSpacing: '1.5px',
           textTransform: 'uppercase',
-          color: '#dc2626',
-          background: 'rgba(220,38,38,0.08)',
+          color: '#d91b3d',
+          background: 'rgba(217, 27, 61, 0.08)',
           padding: '4px 14px',
           borderRadius: '4px',
         }}>
@@ -99,7 +99,7 @@ export default function CarrierCarousel() {
             <div style={{
               fontSize: '13px',
               fontWeight: 900,
-              color: '#dc2626',
+              color: '#d91b3d',
               textAlign: 'center',
               lineHeight: 1.2,
             }}>
@@ -123,9 +123,9 @@ export default function CarrierCarousel() {
           animation-play-state: paused !important;
         }
         .carousel-card:hover {
-          border-color: #dc2626 !important;
+          border-color: #d91b3d !important;
           transform: translateY(-3px);
-          box-shadow: 0 10px 24px rgba(220, 38, 38, 0.18) !important;
+          box-shadow: 0 10px 24px rgba(217, 27, 61, 0.18) !important;
         }
       `}</style>
     </section>

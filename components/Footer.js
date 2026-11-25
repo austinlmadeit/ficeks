@@ -37,7 +37,7 @@ export default function Footer() {
               </div>
               <div>
                 <div style={{ fontSize: '20px', fontWeight: 900, color: '#ffffff', fontFamily: 'var(--font-heading)', lineHeight: 1 }}>FICEK</div>
-                <div style={{ fontSize: '9px', fontWeight: 700, color: '#dc2626', letterSpacing: '2px' }}>INSURANCE</div>
+                <div style={{ fontSize: '9px', fontWeight: 700, color: '#d91b3d', letterSpacing: '2px' }}>INSURANCE</div>
               </div>
             </div>
             <p style={{ fontSize: '14px', color: '#a1a1aa', lineHeight: 1.7, marginBottom: '20px', maxWidth: '240px' }}>
@@ -61,7 +61,7 @@ export default function Footer() {
 
           {/* Column 1: Coverage */}
           <div>
-            <h4 style={{ fontSize: '12px', fontWeight: 800, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#dc2626', marginBottom: '20px' }}>
+            <h4 style={{ fontSize: '12px', fontWeight: 800, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#d91b3d', marginBottom: '20px' }}>
               Coverage Options
             </h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -77,7 +77,7 @@ export default function Footer() {
 
           {/* Column 2: More Coverage */}
           <div>
-            <h4 style={{ fontSize: '12px', fontWeight: 800, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#dc2626', marginBottom: '20px' }}>
+            <h4 style={{ fontSize: '12px', fontWeight: 800, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#d91b3d', marginBottom: '20px' }}>
               Specialty Lines
             </h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -93,7 +93,7 @@ export default function Footer() {
 
           {/* Column 3: Company */}
           <div>
-            <h4 style={{ fontSize: '12px', fontWeight: 800, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#dc2626', marginBottom: '20px' }}>
+            <h4 style={{ fontSize: '12px', fontWeight: 800, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#d91b3d', marginBottom: '20px' }}>
               Company
             </h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -115,7 +115,7 @@ export default function Footer() {
 
           {/* Column 4: Office Info */}
           <div>
-            <h4 style={{ fontSize: '12px', fontWeight: 800, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#dc2626', marginBottom: '20px' }}>
+            <h4 style={{ fontSize: '12px', fontWeight: 800, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#d91b3d', marginBottom: '20px' }}>
               Brandon Offices
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', fontSize: '14px', color: '#a1a1aa' }}>
@@ -123,7 +123,7 @@ export default function Footer() {
                 <strong style={{ color: '#ffffff', display: 'block', fontSize: '14px', marginBottom: '2px' }}>1439 1st Street (Main Office)</strong>
                 <div>Brandon, MB R7A 2Y7</div>
                 <div style={{ marginTop: '4px' }}>
-                  <a href="tel:+12045711777" style={{ color: '#dc2626', fontWeight: 800, fontSize: '15px' }}>204-571-1777</a>
+                  <a href="tel:+12045711777" style={{ color: '#d91b3d', fontWeight: 800, fontSize: '15px' }}>204-571-1777</a>
                 </div>
               </div>
 
@@ -131,7 +131,7 @@ export default function Footer() {
                 <strong style={{ color: '#ffffff', display: 'block', fontSize: '14px', marginBottom: '2px' }}>1525B 18th Street Office</strong>
                 <div>Brandon, MB R7A 5A9</div>
                 <div style={{ marginTop: '4px' }}>
-                  <a href="tel:+12047281957" style={{ color: '#dc2626', fontWeight: 800, fontSize: '15px' }}>204-728-1957</a>
+                  <a href="tel:+12047281957" style={{ color: '#d91b3d', fontWeight: 800, fontSize: '15px' }}>204-728-1957</a>
                 </div>
               </div>
 
@@ -152,7 +152,7 @@ export default function Footer() {
                 href="https://www.instagram.com/austinlmadeit/"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: '#dc2626', fontWeight: 600, textDecoration: 'none' }}
+                style={{ color: '#d91b3d', fontWeight: 600, textDecoration: 'none' }}
               >
                 @austinlmadeit
               </a>{' '}
