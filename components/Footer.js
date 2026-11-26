@@ -27,11 +27,10 @@ export default function Footer() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
               <div style={{ width: '42px', height: '42px', background: '#ffffff', borderRadius: '6px', padding: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                 <Image
-                  src="/images/ficek.logo.jpg"
+                  src="/images/ficek-logo.svg"
                   alt="Ficek Insurance"
-                  width={34}
+                  width={26}
                   height={34}
-                  quality={100}
                   style={{ objectFit: 'contain' }}
                 />
               </div>
