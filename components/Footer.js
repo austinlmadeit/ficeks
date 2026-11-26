@@ -146,16 +146,7 @@ export default function Footer() {
           <div>
             <div>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</div>
             <div style={{ fontSize: '11px', color: '#ffffff', marginTop: '6px', letterSpacing: '0.2px', opacity: 0.9 }}>
-              Made with love, care and obsession —{' '}
-              <a
-                href="https://www.instagram.com/austinlmadeit/"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: '#d91b3d', fontWeight: 600, textDecoration: 'none' }}
-              >
-                @austinlmadeit
-              </a>{' '}
-              💜
+              Made with love, care and obsession 💜
             </div>
           </div>
           <span style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
