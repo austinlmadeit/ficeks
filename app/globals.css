@@ -13,11 +13,11 @@
   --text-white:     #ffffff;
   
   /* Ficek Brand Red */
-  --red:            #dc2626;
-  --red-dark:       #991b1b;
-  --red-light:      #ef4444;
-  --red-bg:         #fef2f2;
-  --red-border:     #fecaca;
+  --red:            #d91b3d;
+  --red-dark:       #92142b;
+  --red-light:      #f53053;
+  --red-bg:         #fef2f4;
+  --red-border:     #fecad3;
   
   /* Obsidian Black */
   --black:          #09090b;
@@ -32,7 +32,7 @@
   --shadow-sm:      0 1px 3px rgba(0,0,0,0.06);
   --shadow:         0 4px 20px rgba(0,0,0,0.08);
   --shadow-hover:   0 12px 36px rgba(0,0,0,0.12);
-  --shadow-red:     0 8px 24px rgba(220,38,38,0.25);
+  --shadow-red:     0 8px 24px rgba(217, 27, 61, 0.25);
 }
 
 *, *::before, *::after {
@@ -156,7 +156,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn-red:hover {
   background: var(--red-dark);
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(220,38,38,0.35);
+  box-shadow: 0 12px 28px rgba(217, 27, 61, 0.35);
 }
 
 .btn-black {
@@ -253,7 +253,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #ffffff;
   border-radius: 24px;
   padding: 24px;
-  border: 2px solid rgba(220, 38, 38, 0.25);
+  border: 2px solid rgba(217, 27, 61, 0.25);
   width: 275px;
   height: 275px;
   display: flex;
@@ -267,8 +267,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-logo-card:hover {
   transform: translateY(-6px);
-  border-color: #dc2626;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55), 0 8px 25px rgba(220, 38, 38, 0.2);
+  border-color: #d91b3d;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55), 0 8px 25px rgba(217, 27, 61, 0.2);
 }
 
 .hero-logo-card img {
@@ -303,8 +303,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .location-showcase-card:hover {
-  border-color: #dc2626;
-  box-shadow: 0 14px 40px rgba(220, 38, 38, 0.18);
+  border-color: #d91b3d;
+  box-shadow: 0 14px 40px rgba(217, 27, 61, 0.18);
   transform: translateY(-4px);
 }
 

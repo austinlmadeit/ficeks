@@ -8,7 +8,7 @@ export const metadata = {
     'Detailed directions to both Ficek Insurance offices in Brandon, Manitoba: 1525B 18th Street and 1439 1st Street. Routes from every direction, landmarks, parking, maps and photos.',
 };
 
-const RED = '#dc2626';
+const RED = '#d91b3d';
 const INK = '#09090b';
 const SLATE = '#475569';
 
@@ -36,7 +36,7 @@ export default function FindUsPage() {
           right: 0,
           width: '520px',
           height: '520px',
-          background: 'radial-gradient(circle, rgba(220,38,38,0.2) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(217, 27, 61, 0.2) 0%, transparent 70%)',
           pointerEvents: 'none',
         }} />
 
@@ -273,8 +273,8 @@ export default function FindUsPage() {
               {guide.bestFor?.length > 0 && (
                 <>
                 <div style={{
-                  background: guide.isNew ? 'rgba(220, 38, 38, 0.06)' : '#f1f5f9',
-                  border: `1px solid ${guide.isNew ? 'rgba(220, 38, 38, 0.2)' : '#e2e8f0'}`,
+                  background: guide.isNew ? 'rgba(217, 27, 61, 0.06)' : '#f1f5f9',
+                  border: `1px solid ${guide.isNew ? 'rgba(217, 27, 61, 0.2)' : '#e2e8f0'}`,
                   borderRadius: '12px',
                   padding: '24px 28px',
                   marginBottom: '40px',

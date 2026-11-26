@@ -43,6 +43,7 @@ npx vercel --prod --yes
    - Clean, professional corporate tone without emoji clutter (no `✨`, `🏆`, or `⏰` in headings/badges).
    - No em-dashes (`—`) in headlines; use colons (`:`) or hyphens (`-`).
    - SGI logo is `/images/carriers/sgi.updated.webp`.
+   - Brand red is `#d91b3d` (`#D91B3D`). Matching shades: darker `#b31431` (hover), darkest `#92142b`, lighter `#f53053` (on dark backgrounds), pale `#fecad3` (borders) and `#fef2f4` (backgrounds); `rgba(217, 27, 61, …)` for transparent red. Use these, not the old `#dc2626`. The lead-notification email templates in `app/api/` still use `#dc2626` (staff-only emails, left unchanged).
 
 ## Changing Lead Capture
 

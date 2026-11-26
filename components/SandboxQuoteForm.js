@@ -141,8 +141,8 @@ export default function SandboxQuoteForm() {
           width: '64px',
           height: '64px',
           borderRadius: '50%',
-          background: '#fef2f2',
-          color: '#dc2626',
+          background: '#fef2f4',
+          color: '#d91b3d',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -162,7 +162,7 @@ export default function SandboxQuoteForm() {
           display: 'inline-flex',
           alignItems: 'center',
           gap: '8px',
-          background: '#dc2626',
+          background: '#d91b3d',
           color: '#fff',
           fontWeight: 800,
           fontSize: '16px',
@@ -187,7 +187,7 @@ export default function SandboxQuoteForm() {
       {/* Progress Header */}
       <div style={{ background: '#09090b', padding: '24px 32px' }}>
       <HoneypotField guard={guard} />
-        <div style={{ fontSize: '12px', fontWeight: 800, color: '#dc2626', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '14px' }}>
+        <div style={{ fontSize: '12px', fontWeight: 800, color: '#d91b3d', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '14px' }}>
           Get My Sandbox Mutual Auto Quote
         </div>
         <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
@@ -202,7 +202,7 @@ export default function SandboxQuoteForm() {
                     width: '28px',
                     height: '28px',
                     borderRadius: '50%',
-                    background: done ? '#22c55e' : active ? '#dc2626' : '#3f3f46',
+                    background: done ? '#22c55e' : active ? '#d91b3d' : '#3f3f46',
                     color: '#fff',
                     display: 'flex',
                     alignItems: 'center',
@@ -322,9 +322,9 @@ export default function SandboxQuoteForm() {
                     style={{
                       padding: '14px 10px',
                       borderRadius: '8px',
-                      border: form.preferredLiability === opt ? '2px solid #dc2626' : '1.5px solid #e4e4e7',
-                      background: form.preferredLiability === opt ? '#fef2f2' : '#fafafa',
-                      color: form.preferredLiability === opt ? '#dc2626' : '#09090b',
+                      border: form.preferredLiability === opt ? '2px solid #d91b3d' : '1.5px solid #e4e4e7',
+                      background: form.preferredLiability === opt ? '#fef2f4' : '#fafafa',
+                      color: form.preferredLiability === opt ? '#d91b3d' : '#09090b',
                       fontWeight: 800,
                       fontSize: '14px',
                       cursor: 'pointer',
@@ -350,7 +350,7 @@ export default function SandboxQuoteForm() {
 
         {/* Error */}
         {error && (
-          <div style={{ marginTop: '16px', padding: '12px 16px', background: '#fef2f2', border: '1px solid #fecaca', borderRadius: '8px', color: '#dc2626', fontSize: '14px', fontWeight: 600 }}>
+          <div style={{ marginTop: '16px', padding: '12px 16px', background: '#fef2f4', border: '1px solid #fecad3', borderRadius: '8px', color: '#d91b3d', fontSize: '14px', fontWeight: 600 }}>
             {error}
           </div>
         )}
@@ -364,13 +364,13 @@ export default function SandboxQuoteForm() {
           ) : <div />}
 
           {step < 3 ? (
-            <button onClick={next} style={{ background: '#dc2626', color: '#fff', border: 'none', borderRadius: '8px', padding: '13px 28px', fontWeight: 800, fontSize: '15px', cursor: 'pointer', fontFamily: 'inherit', transition: 'background 0.2s' }}>
+            <button onClick={next} style={{ background: '#d91b3d', color: '#fff', border: 'none', borderRadius: '8px', padding: '13px 28px', fontWeight: 800, fontSize: '15px', cursor: 'pointer', fontFamily: 'inherit', transition: 'background 0.2s' }}>
               Next Step →
             </button>
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'flex-end' }}>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                <input type="checkbox" required id="consent" style={{ marginTop: '4px', width: '16px', height: '16px', accentColor: '#dc2626' }} />
+                <input type="checkbox" required id="consent" style={{ marginTop: '4px', width: '16px', height: '16px', accentColor: '#d91b3d' }} />
                 <label htmlFor="consent" style={{ fontSize: '13px', color: '#71717a', lineHeight: 1.5, textAlign: 'left', maxWidth: '300px' }}>
                   I agree to the <a href="/terms" target="_blank" style={{ color: '#09090b', textDecoration: 'underline' }}>Terms</a> and <a href="/privacy" target="_blank" style={{ color: '#09090b', textDecoration: 'underline' }}>Privacy Policy</a>.
                 </label>
@@ -378,7 +378,7 @@ export default function SandboxQuoteForm() {
               <button
                 onClick={submit}
                 disabled={loading}
-                style={{ background: loading ? '#a1a1aa' : '#dc2626', color: '#fff', border: 'none', borderRadius: '8px', padding: '13px 28px', fontWeight: 800, fontSize: '15px', cursor: loading ? 'not-allowed' : 'pointer', fontFamily: 'inherit', transition: 'background 0.2s' }}
+                style={{ background: loading ? '#a1a1aa' : '#d91b3d', color: '#fff', border: 'none', borderRadius: '8px', padding: '13px 28px', fontWeight: 800, fontSize: '15px', cursor: loading ? 'not-allowed' : 'pointer', fontFamily: 'inherit', transition: 'background 0.2s' }}
               >
                 {loading ? 'Sending...' : 'Submit Quote Request'}
               </button>

@@ -81,7 +81,7 @@ export default function HeroQuoteWidget() {
         borderBottom: '2px solid #f4f4f5',
       }}>
         <div>
-          <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1.5px', color: '#dc2626' }}>
+          <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1.5px', color: '#d91b3d' }}>
             ⚡ Instant Quote Request
           </span>
           <h3 style={{ fontSize: '22px', fontWeight: 900, color: '#09090b', marginTop: '2px' }}>
@@ -89,9 +89,9 @@ export default function HeroQuoteWidget() {
           </h3>
         </div>
         <span style={{
-          background: '#fef2f2',
-          color: '#dc2626',
-          border: '1px solid #fecaca',
+          background: '#fef2f4',
+          color: '#d91b3d',
+          border: '1px solid #fecad3',
           padding: '4px 10px',
           borderRadius: '20px',
           fontSize: '12px',
@@ -121,9 +121,9 @@ export default function HeroQuoteWidget() {
                   style={{
                     padding: '12px 10px',
                     borderRadius: '8px',
-                    border: active ? '2px solid #dc2626' : '1.5px solid #e4e4e7',
-                    background: active ? '#fef2f2' : '#ffffff',
-                    color: active ? '#dc2626' : '#09090b',
+                    border: active ? '2px solid #d91b3d' : '1.5px solid #e4e4e7',
+                    background: active ? '#fef2f4' : '#ffffff',
+                    color: active ? '#d91b3d' : '#09090b',
                     textAlign: 'center',
                     cursor: 'pointer',
                     transition: 'all 0.15s ease',
@@ -204,13 +204,13 @@ export default function HeroQuoteWidget() {
           </div>
 
           {error && (
-            <div style={{ color: '#dc2626', fontSize: '13px', fontWeight: 700, marginBottom: '14px', background: '#fef2f2', padding: '8px 12px', borderRadius: '6px' }}>
+            <div style={{ color: '#d91b3d', fontSize: '13px', fontWeight: 700, marginBottom: '14px', background: '#fef2f4', padding: '8px 12px', borderRadius: '6px' }}>
               ⚠️ {error}
             </div>
           )}
 
           <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '16px' }}>
-            <input type="checkbox" required id="consentHero" style={{ marginTop: '4px', width: '16px', height: '16px', accentColor: '#dc2626' }} />
+            <input type="checkbox" required id="consentHero" style={{ marginTop: '4px', width: '16px', height: '16px', accentColor: '#d91b3d' }} />
             <label htmlFor="consentHero" style={{ fontSize: '12px', color: '#71717a', lineHeight: 1.5 }}>
               I agree to the <Link href="/terms" target="_blank" style={{ color: '#09090b', textDecoration: 'underline' }}>Terms</Link> and <Link href="/privacy" target="_blank" style={{ color: '#09090b', textDecoration: 'underline' }}>Privacy Policy</Link>.
             </label>
@@ -225,7 +225,7 @@ export default function HeroQuoteWidget() {
               padding: '16px',
               fontSize: '16px',
               borderRadius: '8px',
-              background: loading ? '#9ca3af' : '#dc2626',
+              background: loading ? '#9ca3af' : '#d91b3d',
               cursor: loading ? 'not-allowed' : 'pointer',
             }}
           >

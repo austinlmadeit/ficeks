@@ -10,7 +10,7 @@ export default function PrivacyPage() {
     <main>
       <section className="section" style={{ background: '#fafafa' }}>
         <div className="container" style={{ maxWidth: '800px' }}>
-          <Link href="/" style={{ color: '#ef4444', fontWeight: 700, fontSize: '14px', marginBottom: '24px', display: 'inline-block' }}>
+          <Link href="/" style={{ color: '#f53053', fontWeight: 700, fontSize: '14px', marginBottom: '24px', display: 'inline-block' }}>
             ? Back to Home
           </Link>
           <h1 className="section-title">Privacy Policy</h1>

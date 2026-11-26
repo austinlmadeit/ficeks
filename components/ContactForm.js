@@ -175,7 +175,7 @@ export default function ContactForm() {
 
       {/* Consent Checkbox */}
       <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginTop: '2px' }}>
-        <input type="checkbox" required id="contact-consent" style={{ marginTop: '3px', width: '16px', height: '16px', accentColor: '#dc2626', cursor: 'pointer' }} />
+        <input type="checkbox" required id="contact-consent" style={{ marginTop: '3px', width: '16px', height: '16px', accentColor: '#d91b3d', cursor: 'pointer' }} />
         <label htmlFor="contact-consent" style={{ fontSize: '13px', color: '#71717a', lineHeight: 1.5, cursor: 'pointer' }}>
           I agree to the <Link href="/terms" target="_blank" style={{ color: '#09090b', textDecoration: 'underline' }}>Terms of Service</Link> and <Link href="/privacy" target="_blank" style={{ color: '#09090b', textDecoration: 'underline' }}>Privacy Policy</Link>, and consent to being contacted regarding this request.
         </label>
@@ -184,10 +184,10 @@ export default function ContactForm() {
       {error && (
         <div style={{
           padding: '10px 14px',
-          background: '#fef2f2',
-          border: '1px solid #fecaca',
+          background: '#fef2f4',
+          border: '1px solid #fecad3',
           borderRadius: '8px',
-          color: '#dc2626',
+          color: '#d91b3d',
           fontSize: '13px',
           fontWeight: 700,
         }}>
@@ -203,7 +203,7 @@ export default function ContactForm() {
           width: '100%',
           padding: '14px',
           fontSize: '15px',
-          background: loading ? '#9ca3af' : '#dc2626',
+          background: loading ? '#9ca3af' : '#d91b3d',
           cursor: loading ? 'not-allowed' : 'pointer',
         }}
       >

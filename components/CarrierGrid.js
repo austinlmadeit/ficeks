@@ -26,7 +26,7 @@ export default function CarrierGrid() {
             <div key={carrier.id} className="card" style={{
               background: '#ffffff',
               border: '1px solid #e4e4e7',
-              borderLeft: '4px solid #dc2626',
+              borderLeft: '4px solid #d91b3d',
               padding: '24px',
               display: 'flex',
               flexDirection: 'column',
@@ -35,7 +35,7 @@ export default function CarrierGrid() {
             }}>
               <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-                  <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px', color: '#dc2626', background: 'rgba(220,38,38,0.08)', padding: '4px 10px', borderRadius: '4px' }}>
+                  <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px', color: '#d91b3d', background: 'rgba(217, 27, 61, 0.08)', padding: '4px 10px', borderRadius: '4px' }}>
                     {carrier.badge}
                   </span>
                   <span style={{ fontSize: '20px' }}>🛡️</span>

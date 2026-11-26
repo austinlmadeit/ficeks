@@ -173,7 +173,7 @@ ${!isAuto && form.policyNumber ? `[Policy Number]: ${form.policyNumber}\n` : ''}
       <div style={{ background: '#09090b', padding: '28px 36px', color: '#ffffff' }}>
       <HoneypotField guard={guard} />
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '8px' }}>
-          <span style={{ fontSize: '11px', fontWeight: 900, color: '#dc2626', letterSpacing: '1.5px', textTransform: 'uppercase' }}>
+          <span style={{ fontSize: '11px', fontWeight: 900, color: '#d91b3d', letterSpacing: '1.5px', textTransform: 'uppercase' }}>
             Ficek Independent Quote Engine
           </span>
           <span style={{ fontSize: '12px', color: '#a1a1aa', fontWeight: 700 }}>
@@ -193,7 +193,7 @@ ${!isAuto && form.policyNumber ? `[Policy Number]: ${form.policyNumber}\n` : ''}
                   width: '28px',
                   height: '28px',
                   borderRadius: '50%',
-                  background: done ? '#22c55e' : active ? '#dc2626' : '#27272a',
+                  background: done ? '#22c55e' : active ? '#d91b3d' : '#27272a',
                   color: '#ffffff',
                   display: 'flex',
                   alignItems: 'center',
@@ -257,17 +257,17 @@ ${!isAuto && form.policyNumber ? `[Policy Number]: ${form.policyNumber}\n` : ''}
                       gap: '14px',
                       padding: '18px 16px',
                       borderRadius: '10px',
-                      border: isSelected ? '2px solid #dc2626' : '1.5px solid #e4e4e7',
-                      background: isSelected ? '#fef2f2' : '#ffffff',
+                      border: isSelected ? '2px solid #d91b3d' : '1.5px solid #e4e4e7',
+                      background: isSelected ? '#fef2f4' : '#ffffff',
                       textAlign: 'left',
                       cursor: 'pointer',
                       transition: 'all 0.15s ease',
-                      boxShadow: isSelected ? '0 8px 20px rgba(220,38,38,0.1)' : 'none',
+                      boxShadow: isSelected ? '0 8px 20px rgba(217, 27, 61, 0.1)' : 'none',
                     }}
                   >
                     <span style={{ fontSize: '28px', flexShrink: 0 }}>{cat.icon}</span>
                     <div>
-                      <div style={{ fontSize: '16px', fontWeight: 800, color: isSelected ? '#dc2626' : '#09090b', marginBottom: '4px' }}>
+                      <div style={{ fontSize: '16px', fontWeight: 800, color: isSelected ? '#d91b3d' : '#09090b', marginBottom: '4px' }}>
                         {cat.title}
                       </div>
                       <div style={{ fontSize: '12px', color: '#71717a', lineHeight: 1.4 }}>
@@ -603,10 +603,10 @@ ${!isAuto && form.policyNumber ? `[Policy Number]: ${form.policyNumber}\n` : ''}
           <div style={{
             marginTop: '20px',
             padding: '12px 16px',
-            background: '#fef2f2',
-            border: '1.5px solid #fecaca',
+            background: '#fef2f4',
+            border: '1.5px solid #fecad3',
             borderRadius: '8px',
-            color: '#dc2626',
+            color: '#d91b3d',
             fontSize: '14px',
             fontWeight: 700,
           }}>
@@ -654,7 +654,7 @@ ${!isAuto && form.policyNumber ? `[Policy Number]: ${form.policyNumber}\n` : ''}
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'flex-end' }}>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                <input type="checkbox" required id="consent" style={{ marginTop: '4px', width: '16px', height: '16px', accentColor: '#dc2626' }} />
+                <input type="checkbox" required id="consent" style={{ marginTop: '4px', width: '16px', height: '16px', accentColor: '#d91b3d' }} />
                 <label htmlFor="consent" style={{ fontSize: '13px', color: '#71717a', lineHeight: 1.5, textAlign: 'left', maxWidth: '300px' }}>
                   I agree to the <a href="/terms" target="_blank" style={{ color: '#09090b', textDecoration: 'underline' }}>Terms</a> and <a href="/privacy" target="_blank" style={{ color: '#09090b', textDecoration: 'underline' }}>Privacy Policy</a>.
                 </label>
@@ -667,7 +667,7 @@ ${!isAuto && form.policyNumber ? `[Policy Number]: ${form.policyNumber}\n` : ''}
                 style={{
                   padding: '14px 36px',
                   fontSize: '16px',
-                  background: loading ? '#9ca3af' : '#dc2626',
+                  background: loading ? '#9ca3af' : '#d91b3d',
                   cursor: loading ? 'not-allowed' : 'pointer',
                 }}
               >

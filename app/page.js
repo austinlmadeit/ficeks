@@ -29,14 +29,14 @@ export default function HomePage() {
               gap: '8px',
               padding: '6px 18px',
               borderRadius: '9999px',
-              background: '#dc2626',
+              background: '#d91b3d',
               color: '#ffffff',
               fontSize: '13px',
               fontWeight: 800,
               letterSpacing: '1px',
               textTransform: 'uppercase',
               marginBottom: '16px',
-              boxShadow: '0 2px 8px rgba(220, 38, 38, 0.25)',
+              boxShadow: '0 2px 8px rgba(217, 27, 61, 0.25)',
             }}>
               Now Open Across Two Brandon Offices
             </div>
@@ -57,7 +57,7 @@ export default function HomePage() {
                 position: 'absolute',
                 top: 0,
                 right: 0,
-                background: '#dc2626',
+                background: '#d91b3d',
                 color: '#ffffff',
                 padding: '6px 20px',
                 fontSize: '11px',
@@ -65,7 +65,7 @@ export default function HomePage() {
                 letterSpacing: '1px',
                 textTransform: 'uppercase',
                 borderBottomLeftRadius: '12px',
-                boxShadow: '0 2px 8px rgba(220, 38, 38, 0.3)',
+                boxShadow: '0 2px 8px rgba(217, 27, 61, 0.3)',
               }}>
                 OUR NEW LOCATION
               </div>
@@ -76,7 +76,7 @@ export default function HomePage() {
                     fontSize: '12px',
                     fontWeight: 900,
                     color: '#ffffff',
-                    background: '#dc2626',
+                    background: '#d91b3d',
                     padding: '4px 12px',
                     borderRadius: '6px',
                     textTransform: 'uppercase',
@@ -94,7 +94,7 @@ export default function HomePage() {
                 </h3>
 
                 <p style={{ fontSize: '15px', color: '#475569', lineHeight: 1.6, marginBottom: '20px' }}>
-                  <strong style={{ color: '#dc2626' }}>We just opened our new location!</strong> Come check out our fresh, modern new space. Enjoy extended evening hours until 7:00 PM on weekdays and Saturday hours for fast Autopac renewals, driver licensing, and friendly broker service.
+                  <strong style={{ color: '#d91b3d' }}>We just opened our new location!</strong> Come check out our fresh, modern new space. Enjoy extended evening hours until 7:00 PM on weekdays and Saturday hours for fast Autopac renewals, driver licensing, and friendly broker service.
                 </p>
 
                 {/* Embedded Interactive Google Map */}
@@ -122,7 +122,7 @@ export default function HomePage() {
                 {/* Office Details */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '24px', borderTop: '1px solid #f1f5f9', paddingTop: '16px' }}>
                   <div>
-                    <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
+                    <div style={{ fontSize: '11px', fontWeight: 800, color: '#d91b3d', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
                       Street Address
                     </div>
                     <div style={{ fontSize: '16px', fontWeight: 800, color: '#09090b' }}>
@@ -131,20 +131,20 @@ export default function HomePage() {
                   </div>
 
                   <div>
-                    <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
+                    <div style={{ fontSize: '11px', fontWeight: 800, color: '#d91b3d', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
                       Direct Phone
                     </div>
-                    <a href="tel:+12047281957" style={{ fontSize: '16px', fontWeight: 800, color: '#dc2626', textDecoration: 'none' }}>
+                    <a href="tel:+12047281957" style={{ fontSize: '16px', fontWeight: 800, color: '#d91b3d', textDecoration: 'none' }}>
                       📞 204-728-1957
                     </a>
                   </div>
 
                   <div>
-                    <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
+                    <div style={{ fontSize: '11px', fontWeight: 800, color: '#d91b3d', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
                       Office Hours (Extended Evenings & Saturdays!)
                     </div>
                     <div style={{ fontSize: '14px', fontWeight: 700, color: '#09090b' }}>
-                      Mon – Fri: 9:00 AM – 7:00 PM <span style={{ color: '#dc2626', fontWeight: 800 }}>(Open Late!)</span> | Sat: 10:00 AM – 5:00 PM
+                      Mon – Fri: 9:00 AM – 7:00 PM <span style={{ color: '#d91b3d', fontWeight: 800 }}>(Open Late!)</span> | Sat: 10:00 AM – 5:00 PM
                     </div>
                   </div>
                 </div>
@@ -224,7 +224,7 @@ export default function HomePage() {
                 {/* Office Details */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '24px', borderTop: '1px solid #f1f5f9', paddingTop: '16px' }}>
                   <div>
-                    <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
+                    <div style={{ fontSize: '11px', fontWeight: 800, color: '#d91b3d', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
                       Street Address
                     </div>
                     <div style={{ fontSize: '16px', fontWeight: 800, color: '#09090b' }}>
@@ -233,16 +233,16 @@ export default function HomePage() {
                   </div>
 
                   <div>
-                    <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
+                    <div style={{ fontSize: '11px', fontWeight: 800, color: '#d91b3d', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
                       Direct Phone
                     </div>
-                    <a href="tel:+12045711777" style={{ fontSize: '16px', fontWeight: 800, color: '#dc2626', textDecoration: 'none' }}>
+                    <a href="tel:+12045711777" style={{ fontSize: '16px', fontWeight: 800, color: '#d91b3d', textDecoration: 'none' }}>
                       📞 204-571-1777
                     </a>
                   </div>
 
                   <div>
-                    <div style={{ fontSize: '11px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
+                    <div style={{ fontSize: '11px', fontWeight: 800, color: '#d91b3d', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>
                       Office Hours
                     </div>
                     <div style={{ fontSize: '14px', fontWeight: 700, color: '#09090b' }}>
@@ -292,7 +292,7 @@ export default function HomePage() {
         color: '#ffffff',
         paddingTop: '64px',
         paddingBottom: '80px',
-        borderBottom: '4px solid #dc2626',
+        borderBottom: '4px solid #d91b3d',
         position: 'relative',
         overflow: 'hidden',
       }}>
@@ -303,7 +303,7 @@ export default function HomePage() {
           right: 0,
           width: '500px',
           height: '500px',
-          background: 'radial-gradient(circle, rgba(220,38,38,0.2) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(217, 27, 61, 0.2) 0%, transparent 70%)',
           pointerEvents: 'none',
         }} />
 
@@ -332,7 +332,7 @@ export default function HomePage() {
                 gap: '8px',
                 padding: '6px 14px',
                 borderRadius: '20px',
-                background: '#dc2626',
+                background: '#d91b3d',
                 color: '#ffffff',
                 fontSize: '12px',
                 fontWeight: 800,
@@ -400,11 +400,11 @@ export default function HomePage() {
           <div className="grid-4">
             {/* Auto Insurance */}
             <div style={{
-              borderLeft: '4px solid #dc2626',
+              borderLeft: '4px solid #d91b3d',
               paddingLeft: '20px',
               paddingRight: '12px',
             }}>
-              <div style={{ fontSize: '12px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '4px' }}>
+              <div style={{ fontSize: '12px', fontWeight: 800, color: '#d91b3d', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '4px' }}>
                 Auto Insurance
               </div>
               <h3 style={{ fontSize: '22px', fontWeight: 900, marginBottom: '8px' }}>Auto & Vehicles</h3>
@@ -422,7 +422,7 @@ export default function HomePage() {
                 ].map((item, idx) => (
                   <li key={idx}>
                     <Link href={item.href} style={{ fontSize: '14px', fontWeight: 700, color: '#09090b', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                      {item.name} <span style={{ color: '#dc2626' }}>→</span>
+                      {item.name} <span style={{ color: '#d91b3d' }}>→</span>
                     </Link>
                   </li>
                 ))}
@@ -431,11 +431,11 @@ export default function HomePage() {
 
             {/* Property Insurance */}
             <div style={{
-              borderLeft: '4px solid #dc2626',
+              borderLeft: '4px solid #d91b3d',
               paddingLeft: '20px',
               paddingRight: '12px',
             }}>
-              <div style={{ fontSize: '12px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '4px' }}>
+              <div style={{ fontSize: '12px', fontWeight: 800, color: '#d91b3d', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '4px' }}>
                 Property Insurance
               </div>
               <h3 style={{ fontSize: '22px', fontWeight: 900, marginBottom: '8px' }}>Home & Property</h3>
@@ -455,7 +455,7 @@ export default function HomePage() {
                 ].map((item, idx) => (
                   <li key={idx}>
                     <Link href={item.href} style={{ fontSize: '14px', fontWeight: 700, color: '#09090b', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                      {item.name} <span style={{ color: '#dc2626' }}>→</span>
+                      {item.name} <span style={{ color: '#d91b3d' }}>→</span>
                     </Link>
                   </li>
                 ))}
@@ -464,11 +464,11 @@ export default function HomePage() {
 
             {/* Commercial Insurance */}
             <div style={{
-              borderLeft: '4px solid #dc2626',
+              borderLeft: '4px solid #d91b3d',
               paddingLeft: '20px',
               paddingRight: '12px',
             }}>
-              <div style={{ fontSize: '12px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '4px' }}>
+              <div style={{ fontSize: '12px', fontWeight: 800, color: '#d91b3d', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '4px' }}>
                 Commercial Insurance
               </div>
               <h3 style={{ fontSize: '22px', fontWeight: 900, marginBottom: '8px' }}>Commercial & Business</h3>
@@ -487,7 +487,7 @@ export default function HomePage() {
                 ].map((item, idx) => (
                   <li key={idx}>
                     <Link href={item.href} style={{ fontSize: '14px', fontWeight: 700, color: '#09090b', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                      {item.name} <span style={{ color: '#dc2626' }}>→</span>
+                      {item.name} <span style={{ color: '#d91b3d' }}>→</span>
                     </Link>
                   </li>
                 ))}
@@ -496,11 +496,11 @@ export default function HomePage() {
 
             {/* Farm Insurance */}
             <div style={{
-              borderLeft: '4px solid #dc2626',
+              borderLeft: '4px solid #d91b3d',
               paddingLeft: '20px',
               paddingRight: '12px',
             }}>
-              <div style={{ fontSize: '12px', fontWeight: 800, color: '#dc2626', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '4px' }}>
+              <div style={{ fontSize: '12px', fontWeight: 800, color: '#d91b3d', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '4px' }}>
                 Farm Insurance
               </div>
               <h3 style={{ fontSize: '22px', fontWeight: 900, marginBottom: '8px' }}>Farm & Agriculture</h3>
@@ -518,7 +518,7 @@ export default function HomePage() {
                 ].map((item, idx) => (
                   <li key={idx}>
                     <Link href={item.href} style={{ fontSize: '14px', fontWeight: 700, color: '#09090b', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                      {item.name} <span style={{ color: '#dc2626' }}>→</span>
+                      {item.name} <span style={{ color: '#d91b3d' }}>→</span>
                     </Link>
                   </li>
                 ))}
@@ -547,7 +547,7 @@ export default function HomePage() {
 
       {/* ── FOOTER CALLOUT BANNER ── */}
       <section style={{
-        background: '#dc2626',
+        background: '#d91b3d',
         color: '#ffffff',
         padding: '64px 0',
         textAlign: 'center',
@@ -556,7 +556,7 @@ export default function HomePage() {
           <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 900, marginBottom: '12px', color: '#ffffff' }}>
             Ready to find your best insurance rate?
           </h2>
-          <p style={{ fontSize: '18px', color: '#fecaca', marginBottom: '28px', maxWidth: '520px', margin: '0 auto 28px' }}>
+          <p style={{ fontSize: '18px', color: '#fecad3', marginBottom: '28px', maxWidth: '520px', margin: '0 auto 28px' }}>
             Speak to one of our friendly brokers today, or submit a quick quote request online.
           </p>
           <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
