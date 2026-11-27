@@ -27,11 +27,10 @@ export default function Footer() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
               <div style={{ width: '42px', height: '42px', background: '#ffffff', borderRadius: '6px', padding: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                 <Image
-                  src="/images/ficek.logo.jpg"
+                  src="/images/ficek-logo.svg"
                   alt="Ficek Insurance"
-                  width={34}
+                  width={26}
                   height={34}
-                  quality={100}
                   style={{ objectFit: 'contain' }}
                 />
               </div>
@@ -147,16 +146,7 @@ export default function Footer() {
           <div>
             <div>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</div>
             <div style={{ fontSize: '11px', color: '#ffffff', marginTop: '6px', letterSpacing: '0.2px', opacity: 0.9 }}>
-              Made with love, care and obsession —{' '}
-              <a
-                href="https://www.instagram.com/austinlmadeit/"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: '#d91b3d', fontWeight: 600, textDecoration: 'none' }}
-              >
-                @austinlmadeit
-              </a>{' '}
-              💜
+              Made with love, care and obsession 💜
             </div>
           </div>
           <span style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>

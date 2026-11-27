@@ -39,11 +39,10 @@ export default function Nav() {
         {/* Ficek Brand Logo */}
         <Link href="/" className={styles.logo}>
           <Image
-            src="/images/ficek.logo.jpg"
+            src="/images/ficek-logo.svg"
             alt="Ficek Insurance"
-            width={48}
+            width={37}
             height={48}
-            quality={100}
             priority
             className={styles.logoImage}
           />

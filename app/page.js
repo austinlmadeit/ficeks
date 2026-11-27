@@ -313,13 +313,12 @@ export default function HomePage() {
             <div className="hero-logo-box float-in-scale delay-150">
               <div className="hero-logo-card">
                 <Image
-                  src="/images/ficek.logo.jpg"
+                  src="/images/ficek-logo.svg"
                   alt="Ficek Insurance Logo"
-                  width={230}
-                  height={230}
-                  quality={100}
+                  width={346}
+                  height={447}
                   priority
-                  style={{ objectFit: 'contain', width: '100%', height: 'auto' }}
+                  style={{ objectFit: 'contain', width: 'auto', height: '100%', maxWidth: '100%' }}
                 />
               </div>
             </div>
